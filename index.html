@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statecraft — Sports Betting Legislative Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --panel: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #6b6b66;
+    --line: #e2e0d8;
+    --accent: #1f3a5f;
+    --accent-soft: #e4ebf4;
+    --hover: #ffd84d;
+    --hover-ink: #5c4a00;
+    --map-0: #efeee8;
+    --map-1: #d9e4f0;
+    --map-2: #a9c3dd;
+    --map-3: #6f98c2;
+    --map-4: #2f5f93;
+    --ok: #2a7f4f;
+    --warn: #b55a00;
+    --bad: #a12b2b;
+    --law: #4b3d8f;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    overflow: hidden;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px; border-bottom: 1px solid var(--line); background: var(--panel);
+  }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand h1 { font-family: "Source Serif 4", Georgia, serif; font-size: 24px; margin: 0; letter-spacing: -0.01em; }
+  .brand .topic { font-size: 14px; color: var(--muted); border-left: 1px solid var(--line); padding-left: 14px; }
+  .meta { font-size: 12px; color: var(--muted); text-align: right; line-height: 1.5; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 460px; min-height: 0; }
+  #map-wrap { position: relative; min-height: 0; display: flex; flex-direction: column; }
+  #map { flex: 1; width: 100%; height: 100%; }
+  #map .state { stroke: #fff; stroke-width: 0.8; cursor: pointer; transition: fill .12s; }
+  #map .state:hover, #map .state.hovered { fill: var(--hover) !important; stroke: var(--hover-ink); stroke-width: 1.2; }
+  #map .state.selected { stroke: var(--ink); stroke-width: 1.8; }
+  #legend {
+    position: absolute; left: 24px; bottom: 20px; background: rgba(255,255,255,.92);
+    border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 12px; color: var(--muted);
+  }
+  #legend .row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  #legend .sw { width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(0,0,0,.08); }
+  #tip {
+    position: absolute; pointer-events: none; display: none; z-index: 5;
+    background: var(--ink); color: #fff; padding: 10px 12px; border-radius: 8px; font-size: 13px; line-height: 1.45;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18); max-width: 260px;
+  }
+  #tip .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  #tip .sub { color: #cfcfcf; }
+  #tip .hint { color: var(--hover); margin-top: 6px; font-size: 12px; }
+  aside {
+    border-left: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; min-height: 0;
+  }
+  .panel-head { padding: 18px 22px 12px; border-bottom: 1px solid var(--line); }
+  .panel-head h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 22px; margin: 0 0 4px; }
+  .panel-head .sub { font-size: 13px; color: var(--muted); }
+  .back { font-size: 13px; color: var(--accent); cursor: pointer; background: none; border: 0; padding: 0; margin-bottom: 8px; font-family: inherit; }
+  .back:hover { text-decoration: underline; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+  .stat { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .stat .n { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+  .stat .l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+  .controls { display: flex; gap: 8px; padding: 12px 22px; border-bottom: 1px solid var(--line); align-items: center; flex-wrap: wrap; }
+  .tabs { display: flex; gap: 4px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 3px; }
+  .tabs button { border: 0; background: none; padding: 6px 12px; border-radius: 6px; font: inherit; font-size: 13px; cursor: pointer; color: var(--muted); }
+  .tabs button.on { background: var(--panel); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+  .controls input[type=search] { flex: 1; min-width: 120px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; font-size: 13px; background: var(--bg); }
+  .controls label { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  .list { overflow-y: auto; flex: 1; padding: 6px 0 24px; }
+  .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 14px 22px 6px; font-weight: 600; }
+  .bill { padding: 12px 22px; border-bottom: 1px solid var(--line); }
+  .bill:hover { background: #fbfaf6; }
+  .bill .top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .bill .num { font-weight: 700; font-size: 14px; }
+  .bill .num a { color: var(--accent); text-decoration: none; }
+  .bill .num a:hover { text-decoration: underline; }
+  .bill .st { font-size: 12px; color: var(--muted); }
+  .badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid transparent; }
+  .badge.s0, .badge.s1 { background: var(--accent-soft); color: var(--accent); }
+  .badge.s2, .badge.s3 { background: #fff1e0; color: var(--warn); }
+  .badge.s4 { background: #e9e4f7; color: var(--law); }
+  .badge.s5, .badge.s6 { background: #f8e3e3; color: var(--bad); }
+  .badge.hearing { background: #fff7cc; color: var(--hover-ink); border-color: #f0dc8a; }
+  .bill .title { font-size: 13.5px; line-height: 1.4; margin: 6px 0 4px; }
+  .bill .action { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+  .bill .action b { color: var(--ink); font-weight: 500; }
+  .bill .links { font-size: 12px; margin-top: 6px; display: flex; gap: 12px; }
+  .bill .links a { color: var(--accent); text-decoration: none; }
+  .bill .links a:hover { text-decoration: underline; }
+  .empty { padding: 28px 22px; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+  .notice { font-size: 12px; color: var(--muted); padding: 10px 22px; border-top: 1px solid var(--line); line-height: 1.45; background: var(--bg); }
+  .state-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--ink); color: #fff; padding: 1px 6px; border-radius: 4px; margin-right: 6px; }
+  @media (max-width: 900px) {
+    body { overflow: auto; height: auto; }
+    main { grid-template-columns: 1fr; }
+    #map-wrap { height: 60vh; }
+    aside { border-left: 0; border-top: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>Statecraft</h1>
+    <span class="topic" id="topic">Sports betting · legislative radar</span>
+  </div>
+  <div class="meta" id="meta"></div>
+</header>
+<main>
+  <div id="map-wrap">
+    <svg id="map" role="img" aria-label="Map of US states shaded by number of active sports betting bills"></svg>
+    <div id="legend"></div>
+    <div id="tip"></div>
+  </div>
+  <aside id="panel"></aside>
+</main>
+<script src="vendor/d3.v7.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+<script src="vendor/states-10m.js"></script>
+<script src="data/bills.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
