@@ -109,6 +109,36 @@
   .empty { padding: 28px 22px; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
   .notice { font-size: 12px; color: var(--muted); padding: 10px 22px; border-top: 1px solid var(--line); line-height: 1.45; background: var(--bg); }
   .state-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--ink); color: #fff; padding: 1px 6px; border-radius: 4px; margin-right: 6px; }
+  #lens {
+    position: absolute; left: 24px; top: 20px; background: rgba(255,255,255,.95); border: 1px solid var(--line);
+    border-radius: 8px; padding: 10px 12px; font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 6px;
+  }
+  #lens label { font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: 11px; }
+  #lens select { font: inherit; font-size: 13px; color: var(--ink); padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); min-width: 220px; }
+  .headrow { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .headrow .back { margin: 0; white-space: nowrap; }
+  .badge.mv2 { background: #fff7cc; color: var(--hover-ink); border-color: #f0dc8a; }
+  .badge.mv3 { background: #ffe8b3; color: #7a4a00; border-color: #f0c870; }
+  .bill.moved { border-left: 3px solid var(--hover); }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 6px; }
+  .tag { font-size: 11px; color: var(--accent); background: var(--accent-soft); padding: 1px 7px; border-radius: 4px; }
+  .positions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+  .pos { font-size: 12px; padding: 3px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); display: inline-flex; gap: 6px; align-items: center; }
+  .pos.oppose { border-color: #e3b4b4; background: #fbeaea; }
+  .pos.support { border-color: #b4d6c1; background: #e8f5ec; }
+  .pos.monitor { border-color: #d6d2c4; }
+  .pos.amend { border-color: #e7cf9a; background: #fff6e0; }
+  .pos .x { border: 0; background: none; cursor: pointer; color: var(--muted); font-size: 13px; padding: 0; line-height: 1; }
+  .addpos, .linkbtn { font: inherit; font-size: 12px; color: var(--accent); background: none; border: 1px dashed var(--line); border-radius: 6px; padding: 3px 8px; cursor: pointer; }
+  .linkbtn { border-style: solid; }
+  .addpos:hover, .linkbtn:hover { border-color: var(--accent); }
+  .posform { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .posform[hidden] { display: none; }
+  .posform input, .posform select { font: inherit; font-size: 12.5px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; }
+  .posform input[name=who] { width: 150px; } .posform input[name=note] { flex: 1; min-width: 120px; }
+  .posform button { font: inherit; font-size: 12.5px; padding: 5px 10px; border-radius: 6px; border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+  .hist { margin: 8px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .hist b { color: var(--ink); font-weight: 500; }
   @media (max-width: 900px) {
     body { overflow: auto; height: auto; }
     main { grid-template-columns: 1fr; }
@@ -128,6 +158,7 @@
 <main>
   <div id="map-wrap">
     <svg id="map" role="img" aria-label="Map of US states shaded by number of active sports betting bills"></svg>
+    <div id="lens"></div>
     <div id="legend"></div>
     <div id="tip"></div>
   </div>

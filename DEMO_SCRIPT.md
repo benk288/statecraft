@@ -1,39 +1,39 @@
 # Statecraft demo script (target: 2 to 2.5 minutes)
 
 Record the browser at http://localhost:8765 with the panel on the right visible.
-Speak the three required points in this order: the problem, how it works, how a lawyer uses it.
+Before recording: add one or two positions with a fictional client name (for example "Acme Sportsbook (demo)") so the Client positions view has something in it. Reset the Issue lens to "All sports-betting bills".
 
 ## 1. The problem (about 30 seconds)
 
 Statecraft is a legislative radar for lawyers who practice sports-betting regulation.
 
-Since the Supreme Court struck down the federal ban in 2018, sports betting has been regulated state by state. A regulatory lawyer in this space is watching dozens of bills at once, in House and Senate chambers across many states, each on its own calendar: new legalization bills, tax changes, advertising limits, prop-bet bans, and prediction-market fights.
+Since the Supreme Court struck down the federal ban in 2018, sports betting has been regulated state by state. A regulatory lawyer in this space is watching hundreds of bills at once, in House and Senate chambers across dozens of states, each on its own calendar: tax changes, prediction markets, advertising limits, prop-bet bans, sweepstakes, licensing.
 
-Every legislature publishes this on its own website, so the information is public. The problem is that it is spread across fifty sites with fifty different formats, and the lawyer finds out about a hearing after it has happened.
+Every legislature publishes its bills on its own website, so the information is public. The problem is that it's spread across fifty sites in fifty formats, and a lawyer's time is wasted on noise: most introduced bills never move. What matters is the bill that just came out of committee or is on a floor calendar. I interviewed a practicing sports-betting regulatory lawyer, and that was his first requirement: show me what moved.
 
 ## 2. How it works (about 60 seconds)
 
-[Show the map.]
-Statecraft pulls every current state bill that mentions sports betting or sports wagering from the legislatures' own published data, and puts them on one map. States are shaded by how many bills are active.
+[Show the map and the "What moved" panel.]
+Statecraft pulls every current state bill on sports betting from the legislatures' own published data, 779 bills today, and puts them on one map. The panel opens on "What moved": only bills that left committee, reached a calendar, or had a floor vote, sorted by how far they've gone.
 
-[Hover over a few states.]
-Hover a state and it turns yellow and shows the count, split by chamber: House bills and Senate bills.
+[Hover a few states.]
+Hover a state and it turns yellow with its active bill count split by chamber, and how many are moving.
 
-[Click a state, for example a shaded one with several bills.]
-Click it and you get that state's docket. Each bill shows its number, chamber, current status, the last action taken and the date. The tabs split House from Senate. The search box filters by keyword or sponsor.
+[Change the Issue lens to "Prediction markets", then "Advertising".]
+The issue lens re-shades the whole map by one topic, in the order the lawyer ranked them: tax rate, prediction markets, advertising, prop and college bets, sweepstakes, licensing. So "where are prediction-market bills spreading?" is one click.
 
-[Click "Official bill page" on one bill.]
-Every bill links straight to its page on the official state legislature site, so the lawyer is always one click from the primary source, not from an AI summary.
+[Click a state, for example New York or Minnesota.]
+Click a state for its docket. Each bill shows chamber, status, movement, issue tags, and the last action with its date. "History" expands the recent actions. Every bill links to its page on the official state legislature site, so the lawyer is one click from the primary source.
 
-[Click "All states".]
-The nationwide view shows what moved in the last two weeks across every state and what has been signed into law this session.
+[Click "+ Position" on a bill, enter a fictional client and "Oppose", save. Then click "Client positions".]
+Positions: tag where each client or stakeholder stands on a bill, with a note. The "Client positions" view collects them across every state. That's what turns a public data feed into the lawyer's own war room.
 
 ## 3. How a lawyer uses it (about 30 seconds)
 
-A sports-betting regulatory lawyer would open this each morning. In two minutes they see which states are moving, which bills just passed a chamber, and which ones a client needs to react to, then go to the official page to read the text.
+The lawyer opens this each morning, sees what moved overnight across all fifty states, filters to the issues his clients care about, checks where each client stands, and goes to the official page to read the text. He told me this would replace two subscription tools his practice pays for today.
 
-Two judgment calls in the design: Statecraft tracks and organizes; it does not give legal advice or summarize bills with AI, because a lawyer has to work from the actual text. And it uses only public legislative data, no client information.
+Judgment calls in the design: Statecraft tracks and organizes; it doesn't give legal advice or summarize bills with AI, because a lawyer has to work from the actual text. It uses only public legislative data, and positions stay on the lawyer's own machine.
 
-The next steps are adding city council ordinances and other regulated topics, like state AI laws, which follow the same pattern.
+Next on the roadmap, from the same interview: AI summaries that compare a bill to other states' versions, sponsor research, and comparing a bill against the firm's model legislation.
 
 [End.]
