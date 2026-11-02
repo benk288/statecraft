@@ -93,7 +93,7 @@ function renderViews() {
   const taggedCount = Object.keys(positions).filter((id) => positions[id].length).length;
   const items = [["moved", "What moved", movedBills().length], ["positions", "Client positions", taggedCount], ["model", "Model bill", modelBill.text ? "✓" : ""], ["brief", "Morning brief", ""]];
   document.getElementById("views").innerHTML = items.map(([k, l, n]) => `<button data-view="${k}" class="${view === k ? "on" : ""}">${l}${n !== "" ? `<span class="n">${n}</span>` : ""}</button>`).join("");
-  document.querySelectorAll("#views button").forEach((btn) => btn.addEventListener("click", () => { view = btn.dataset.view; if (view !== "moved") selectedState = null; render(); }));
+  document.querySelectorAll("#views button").forEach((btn) => btn.addEventListener("click", () => { view = btn.dataset.view; selectedBill = null; if (view !== "moved") selectedState = null; render(); }));
 }
 
 // ---- map ----
@@ -247,7 +247,7 @@ function modelCard(b) {
     ${c.covered.length ? `<h3 style="margin-top:12px">Matches the model (${c.covered.length})</h3><ul class="cmp-list covered">${c.covered.slice(0, 6).map((m) => `<li>${esc(m.model)}</li>`).join("")}</ul>` : ""}</div>`;
 }
 function renderDetail() {
-  if (view === "model") return renderModelEditor();
+  if (view === "model" && !selectedBill) return renderModelEditor();
   if (view === "brief") return renderBrief();
   const b = billById[selectedBill];
   if (!b) {
