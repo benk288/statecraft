@@ -46,15 +46,17 @@ async function main() {
   let analysis = {};
   try { analysis = JSON.parse(await readFile("data/analysis.json", "utf8")); } catch {}
 
-  const todo = texts.filter((t) => !analysis[t.id] && (t.text?.length > 400 || t.abstract));
+  const todo = texts.filter((t) => bills[t.id] && !analysis[t.id] && (t.text?.length > 400 || t.abstract))
+    .sort((a, b) => (bills[a.id].topics.includes("sports") ? 0 : 1) - (bills[b.id].topics.includes("sports") ? 0 : 1)); // sports first
   console.error(`${todo.length} bills to analyse (${Object.keys(analysis).length} already done)`);
 
   // Peer list: other moved bills sharing an issue tag, as title lines, so Claude can compare across states.
   function peers(t) {
     const b = bills[t.id];
     const mine = new Set(issuesOf(b));
+    const topic = b.topics[0];
     return texts
-      .filter((o) => o.id !== t.id && o.state !== t.state && issuesOf(bills[o.id]).some((k) => mine.has(k)))
+      .filter((o) => o.id !== t.id && bills[o.id] && o.state !== t.state && bills[o.id].topics.includes(topic) && (topic !== "sports" || issuesOf(bills[o.id]).some((k) => mine.has(k))))
       .slice(0, 40)
       .map((o) => `${o.state} ${o.number} — ${bills[o.id].title}${o.abstract ? ` — ${o.abstract.slice(0, 300)}` : ""}`)
       .join("\n");
@@ -70,7 +72,9 @@ async function main() {
         const res = await client.messages.parse({
           model: MODEL,
           max_tokens: 4000,
-          system: "You analyse state legislation for a lawyer who represents sports-betting operators and gaming companies. Be precise, cite section numbers or figures from the text when they matter, and never invent provisions that are not in the text. Write in plain English, no headings, no markdown.",
+          system: b.topics.includes("sports")
+            ? "You analyse state legislation for a lawyer who represents sports-betting operators and gaming companies. Be precise, cite section numbers or figures from the text when they matter, and never invent provisions that are not in the text. Write in plain English, no headings, no markdown."
+            : "You analyse state legislation for a lawyer who represents technology companies and an industry coalition opposing burdensome state AI regulation. Be precise about who is covered (developers, deployers, size thresholds), obligations, penalties, private rights of action, preemption and effective dates; cite section numbers when they matter; never invent provisions. Write in plain English, no headings, no markdown. For issue_tags, use: licensing for registration/audit/impact-assessment duties, integrity for consumer-protection/transparency/disclosure duties, advertising for deepfake/synthetic-media rules, prop for employment/automated-decision rules, tax for any fee or tax, legalize for government-use or sandbox/innovation provisions, prediction for frontier/safety/catastrophic-risk rules, sweeps for chatbot/companion/minor-protection rules.",
           messages: [{
             role: "user",
             content: `Bill: ${b.state} ${b.number} — ${b.title}\nStatus: ${b.status_text}. Last action ${b.last_action_date}: ${b.last_action}\n\nOther states' bills on overlapping issues:\n${peers(t) || "(none)"}\n\nBill text (${t.version?.note || "current version"}):\n${body}`,

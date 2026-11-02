@@ -3,7 +3,7 @@
 // the bundle small.
 import { readdir, readFile, writeFile } from "node:fs/promises";
 
-const CAP = 60000;
+const CAP = 30000;
 const files = (await readdir("data/texts")).filter((f) => f.endsWith(".json") && !f.startsWith("_"));
 const out = {};
 let total = 0;

@@ -2,3 +2,5 @@
 .DS_Store
 dist/
 node_modules/
+data/texts/
+data/bills.openstates.json
