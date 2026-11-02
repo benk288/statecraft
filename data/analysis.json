@@ -1,0 +1,19 @@
+{
+ "ocd-bill/0f429223-7646-4873-aa7c-b5eb1127a0e6": {
+  "summary": "AB 1170 is California's annual code maintenance bill. It makes nonsubstantive technical changes across various code provisions to carry out the Legislative Counsel's recommendations for maintaining the codes. It was signed and chaptered as Chapter 67, Statutes of 2025, on July 28, 2025.",
+  "mechanics": [
+   "Implements the existing statutory duty of the Legislative Counsel to advise the Legislature on legislation needed to maintain the codes.",
+   "Makes only nonsubstantive changes, such as corrections, conforming edits and cleanup, according to the official abstract.",
+   "Affects unspecified 'various provisions of the law'. The full text was not available, so the specific code sections amended cannot be confirmed here.",
+   "Enacted as Chapter 67, Statutes of 2025, chaptered 2025-07-28."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "No comparable bills from other states were listed. This is a routine housekeeping vehicle rather than a gaming policy bill, and it is unusual only in that it may touch many code sections at once without changing their legal effect.",
+  "watch": "Check the chaptered text to see whether any technical edits land in Penal Code gambling provisions, the Gambling Control Act (Bus. & Prof. Code §19800 et seq.) or horse-racing wagering statutes, so that compliance citations and internal references stay accurate.",
+  "model": "claude-opus-5-5",
+  "version": "AB1170",
+  "text_chars": 0,
+  "generated": "2026-11-02T17:57:52.202Z"
+ }
+}
