@@ -141,7 +141,7 @@ function drawLegend() {
 }
 function drawLens() {
   const lens = document.getElementById("lens");
-  lens.innerHTML = `<label for="issue">Issue lens</label><select id="issue"><option value="ALL">All ${esc((DATA.topics[topic] || "").toLowerCase())} bills</option>${LENSES[topic].map((l) => `<option value="${l.key}" ${filter.issue === l.key ? "selected" : ""}>${l.label}</option>`).join("")}</select>`;
+  lens.innerHTML = `<label for="issue">Issue lens</label><select id="issue"><option value="ALL">All ${esc(DATA.topics[topic] || "")} bills</option>${LENSES[topic].map((l) => `<option value="${l.key}" ${filter.issue === l.key ? "selected" : ""}>${l.label}</option>`).join("")}</select>`;
   lens.querySelector("#issue").addEventListener("change", (e) => { filter.issue = e.target.value; render(); });
 }
 function selectState(st) { selectedState = st === selectedState ? null : st; view = "moved"; selectedBill = null; render(); }

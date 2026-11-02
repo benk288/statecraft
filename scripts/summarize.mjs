@@ -46,7 +46,8 @@ async function main() {
   let analysis = {};
   try { analysis = JSON.parse(await readFile("data/analysis.json", "utf8")); } catch {}
 
-  const todo = texts.filter((t) => bills[t.id] && !analysis[t.id] && (t.text?.length > 400 || t.abstract))
+  const onlyTopic = process.env.TOPIC; // e.g. TOPIC=sports to limit spend
+  const todo = texts.filter((t) => bills[t.id] && !analysis[t.id] && (t.text?.length > 400 || t.abstract) && (!onlyTopic || bills[t.id].topics.includes(onlyTopic)))
     .sort((a, b) => (bills[a.id].topics.includes("sports") ? 0 : 1) - (bills[b.id].topics.includes("sports") ? 0 : 1)); // sports first
   console.error(`${todo.length} bills to analyse (${Object.keys(analysis).length} already done)`);
 
