@@ -150,7 +150,7 @@ function row(b, showState) {
     <div class="action">${fmtDate(b.last_action_date)} · ${esc(b.last_action.slice(0, 90))}</div></button>`;
 }
 function applyFilter(list) {
-  return list.filter((b) => matchesIssue(b) && (filter.chamber === "ALL" || b.chamber === filter.chamber) && (!filter.activeOnly || isActive(b)) &&
+  return list.filter((b) => matchesIssue(b) && (filter.chamber === "ALL" || b.chamber === filter.chamber) && (!filter.activeOnly || filter.q || isActive(b)) &&
     (!filter.q || `${b.number} ${b.title} ${b.description} ${b.last_action} ${(b.sponsors || []).join(" ")} ${posOf(b).map((p) => p.who + " " + p.stance).join(" ")} ${ANALYSIS[b.id]?.summary || ""}`.toLowerCase().includes(filter.q)));
 }
 function controls(showChamber) {
