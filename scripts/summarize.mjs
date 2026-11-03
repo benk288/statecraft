@@ -46,8 +46,8 @@ async function main() {
   let analysis = {};
   try { analysis = JSON.parse(await readFile("data/analysis.json", "utf8")); } catch {}
 
-  const onlyTopic = process.env.TOPIC; // e.g. TOPIC=sports to limit spend
-  const todo = texts.filter((t) => bills[t.id] && !analysis[t.id] && (t.text?.length > 400 || t.abstract) && (!onlyTopic || bills[t.id].topics.includes(onlyTopic)))
+  const onlyTopics = process.env.TOPIC ? process.env.TOPIC.split(",") : null; // e.g. TOPIC=sports,igaming to limit spend
+  const todo = texts.filter((t) => bills[t.id] && !analysis[t.id] && (t.text?.length > 400 || t.abstract) && (!onlyTopics || bills[t.id].topics.some((x) => onlyTopics.includes(x))))
     .sort((a, b) => (bills[a.id].topics.includes("sports") ? 0 : 1) - (bills[b.id].topics.includes("sports") ? 0 : 1)); // sports first
   console.error(`${todo.length} bills to analyse (${Object.keys(analysis).length} already done)`);
 
@@ -73,8 +73,8 @@ async function main() {
         const res = await client.messages.parse({
           model: MODEL,
           max_tokens: 4000,
-          system: b.topics.includes("sports")
-            ? "You analyse state legislation for a lawyer who represents sports-betting operators and gaming companies. Be precise, cite section numbers or figures from the text when they matter, and never invent provisions that are not in the text. Write in plain English, no headings, no markdown."
+          system: b.topics.some((t) => ["sports", "igaming", "cards"].includes(t))
+            ? "You analyse state legislation for a lawyer who represents sports-betting operators, online casino (iGaming) operators, and collectibles and trading-card companies (including live card breaks and mystery packs). Be precise, cite section numbers or figures from the text when they matter, and never invent provisions that are not in the text. Write in plain English, no headings, no markdown."
             : "You analyse state legislation for a lawyer who represents technology companies and an industry coalition opposing burdensome state AI regulation. Be precise about who is covered (developers, deployers, size thresholds), obligations, penalties, private rights of action, preemption and effective dates; cite section numbers when they matter; never invent provisions. Write in plain English, no headings, no markdown. For issue_tags, use: licensing for registration/audit/impact-assessment duties, integrity for consumer-protection/transparency/disclosure duties, advertising for deepfake/synthetic-media rules, prop for employment/automated-decision rules, tax for any fee or tax, legalize for government-use or sandbox/innovation provisions, prediction for frontier/safety/catastrophic-risk rules, sweeps for chatbot/companion/minor-protection rules.",
           messages: [{
             role: "user",

@@ -7447,5 +7447,1047 @@
   "version": "Chaptered",
   "text_chars": 9951,
   "generated": "2026-11-02T19:09:16.406Z"
+ },
+ "CT-HB5035": {
+  "summary": "Connecticut HB 5035 (substitute) requires public school students to keep personal wireless communication devices powered off and stored during the school day unless access is authorized for instructional purposes, and bars students from accessing social media through school-provided Internet except for instruction. Local and regional boards of education must adopt implementing policies, including emergency communication and discipline procedures, and notify parents annually. It has nothing to do with sports betting, iGaming, or collectibles; the only gaming reference is to 'gaming device' and 'gaming' as device functions.",
+  "mechanics": [
+   "Sec. 1(a)(1): 'wireless communication device' covers any portable device capable of voice, messaging or data communication, including cell phones, tablets, computers, gaming devices and smart watches, but excludes district-provided instructional technology.",
+   "Sec. 1(b)(1): no student may access such a device on school property during the school day (scheduled start to end time, grades K-12) unless authorized for instructional purposes; devices must be powered off and stored as the board prescribes, e.g. lockers.",
+   "Sec. 1(b)(2): exceptions for use required by an IEP under IDEA or a Section 504 accommodations plan, or deemed necessary for health by a licensed physician, PA or APRN.",
+   "Sec. 1(c): bars student access to social media platforms via school-provided Internet during the school day except for instructional purposes.",
+   "Sec. 1(d)-(e): boards must adopt policies covering emergency parent communication and discipline, notify parents annually, and include the policies in student handbooks.",
+   "Effective July 1, 2027; passed the House, and on 2026-04-29 was moved to the foot of the Senate calendar."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is comparable in subject. The iGaming authorization bills (IL HB3080/HB4797, MA H332/S235, MD HB1343/SB885, ME LD1164), sports wagering bills (MS HB 4074, NJ A 3258) and advertising bills (MI SB0713/SB0714, NJ AR150) all regulate gambling directly. The closest overlap is with the youth and social-media bills (MI HB4388, NC H462, CO HB1255), but HB 5035 regulates school device use, not platform operators. Its only gaming link is that 'gaming' appears as a device function in the definition of 'access' in Sec. 1(a)(3).",
+  "watch": "Nothing here imposes obligations on betting, iGaming or card-break operators; at most, note that it restricts minors' in-school access to gaming and social-media functions, so monitor whether later amendments add youth-gambling or app-specific provisions.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 4003,
+  "generated": "2026-11-03T22:15:23.289Z"
+ },
+ "DC-B26-0659": {
+  "summary": "This enacted act adopts the local portion of the District of Columbia's Fiscal Year 2027 budget, with total operating appropriations capped at $21,876,166,228, allocated agency by agency. Its only gaming-related content is a carryover clause for the Office of the Chief Financial Officer. That clause makes all money deposited in the Internet Gaming Revenue Fund, regardless of fiscal year, available for spending through September 30, 2027, and does the same for FY2027 deposits into the DC Lottery Reimbursement Fund. It does not create, amend or regulate any gaming, wagering or lottery program.",
+  "mechanics": [
+   "Sec. 2 caps FY2027 operating appropriations at the lesser of total District revenues or $21,876,166,228. Of that, $12,242,076,569 is local funds and $782,454,817 is dedicated taxes.",
+   "OCFO appropriation (Governmental Direction and Support, para. (21)) is $221,181,516. All funds deposited into the Internet Gaming Revenue Fund, without regard to fiscal year, are authorized for expenditure and remain available until September 30, 2027.",
+   "Under the same paragraph, funds deposited during FY2027 into the DC Lottery Reimbursement Fund are authorized for expenditure through September 30, 2027.",
+   "General provisos let local and other funds be reprogrammed through November 15, 2027 (proviso (8)). Unspent balances in non-lapsing funds roll into FY2027 (proviso (14)).",
+   "The act became law as L26-0179, effective September 15, 2026. The supplied text is truncated partway through the Public Education Systems section, so later agency lines were not reviewed."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Like the omnibus budgets in MI HB5619 and NJ A5327/S2027, this is a general appropriations act in which gaming appears only as a fund line. MI HB6127 and MI HB4346 are different: they substantively change how internet gaming fund money is spent or allocated, whereas DC B26-0659 merely carries forward spending authority for an already existing Internet Gaming Revenue Fund. Unlike the iGaming authorization bills (IL HB3080/HB4797, MD HB1343/SB885, MA H332/S235), it contains no licensing, tax-rate or regulatory provisions.",
+  "watch": "Watch the companion FY2027 Budget Support Act and the underlying statute governing the Internet Gaming Revenue Fund, since any change to DC gaming revenue use, rates or regulation would appear there rather than in this appropriations act.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 81923,
+  "generated": "2026-11-03T22:15:27.583Z"
+ },
+ "CT-SB240": {
+  "summary": "SB 240 directs the Commissioner of Mental Health and Addiction Services to develop a comprehensive public health plan to identify, prevent and reduce the risks of Internet gaming disorder, and to identify any link between that disorder and gambling behaviors. 'Internet gaming disorder' is not defined; the term usually refers to compulsive video or online game play rather than licensed online casino wagering. The bill creates no operator obligations and is a planning and reporting mandate only.",
+  "mechanics": [
+   "Section 1 assigns the Commissioner of Mental Health and Addiction Services (DMHAS) to develop the plan; it is a new, uncodified section.",
+   "The plan must cover data monitoring, public education, early screening, health care provider training and evidence-based treatment pathways.",
+   "The plan must also coordinate with existing gambling harm prevention efforts, with particular attention to youth and other vulnerable populations.",
+   "The plan must identify any link between Internet gaming disorder and gambling behaviors.",
+   "The report is due to the Public Health Committee by January 1, 2027, under CGS 11-4a.",
+   "The act takes effect from passage; it sets no enforcement, penalties, fees or appropriation, and does not define 'Internet gaming disorder.'"
+  ],
+  "issue_tags": [],
+  "relevance": "partial",
+  "comparison": "Unlike the iGaming authorization bills in IL (HB3080, HB4797), MD (HB1343, SB885, SB884) and MA (H332, S235), SB 240 neither authorizes nor regulates any form of gaming. It also imposes no direct operator restrictions, unlike ME LD 2080 (credit card ban) or NJ A 3258 (micro-bet ban). It is closest in spirit to NJ AR150's harm-reduction focus, but it is a public-health study aimed at video-game-style 'gaming disorder' and its possible crossover into gambling. That framing is unusual among the listed bills.",
+  "watch": "Watch whether the DMHAS plan, due January 1, 2027, treats gambling-like mechanics such as loot boxes, mystery packs, live card breaks or social and sweepstakes casinos as a bridge between gaming disorder and gambling, and whether it recommends youth-focused screening, advertising or product restrictions that later legislation could impose on operators and collectibles companies.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 1916,
+  "generated": "2026-11-03T22:15:28.965Z"
+ },
+ "DC-B26-0660": {
+  "summary": "This is the District of Columbia's emergency act adopting the local portion of the FY2027 budget (fiscal year ending September 30, 2027), setting agency-by-agency appropriations and fund-availability rules. Its only gaming content in the text provided is a proviso under the Office of the Chief Financial Officer keeping the Internet Gaming Revenue Fund and the DC Lottery Reimbursement Fund available for expenditure through September 30, 2027. It creates no new wagering rules, tax rates, or licensing requirements.",
+  "mechanics": [
+   "Caps total FY2027 operating appropriations at the lesser of total District revenues or $21,876,166,228, of which $12,242,076,569 is local funds and $782,454,817 is dedicated taxes (Sec. 2, proviso (1)).",
+   "Office of the Chief Financial Officer receives $221,181,516. All funds deposited in the Internet Gaming Revenue Fund, regardless of fiscal year, are authorized for expenditure and remain available until September 30, 2027.",
+   "All funds deposited during FY2027 into the DC Lottery Reimbursement Fund, also under the CFO, are authorized for expenditure and remain available until September 30, 2027.",
+   "Unspent balances in non-lapsing funds at the end of FY2026 carry forward and are appropriated for FY2027 (proviso (14)). Reprogramming and transfers are allowed through November 15, 2027 (proviso (8)).",
+   "Emergency act: published as A26-0378 at 73 DCR 011097 and expires October 27, 2026, so a permanent or temporary companion measure is needed for continuity.",
+   "The text supplied is truncated partway through the Public Education Systems heading (at Special Education Transportation), so any lottery or gaming-agency appropriations appearing later in the act cannot be confirmed."
+  ],
+  "issue_tags": [
+   "tax"
+  ],
+  "relevance": "incidental",
+  "comparison": "Like the omnibus appropriations bills listed, including MI HB5619, MI SB0878, NJ A5327 and NJ S2027, this act touches gaming only as a budget line. Unlike MI HB4346 and MI HB6127, it does not change how internet gaming revenue is allocated or how the gaming fund may be spent. It only preserves expenditure availability of the existing Internet Gaming Revenue Fund. It contains nothing comparable to the substantive iGaming authorization bills (IL HB3080, MD HB1343, MA S235), the advertising limits (MI SB0713), or the prediction-market measures (CT HB05038, NJ A5336).",
+  "watch": "Operators should check whether the untruncated text or the companion Budget Support Act redirects Internet Gaming Revenue Fund or lottery-related balances, or changes sports-wagering fees or taxes, since this appropriations act only carries those funds forward.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 81898,
+  "generated": "2026-11-03T22:15:37.395Z"
+ },
+ "CO-HB1255": {
+  "summary": "HB26-1255 would have required large social media platforms to keep a 24/7 law-enforcement contact process and staffed hotline, and to comply with search warrants for user-account information within 24 hours. It also required operators to report to the user's local police or sheriff, within 24 hours, any human-reviewed account restriction, suspension, or termination imposed for publicly posted content violating the platform's policies on specific or imminent threats. The Governor vetoed it on 2026-05-28, so none of it takes effect.",
+  "mechanics": [
+   "Coverage (new 16-3-314(1)(b)): a public or semipublic site or app with at least 1,000,000 discrete monthly users, user profiles, and user-generated content viewable by others. Services whose predominant function is interactive or virtual gaming, as described in 6-1-1601(4)(b)(VII), are expressly included. Excluded are internal enterprise tools, pure e-commerce marketplaces, health or reproductive-care services, review-only comment features, and predominantly provider-selected news, sports, entertainment, or e-commerce content whose chat features relate to that content.",
+   "Warrants (16-3-314(2)-(4)): operators must run an always-available process and staffed hotline, acknowledge a warrant within 8 hours, give status updates, and comply within 24 hours. This is subject to the Colorado Privacy Act, the Reproductive Health Equity Act, and the state constitution, and a court may extend the deadline on a written good-cause finding with no 'adverse result' under 18 U.S.C. 2705(a)(2).",
+   "Enforcement of the warrant section: the AG or a district attorney may seek an injunction, restitution, disgorgement, damages, and civil penalties of up to $250,000 per violation.",
+   "Adverse-action reporting (new 6-1-1602): operators must report to the user's municipal police or county sheriff within 24 hours, including the content at issue. Reporting is barred where the operator believes in good faith that the content is legally protected health-care activity. A violation is a deceptive trade practice under 6-1-105(1)(vvvv), and the AG has rulemaking authority.",
+   "Amendments to other law: Section 5 would have amended 16-3-313, as added by SB26-011, cutting that bill's warrant deadline for covered platforms from 72 to 24 hours and raising its penalty from $5,000 to $250,000 per violation, contingent on SB26-011 becoming law. Section 4 also amends the active-user threshold in 6-1-1601(4)(a)(I); the scanned strike-through is garbled, so the new figure is unclear.",
+   "Effective date would have been the 90-day post-adjournment date (August 12, 2026), subject to referendum, but the bill was vetoed."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is a close analogue. AK HB47 targets criminal liability for generated sexual imagery and CSAM rather than platform warrant or reporting duties. AL HB351 is a general consumer data-privacy bill. AL HJR51 only creates a children's internet safety study commission. What stands out about CO HB1255 is the combination of a 24-hour warrant-compliance mandate, compulsory proactive reporting of threat-based moderation decisions to local police, and $250,000-per-violation penalties, along with its express inclusion of interactive or virtual gaming services in the social media definition.",
+  "watch": "If this is reintroduced after the veto, check whether a sportsbook, iGaming, or card-break app with user profiles, community chat or live-stream comments, and 1 million or more monthly users falls outside the provider-selected sports or entertainment content and e-commerce exclusions, or inside the interactive-gaming inclusion, because that would trigger 24-hour warrant compliance, threat-report duties, and $250,000-per-violation exposure.",
+  "model": "claude-opus-5-5",
+  "version": "Chaptered",
+  "text_chars": 14535,
+  "generated": "2026-11-03T22:15:39.320Z"
+ },
+ "DC-B26-0661": {
+  "summary": "DC B26-0661 is the District's omnibus Fiscal Year 2027 Budget Support Act, enacted as D.C. Law L26-0189 effective October 2, 2026. It amends dozens of unrelated laws covering telework, lobbying fees, the Attorney General's litigation fund, economic development incentives, education funding, tax conformity, TIF districts and special fund transfers. The table of contents lists a Title II Subtitle DD titled \"Internet Gaming Revenue Fund\" (p. 59), but the text supplied is cut off in Title I, so the substance of that subtitle cannot be confirmed here.",
+  "mechanics": [
+   "Title II, Subtitle DD, \"Internet Gaming Revenue Fund\" (p. 59 of the enrolled text) is the only gaming-related heading in the act; its operative text is not in the excerpt provided.",
+   "Title VII includes Subtitle M (Special Fund Transfers) and Subtitle N (Special Fund Sweep Reversals), which could move money into or out of dedicated funds; whether any gaming fund is affected cannot be confirmed from the excerpt.",
+   "Sec. 1032 raises the lobbyist registration fee from $350 to $500, and the fee for nonprofit lobbyists from $100 to $250, extending the nonprofit rate to 501(c)(4) organizations. It also raises the late-filing penalty to $200 per day for up to 60 days.",
+   "Sec. 1072 redirects most Office of the Attorney General litigation recoveries into the Litigation Support Fund, with carve-outs for listed funds. Where an agency referred the matter or gave significant support, recoveries are split 50/50 with the agency's special fund or the General Fund. Outside contingency-counsel amounts are excluded from the $23.5 million cap.",
+   "Effective October 2, 2026, published in the DC Register Vol. 73, p. 013120."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Like the other omnibus budget measures listed, AK HB53, AL HB238, and CA AB101 and AB109, DC B26-0661 is primarily a fiscal vehicle; none of those listings indicate gaming provisions. What sets DC's bill apart is a dedicated \"Internet Gaming Revenue Fund\" subtitle. That points to the District earmarking or restructuring proceeds from online gaming through the budget process rather than through standalone gaming legislation.",
+  "watch": "Obtain the full text of Subtitle DD and the Title VII fund transfer and sweep subtitles to confirm whether internet gaming or sports-wagering revenue is being re-earmarked, swept to the General Fund, or tied to new operator obligations or a broader iGaming authorization.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 246898,
+  "generated": "2026-11-03T22:15:43.211Z"
+ },
+ "MD-HB1255": {
+  "summary": "HB1255 places a question on the November 2026 general election ballot asking Maryland voters whether to expand commercial gaming to authorize Internet gaming (iGaming), as required by Article XIX, § 1(e) of the Maryland Constitution. If voters approve, the General Assembly may by later legislation authorize the State Lottery and Gaming Control Commission to issue iGaming licenses, limited to video lottery operation (casino) licensees and entities under contract with them. The bill itself sets no tax rate, license fee, or operating rules; it only states legislative intent that the State's share of revenue go to dedicated purposes including public education.",
+  "mechanics": [
+   "Section 1(a): the General Assembly may authorize, by law, the State Lottery and Gaming Control Commission to license Internet gaming; the bill does not itself authorize operations.",
+   "Section 1(b)(2): licenses may issue only to holders of a video lottery operation license (as defined in State Government § 9–1A–01) and, subject to further eligibility criteria set by law, entities under contract with such holders. This effectively ties iGaming to Maryland's six casinos and their platform partners.",
+   "Section 1(b)(1): implementing legislation must set criteria for eligible applicants and specify the permissible forms and means of conducting Internet gaming.",
+   "Section 2: if the referendum passes, the State's share of iGaming revenue is to be used for dedicated purposes including public education. No tax rate or fee is specified.",
+   "Section 4: ballot question at the November 2026 general election. If a majority votes 'For', the Act takes effect 30 days after the official canvass. If a majority votes 'Against', the Act is null and void with no further legislative action required.",
+   "Section 5: the Act takes effect July 1, 2026, solely to enable the referendum. Cross-filed with SB 761; assigned to Ways and Means, with a hearing set for 3/05."
+  ],
+  "issue_tags": [
+   "legalize",
+   "licensing",
+   "tax"
+  ],
+  "relevance": "core",
+  "comparison": "Unlike IL HB3080/HB4797 and OH SB197, which are full statutory iGaming frameworks setting licensing, taxes and operating rules, MD HB1255 is only an enabling referendum that defers every operational and fiscal term to future legislation. It most resembles the MA bills (H332, H4431, S235) in aim, but Maryland's constitutional requirement for voter approval of gaming expansion makes a ballot question a precondition. Its land-based tether, limiting licenses to casino licensees and their contracted partners, contrasts with ME LD1164, which would channel iGaming to the Wabanaki Nations.",
+  "watch": "Watch whether the cross-filed SB 761 or the implementing legislation that follows a successful November 2026 vote limits standalone online operators to contracted 'skin' status under casino licensees, and what tax rate, skin caps, and eligibility criteria it sets under Section 1(b).",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 4328,
+  "generated": "2026-11-03T22:15:48.585Z"
+ },
+ "MD-SB761": {
+  "summary": "SB761 would place a question on the November 2026 Maryland general election ballot, as required by Article XIX, § 1(e) of the Maryland Constitution for any expansion of commercial gaming, asking voters whether to authorize Internet gaming. If voters approve, the General Assembly may by later law authorize the State Lottery and Gaming Control Commission to issue Internet gaming licenses, limited to video lottery operation licensees and entities under contract with them. The bill itself contains no tax rate, licensing fee or operating rules, and it was withdrawn by its sponsor on March 13, 2026.",
+  "mechanics": [
+   "Section 1(a): the General Assembly may by law authorize the State Lottery and Gaming Control Commission to license Internet gaming in Maryland.",
+   "Section 1(b)(2): licenses are available only to holders of a video lottery operation license (the casino licensees, as defined in State Government Article § 9–1A–01) and, subject to further eligibility criteria set by law, entities under contract with those holders.",
+   "Section 1(b)(1): implementing legislation must set the eligibility criteria for applicants and specify the permissible forms and means of conducting Internet gaming.",
+   "Section 2: the State's share of Internet gaming revenue is to go to dedicated purposes, including public education funding; no rate or amount is specified.",
+   "Sections 3 and 4: the ballot question for November 2026 reads 'Do you favor the expansion of commercial gaming in the State of Maryland to authorize Internet gaming for dedicated purposes including the funding of public education?' If voters approve, the Act takes effect 30 days after the canvass; if they reject it, the Act is null and void.",
+   "Section 5: the Act takes effect July 1, 2026, solely to allow the referendum to be held."
+  ],
+  "issue_tags": [
+   "legalize",
+   "licensing"
+  ],
+  "relevance": "core",
+  "comparison": "Unlike IL HB3080 and HB4797 and OH SB197, which are full statutory iGaming frameworks with licensing and tax provisions, MD SB761 is only an enabling referendum that defers every operational and tax detail to later legislation. It is narrower than ME LD1164, which steers iGaming opportunity to the Wabanaki Nations, because it confines eligibility to Maryland's existing video lottery (casino) licensees and their contracted partners. It does not address advertising or revenue allocation mechanics, which are the focus of MI SB0713/SB0714 and MI HB4346/HB6127.",
+  "watch": "Although this bill was withdrawn, watch whether the cross-filed companion (6lr3217) or a later session revives the referendum, because Section 1(b)(2) would effectively shut out standalone online operators except as contracted partners of Maryland casino licensees, and all tax and licensing terms would be set in later implementing legislation.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 4336,
+  "generated": "2026-11-03T22:15:49.087Z"
+ },
+ "DC-B26-0724": {
+  "summary": "This is the District of Columbia's emergency Fiscal Year 2027 Budget Support Act, an omnibus measure that enacts or amends dozens of unrelated provisions across government operations, economic development, public safety, education, human services, infrastructure, and finance and revenue. Its only gaming-related element visible in the provided text is a table-of-contents entry for Title II, Subtitle DD, \"Internet Gaming Revenue Fund\"; the operative text of that subtitle is not included in the excerpt, which cuts off in Title II, Subtitle B. As an emergency act it is temporary and, per the status line, expires November 11, 2026.",
+  "mechanics": [
+   "Omnibus structure: nine titles covering government direction (telework, ANC funding, lobbying fees), economic development (downtown conversions, tax abatements, TIFs), public safety, education, human services, operations and infrastructure, finance and revenue, technical corrections, and applicability.",
+   "Title II, Subtitle DD is captioned \"Internet Gaming Revenue Fund,\" but its text is not in the provided excerpt, so the fund's revenue source, deposit rules and permitted uses cannot be confirmed.",
+   "Title VII includes Subtitles M (Special Fund Transfers) and N (Special Fund Sweep Reversals), which could affect gaming-related special funds; their text is also not in the excerpt.",
+   "Sample non-gaming changes in the text: lobbyist registration fee raised from $350 to $500 (Sec. 1032); a $300,000 cap on mayoral transition payments (Sec. 1044); and the Central Washington activation abatement extended to 2027 with lowered annual caps (Sec. 2002).",
+   "Emergency act published as A26-0416 at 73 DCR 011509, expiring November 11, 2026, so any gaming-fund provision lapses unless carried in temporary or permanent companion legislation."
+  ],
+  "issue_tags": [
+   "tax"
+  ],
+  "relevance": "incidental",
+  "comparison": "The comparable listed bills are general budget vehicles: AK HB53 (operating budget), AL HB238 (Education Trust Fund appropriations), and CA AB101, AB102, AB109 and AB111 (Budget Acts of 2025 and 2026). Like those, DC B26-0724 touches gaming only as one line item within a broad fiscal package. It is unusual in carrying a dedicated subtitle captioned \"Internet Gaming Revenue Fund,\" a fund keyed to online gaming revenue, whereas none of the listed state budget bills shows a comparable gaming-specific fund in its title or description.",
+  "watch": "Obtain the full text of Subtitle DD and the special fund transfer and sweep subtitles to see whether the District is earmarking or diverting internet gaming or sports-wagering revenue, which could signal iGaming expansion or changes to the treatment of operator payments, and track the permanent FY2027 Budget Support Act that will replace this emergency act after November 11, 2026.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 197009,
+  "generated": "2026-11-03T22:15:50.772Z"
+ },
+ "MD-SB932": {
+  "summary": "SB932 adds new Commercial Law § 14-1330, requiring operators of social media platforms with Maryland users to show those users the general geographical location (state, province, or comparable subdivision plus country, derived from IP address) of each user whose account is visible to them. Platforms may not display the location of known minors or of participants in Maryland's Address Confidentiality Program. Violations are unfair, abusive, or deceptive trade practices under the Consumer Protection Act, effective October 1, 2026.",
+  "mechanics": [
+   "Under § 14-1330(a)(2), 'general geographical location' means the state, province, or comparable subdivision and the country, derived at the time of access from the IP address of the user's network connection. It expressly excludes precise geolocation data as defined in §§ 14-4701 and 14-4801. The engrossed text appears to strike 'city.'",
+   "Under § 14-1330(a)(3), a 'social media platform' is a website, app, or AR/VR application with a Maryland user that meets four conditions: it allows accounts or profiles for creating, sharing, and viewing user-generated content; it lets users view each other's content; it primarily serves as a medium for social interaction; and it populates a list of users with whom a user shares a social connection.",
+   "The definition excludes services that qualify only because they offer email or direct messaging, services composed primarily of preselected provider content, and services 'for interactive gaming.' 'Interactive gaming' is not defined in the section.",
+   "Under § 14-1330(b)(1), operators must display to a Maryland user the general location of each user whose account is visible to that user.",
+   "Under § 14-1330(b)(2)–(3), operators may not display the location of a user the operator knows or has reason to know is a minor, or of a user who certifies participation in the Address Confidentiality Program (State Government Art. Title 7, Subtitle 3). Operators must build a process for users to make that certification.",
+   "Under § 14-1330(c) and § 13-301(14)(xlix), a violation is a UDAP practice enforceable under Title 13, except §§ 13-407, 13-408, and 13-411. The effective date is October 1, 2026."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "This bill sits alongside the social-media consumer protection bills on the list rather than the gaming bills. CO HB1255 compels platforms to report adverse actions to law enforcement. MI HB4388 and OK HB1275 regulate minors' access and parental consent, and NC H462 pairs data privacy with social media safety. None of those, as described, mandates public display of every user's IP-derived location, which makes SB932 unusual: it imposes an affirmative transparency obligation rather than an access or privacy restriction. Its only gaming touchpoint is the carve-out for services 'for interactive gaming.'",
+  "watch": "Because 'interactive gaming' is undefined and sports wagering and collectibles marketplaces are not separately excluded, operators should assess whether any social features could bring their service within the four-part platform definition and trigger location-display duties and UDAP exposure from October 1, 2026; examples include sportsbook bet-sharing feeds, live card-break streaming apps with follower lists and user profiles, and community features.",
+  "model": "claude-opus-5-5",
+  "version": "Engrossed",
+  "text_chars": 6050,
+  "generated": "2026-11-03T22:15:59.595Z"
+ },
+ "MI-HB4388": {
+  "summary": "HB4388 creates the Social Media Regulation Act, requiring social media companies with at least 5,000,000 account holders worldwide to verify the age of Michigan account applicants and existing account holders and to obtain express parental or guardian consent before a minor (under 18, unemancipated and unmarried) may hold an account. For minor accounts it imposes design restrictions, parental access rights, a default 10:30 p.m. to 6:30 a.m. curfew, and limits on data collection. It is enforced by the Attorney General after a 30-day notice-and-cure period and by a private right of action.",
+  "mechanics": [
+   "Coverage (Sec. 3(l)-(m)): applies to interactive computer services running a social media platform with at least 5,000,000 account holders worldwide. A long list of exclusions includes email, direct messaging, e-commerce where interaction is generally limited to reviews and listings, and 'interactive gaming, virtual gaming' services where communication relates to the content (Sec. 3(m)(i)(F)).",
+   "Age verification and consent (Sec. 5): starting 180 days after the effective date, age verification and express parental consent are required at application. Existing account holders must comply within 14 days of their first access attempt or be locked out. The AG writes rules on verification methods, which may not be limited to government ID, and verification data may be used only for compliance.",
+   "Minor-account restrictions (Sec. 7): minor accounts may not appear in search results except through friend links. Targeted or suggested groups, services, products, posts, accounts or users are banned in minor accounts. Personal information from a minor account's posts, messages or activity may not be collected or used unless needed to comply with state or federal law.",
+   "Parental access and curfew (Secs. 9, 11): parents get a password or other means to view all of the minor's posts and message responses. Access is blocked from 10:30 p.m. to 6:30 a.m. based on IP address, and parents may change or remove the curfew or set daily hour limits.",
+   "AG enforcement (Secs. 13, 15): the AG must investigate consumer complaints. Civil fines are up to $2,500 per violation, plus actual damages, injunctive relief, fees and costs. A 30-day written notice and cure period applies, and a cure with a written assurance bars suit.",
+   "Private action and anti-waiver (Secs. 17, 21): consumers may recover the greater of actual damages or $2,500 per violation. Contract terms entered into on or after the effective date that waive the act's protections, the complaint right or the private action are void."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest analogues are OK HB1275 and OK HB4356, which also tie minors' social media access to age verification and parental permission. Michigan goes further, adding a statutory curfew, full parental viewing access to posts and messages, a ban on targeted or suggested content and products in minor accounts, and a $2,500-per-violation private right of action. NC H462 pairs social media safety with broader data privacy, whereas HB4388 limits data use only for minor accounts and verification data. CO HB1255 (law-enforcement reporting) and MD SB932 (user location display) address different platform duties, and none of the listed gaming bills, such as CT HB05038's under-21 prediction-market ban, regulate wagering through social media rules.",
+  "watch": "Sportsbook and iGaming operators fall outside the 5,000,000-holder social media definition and benefit from the interactive-gaming exclusion in Sec. 3(m)(i)(F), but collectibles clients running live card breaks with chat should check whether a platform's interactive features exceed the narrow e-commerce exclusion in Sec. 3(m)(i)(E). Separately, Sec. 7(1)(b)'s ban on targeted or suggested products in minor accounts, combined with the $2,500-per-violation private action, could push large platforms to tighten ad-delivery controls in ways that affect all operators' Michigan social media marketing.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 15680,
+  "generated": "2026-11-03T22:16:07.700Z"
+ },
+ "MI-HB5834": {
+  "summary": "HB 5834 rewrites section 19 of Michigan's Lawful Internet Gaming Act (MCL 432.319) to specify which individuals the Gaming Control Board must fingerprint and run through state police and FBI criminal history record checks. It replaces the general reference to applicants, licensees, and \"other persons\" with defined lists of individuals tied to internet gaming supplier and occupational licenses. Fingerprints are kept for ongoing arrest notifications (rap back).",
+  "mechanics": [
+   "Sec. 19(2) and (4): Anyone applying for or holding an internet gaming supplier license or occupational license must consent to inspections, criminal history record checks, searches and seizures, and to providing handwriting exemplars, fingerprints, and photographs; the Board may run checks on these individuals and on Board employees and prospective employees. The prior reference to Board agents and contractors and the separate photo-plus-two-fingerprint-sets requirement in former subsection (1) appear to be struck.",
+   "Sec. 19(6): Occupational licensees subject to checks include live internet game dealers, infrastructure technology personnel who can directly affect gameplay, their supervisors, and managers of an internet gaming operation, including the heads of fraud and risk, accounting and finance, and operations, and whoever remits daily payment to the state.",
+   "Sec. 19(7): Supplier-side individuals include directors, and principal executive, operations, or accounting officers who are not occupationally licensed. It also covers directors and principal officers of any \"qualifying business,\" meaning an entity that controls the applicant, holds more than a 5% direct or indirect ownership interest, or shares common ownership and provides a material aspect of the applicant's goods or services in Michigan.",
+   "Sec. 19(5): Fingerprints go to the Michigan State Police and the FBI. State Police must perform every check the Board requests and may charge the Board a fee. The Board may not share check results with any private entity.",
+   "Sec. 19(6)-(7) (renumbered retention provisions): State Police keep fingerprints in an automated identification system that flags new arrests and must notify the Board immediately. The FBI may also retain prints in its automatic notification system if State Police participates.",
+   "No effective date, penalties, or fee amounts are stated in the text."
+  ],
+  "issue_tags": [
+   "licensing"
+  ],
+  "relevance": "core",
+  "comparison": "Most listed iGaming bills would build new regimes from scratch, including IL HB3080/HB4797, MD HB1343/SB885/SB884, MA H332/S235/H4431, and ME LD1164. HB 5834 instead is a narrow technical amendment to an existing, operating Michigan iGaming market. It focuses solely on the statutory authority for fingerprint-based background checks. The closest analogue is OH SB197, which amends Ohio's criminal-records-check statute (R.C. 109.572) as part of legalizing internet gambling. Michigan's bill is unusual in listing specific job functions and parent-company officers by role rather than relying on general \"applicant/licensee\" language.",
+  "watch": "Watch the expanded reach to directors and principal officers of parent and affiliate entities holding more than 5% or sharing common ownership, which creates continuing FBI rap-back monitoring of their arrests, and watch for a parallel amendment to the Lawful Sports Betting Act (2019 PA 149) that would extend the same regime to sportsbook personnel.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 6874,
+  "generated": "2026-11-03T22:16:09.828Z"
+ },
+ "MI-HB4347": {
+  "summary": "HB 4347 rewrites how Michigan's agriculture and equine industry development fund under the Horse Racing Law of 1995 is distributed. It replaces open-ended sums and caps with fixed percentages of the fund's prior fiscal-year-end balance, calculated after set carve-outs, including a backfill to the school aid fund if internet gaming deposits fall below FY2024 levels. It also tightens section 26 so that pari-mutuel wagering, including through third-party facilitators, may be offered only by a race meeting licensee and only at the racetrack named in its license.",
+  "mechanics": [
+   "Sec. 20(18) sets the distribution base as the prior fiscal-year-end fund balance after these deductions: $2.5M to the Michigan Gaming Control Board; MDARD's administrative costs; testing costs under 20(13); the compulsive gaming prevention deposit of 1/15 of 1% of gross wagers under 20(15); and, if current-year Lawful Internet Gaming Act school aid deposits (MCL 432.316) fall below the FY ending 9/30/2024, the shortfall paid to the state school aid fund.",
+   "Standardbred and fair shares under 20(5): 16% purses; 6% split equally among county fairs; 25% special 2- and 3-year-old purses; 12% breeders' awards, with the cap raised from 10% to 20% of gross purse; 2% fair training and stabling; 8% fair operations (judges, photo finish, vet, drug and alcohol testing); 5% 4-year-old races; 15% standardbred sire stakes.",
+   "Thoroughbred shares under 20(6): 3% owner awards; 3% breeders' awards, with the cap raised from 10% to 30%; 1% 4-year-old-and-older races; 3% sire stakes. If no thoroughbred meet runs, top-5 earner award pools pay out 50/25/12/8/5. Research and development grants under 20(11) receive 0.5% each.",
+   "New 'eligible recipient' definition (resident of Michigan) in sec. 2(h) is used to restrict owner and breeder awards and stallion ownership. Owners must file eligibility forms by January 15, and MDARD must certify to Treasury by February 15.",
+   "New 20(19) sends any fund allocation above $8,000,000 in a fiscal year to the pari-mutuel horse racing disbursement account under sec. 19. Third-party facilitator wager tax money stays excluded from the fund under 20(2).",
+   "Sec. 26(2): wagering on live or simulcast races, in person or via a third-party facilitator, may be offered only by a race meeting licensee holding all required approvals, and only at the licensed racetrack identified in the license; fair racetracks need a current track license. Enacting section 1 makes the bill contingent on enactment of HB 4346 or the Senate companion (request S01228'25)."
+  ],
+  "issue_tags": [
+   "licensing",
+   "tax"
+  ],
+  "relevance": "core",
+  "comparison": "None of the listed bills addresses horse racing or pari-mutuel fund allocation. The internet gaming authorization bills (IL HB3080 and HB4797, MD HB1343 and SB885, OH SB197, MA H332 and S235) create new iGaming markets and tax structures. MI HB4347 instead treats existing Michigan iGaming revenue as a benchmark, using equine fund money to make the school aid fund whole if Lawful Internet Gaming Act deposits drop below FY2024. That cross-subsidy, paired with a tie-bar to HB 4346, is unusual and suggests the package anticipates changes to iGaming revenue flows, though HB 4346's text is not provided here.",
+  "watch": "Operators should track tie-barred HB 4346 and the 20(18)(e) school-aid backfill keyed to FY2024 iGaming deposits, which signals possible changes to iGaming revenue allocation. Online horse-wagering partners should also note that sec. 26(2) restricts third-party facilitator wagering to race meeting licensees tied to a specific licensed racetrack.",
+  "model": "claude-opus-5-5",
+  "version": "Engrossed",
+  "text_chars": 31810,
+  "generated": "2026-11-03T22:16:12.182Z"
+ },
+ "MI-HB6127": {
+  "summary": "Public Act 93 of 2026 amends sections 14 and 16 of Michigan's Lawful Internet Gaming Act (MCL 432.314 and 432.316), mainly to change how money in the internet gaming fund is spent. The chaptered text restates the operator tax in section 14 and sets out a revised spending order (waterfall) in section 16 that now ends with a $1,000,000 annual allocation for tribal governments before the remainder goes to the state school aid fund. It took immediate effect on September 21, 2026.",
+  "mechanics": [
+   "Sec. 14(1) restates the graduated tax on non-tribal operators' annual adjusted gross receipts: 20% under $4M, 22% from $4M to under $8M, 24% from $8M to under $10M, 26% from $10M to under $12M, and 28% at $12M or more. Tribal operators instead make payments under section 7(1)(f).",
+   "Sec. 14(3) requires monthly payment, due on the 10th of the following month. Sec. 14(5) keeps the 1.25% city municipal services fee on the adjusted gross receipts of operators that hold a casino license in a city imposing that fee on casinos.",
+   "Sec. 14(4) bars any other tax, payment or fee imposed only on internet gaming operators, except as provided in the act and in section 12(17) of the Michigan Gaming Control and Revenue Act (MCL 432.212). It preserves existing city development agreements.",
+   "Sec. 16(4) waterfall, in order: (a) the board's internet gaming regulatory costs; (b) costs of administering millionaire party activity under the bingo act; (c) $3M a year to the compulsive gaming prevention fund; (d) up to $7M a year to the Christopher R. Slezak first responder presumed coverage fund, to cover 50% of claims and administration costs.",
+   "Sec. 16(4)(e)-(f): $1M a year goes to the Michigan strategic fund for distribution to federally recognized tribal governments for essential government services, under an allocation plan recommended by the Inter-Tribal Council of Michigan. All remaining money goes to the state school aid fund.",
+   "Immediate effect: approved and effective September 21, 2026."
+  ],
+  "issue_tags": [
+   "tax"
+  ],
+  "relevance": "core",
+  "comparison": "Ohio SB197, Illinois HB3080/HB4797, Maryland HB1343/SB885 and Massachusetts H332/S235 would create or legalize and tax iGaming from scratch, whereas Michigan HB6127 adjusts revenue distribution inside an established iGaming regime without changing operator obligations in substance. New Jersey A5336/S4447 add a new prediction-market surtax, while Michigan's bill leaves the operator rate schedule as restated. Its $3M problem-gambling allocation is a funding counterpart to Connecticut SB00240, which addresses internet gaming disorder through a public health plan rather than earmarked operator tax revenue.",
+  "watch": "Because the chaptered text does not show strikeouts, operators should confirm against the prior version that the section 14 rates and the new cross-reference to MGCRA section 12(17) do not add any payment obligation, and should watch whether diverting more fund money to non-gaming uses (the first-responder fund and tribal grants) signals future pressure to raise the 20–28% iGaming rates.",
+  "model": "claude-opus-5-5",
+  "version": "Chaptered",
+  "text_chars": 6138,
+  "generated": "2026-11-03T22:16:15.897Z"
+ },
+ "MI-SB713": {
+  "summary": "SB 713 adds section 9a to Michigan's Lawful Internet Gaming Act (2019 PA 152) to create a statutory advertising and promotions regime for internet gaming. It requires Gaming Control Board pre-approval of all internet gaming advertisements, bars deceptive ads and marketing to people under 21, and sets a 30% under-21 audience cap and mandatory responsible-gaming disclaimers. Violations carry escalating civil fines and, on a third violation, revocation of the operator's license, with Attorney General enforcement.",
+  "mechanics": [
+   "Sec. 9a(1): every internet gaming advertisement must be approved by the board. Sec. 9a(3) lets municipalities adopt ordinances placing reasonable restrictions on public signs related to internet gaming, provided they are not unreasonably impracticable and do not conflict with the act or rules.",
+   "Sec. 9a(5): no advertising or marketing unless the advertiser has reliable evidence that not more than 30% of the TV, radio, website or print audience is reasonably expected to be under 21. Sec. 9a(7) bans marketing and sponsorships targeting under-21s, but allows named sponsorship of arenas, stadiums and other public places and of television channels.",
+   "Sec. 9a(4) bans deceptive, false or misleading ads and statements. Sec. 9a(6) requires every ad or promotion to carry a problem-gambling disclaimer and the toll-free compulsive gaming helpline number.",
+   "Sec. 9a(8) exempts ads that appear on live TV or sports broadcasts only because of their physical placement at the venue. Sec. 9a(11) defines \"advertisement\" broadly as paid marketing likely to induce internet wagering, including search, display, native, video, app ads, billboards, leaflets and sponsorships. The definition excludes TV or internet programs that discuss gaming and name a specific operator, supplier or platform provider.",
+   "Sec. 9a(9)-(10) sets penalties: a civil fine of up to $1,000 for a first violation, up to $5,000 for a second, and license revocation for a third or subsequent violation. The Attorney General may bring enforcement actions. No separate effective date is stated."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "core",
+  "comparison": "Unlike the authorization bills listed, which create full iGaming licensing frameworks with advertising as one component, SB 713 is a standalone advertising statute for an already-legal iGaming market. These include IL HB3080/HB4797, MD HB1343/SB885, OH SB197 and MA H332/S235. NJ AR150 is only a non-binding resolution urging limits on targeted ads to problem gamblers. CT HB05038 applies an under-21 advertising ban to prediction markets rather than licensed casinos. SB 713 is unusual for combining universal board pre-approval, local sign ordinances and mandatory license revocation on a third violation, which is far harsher than the modest fine amounts suggest.",
+  "watch": "Operators should watch the automatic license revocation on a third violation, which could be triggered by low-level ad infractions given universal pre-approval and helpline disclaimer requirements, along with how the board and Attorney General will define \"reliable evidence\" for the 30% under-21 audience test and whether affiliate or influencer content falls within the broad \"advertisement\" definition.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 3280,
+  "generated": "2026-11-03T22:16:24.997Z"
+ },
+ "NC-H198": {
+  "summary": "H198 is North Carolina's 2026 alcoholic beverage control omnibus. It authorizes the ABC Commission to borrow up to $310 million for a new automated warehouse, makes technical fixes across Chapter 18B, and creates new permit types, including a service business permit and a special multiple event permit for nonprofits and political organizations. Its only gaming-adjacent content is letting nonprofit and political organizations offer sealed alcoholic beverages as raffle prizes or auction items at fund-raising events.",
+  "mechanics": [
+   "Sec. 1: one-time ABC Commission loan of up to $310,000,000, repaid only from permit fees and with no pledge of State credit or real property; effective July 1, 2026.",
+   "Sec. 6: permit year runs to May 31, a safe harbor bars revocation for unpaid renewal or registration fees until June 1, and a 25% late fee applies after April 30; the Commission gains discretion to renew despite tax noncompliance, and late-fee refund requests are due by May 31, 2027.",
+   "Sec. 11 (new G.S. 18B-1001(26)): a service business permit lets occupational-licensed service businesses serve complimentary beer and wine, capped at two servings per customer per day (16 oz beer, 8 oz wine); the application fee and the annual registration fee are each $50; effective September 1, 2026.",
+   "Sec. 16 (G.S. 18B-1002(a)(5)): special one-time permits for fund-raisers are no longer limited to ticketed events, and nonprofits may offer alcoholic beverages in the manufacturer's original closed container as raffle prizes or sell them at auction.",
+   "Sec. 17 (new G.S. 18B-1002.2): a special multiple event permit covers sales, brown-bagging, raffle prizes and auctions at multiple fund-raising events, with at most two permit holders per organization and 30 days' written notice to the Commission and local government; the provided text is truncated at this point.",
+   "Sec. 15: local boards must give mixed beverage permittees 30 days' notice of any lottery or random drawing for apportioned liquor; this is an allocation mechanism, not gambling; effective October 1, 2026."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Unlike OH HB344, which restructures electronic instant bingo and lottery terminals and levies a tax, H198 does not regulate any wagering product; its raffle references concern only alcohol as a prize at nonprofit fund-raisers. It also differs from NY S 10092, which restricts gambling advertising to minors across sports betting, prediction markets and sweepstakes. Structurally it resembles the single-subject regulatory omnibuses and budget vehicles listed (IL HB2949, MI HB5619, OH HB96), but it is confined to Chapter 18B, with no tax or appropriation provisions touching gaming.",
+  "watch": "Because the bill is now in conference and its title covers raffles, watch whether conferees add raffle-law or other gaming provisions beyond the alcohol-as-prize language, and review the truncated remainder of Section 17 and later sections for any changes to North Carolina's raffle statutes.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 129597,
+  "generated": "2026-11-03T22:16:28.306Z"
+ },
+ "NC-H425": {
+  "summary": "H425 creates a new Chapter 18D requiring anyone selling tobacco, vapor, or alternative nicotine products to North Carolina consumers to hold a permit from the ABC Commission, enforced with the ALE Division, and sets 21 as the purchase age. It builds an ABC-style licensing regime covering suitability review, fingerprint background checks, inspections, administrative penalties, and seizure and forfeiture. Gambling appears only incidentally, as prohibited conduct on permitted premises and as a disqualifier in the change-of-ownership rules.",
+  "mechanics": [
+   "Three permit types, each with a nonrefundable $400 application fee and the same renewal fee (§ 18D-302(d)): retail seller (face-to-face sales on fixed premises), delivery seller, and remote seller. Permits run May 1 to April 30, with a 25% late renewal fee (§ 18D-303).",
+   "Owners, officers, managers, and holders of 25% or more must be at least 21, generally NC residents, and free of a felony within three years and of a tobacco or misdemeanor drug conviction within two years; they must also be current on state taxes (§ 18D-300).",
+   "Retail sellers must check ID for anyone appearing under 30 (§ 18D-400(d)). Delivery and remote sellers must use independent third-party age verification and require an adult (21+) signature on delivery (§ 18D-400(e)). Vending-machine sales are banned (§ 18D-402(b)(3)).",
+   "Penalties (§ 18D-103): suspension of up to three years, revocation, or fines of $500, $750, and $1,000 for first through third violations within three years; offers in compromise of up to $5,000; and a Class 2 misdemeanor for obstructing an inspection (§ 18D-102).",
+   "§ 18D-401(a)(3) makes it unlawful for a permittee to knowingly allow any violation of the gambling statutes, among other unlawful acts, on the premises. A gambling violation within the prior 12 months also bars successor-operation rights on a change of ownership (§ 18D-303(d)(2)d).",
+   "The supplied text is truncated at § 18D-402(b)(4), so effective dates and any remaining provisions are not shown."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "No listed bill is a standalone tobacco retail-licensing measure. IL HB2755 touches tobacco products only as one item in a revenue omnibus. The closest structural analogues are the Virginia cannabis bills (VA HB642, SB542, SB671, SB826), which likewise build a new licensing authority with suitability, background-check, and penalty frameworks for an age-restricted product. NY S10092 shares the youth-protection theme but targets gambling advertising to minors rather than retail sales.",
+  "watch": "Watch § 18D-401(a)(3), which would turn any gambling-statute violation on a tobacco or vape retailer's premises into a permit violation and give ALE agents broad warrantless inspection authority, raising the risk for sweepstakes terminals or card-break and mystery-pack activity hosted at convenience and vape stores.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 80431,
+  "generated": "2026-11-03T22:16:28.863Z"
+ },
+ "NC-H430": {
+  "summary": "H430 creates a new Chapter 18D requiring anyone selling tobacco, nicotine, or vapor products to North Carolina consumers to hold a tobacco retail sales permit from the ABC Commission, enforced with the ALE Division. It raises the legal purchase age to 21 and sets age-verification, signage, and product restrictions. The bill is a tobacco measure and touches gambling only in two places that tie permit status to gambling violations on the premises.",
+  "mechanics": [
+   "Under § 18D-200 it is unlawful to sell a tobacco product to a consumer without a Commission permit. There are three permit types (retail seller, delivery seller, remote seller), each with a $400 non-refundable application fee and an equal annual renewal fee. Permits run May 1 to April 30, with a 25% late fee (§§ 18D-302, 18D-303).",
+   "Under § 18D-103 the Commission may suspend a permit for up to 3 years, revoke it, or impose fines of up to $500, $750, and $1,000 for first, second, and third violations within 3 years. It may instead accept an offer in compromise of up to $5,000.",
+   "Applicants must be 21 and are fingerprinted, with SBI/FBI background checks. Disqualifiers include a felony within 3 years and a tobacco-sales or misdemeanor drug conviction within 2 years. Owners of 25% or more and managers must also qualify, and a change of 25% or more in ownership terminates the permit (§§ 18D-300, 18D-302, 18D-303(d)).",
+   "Retail clerks must check ID for anyone who appears under 30 (§ 18D-400(d)). Delivery and remote sellers must use third-party age verification and require an adult (21+) signature at delivery (§ 18D-400(e)).",
+   "Under § 18D-401(a)(3) it is unlawful for a permittee to knowingly allow violations of the gambling statutes on licensed premises. Under § 18D-303(d)(2)d, the successor-operation grace period is denied to establishments found responsible for a gambling violation within the prior 12 months.",
+   "Section 18D-402 bans vending-machine sales, sales of products not authorized by the FDA, sales outside original sealed packaging, and self-service displays except in 21+ establishments. The provided text is truncated after § 18D-402."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is a tobacco retail licensing measure. IL HB2755 touches tobacco products only within an omnibus revenue bill. The closest structural analogues are the Virginia cannabis bills (HB642, SB542, SB671, SB826), which likewise build a new permit-based retail regime with background checks and age limits. NY S10092 shares the youth-protection theme but targets advertising of gambling to minors, whereas H430's only gambling hook is a premises-conduct rule tying tobacco permit status to gambling violations.",
+  "watch": "Convenience stores and other tobacco permittees that host sweepstakes terminals, skill games, or other contested gaming devices could lose their tobacco permits under § 18D-401(a)(3) and § 18D-303(d)(2)d if those devices are found to violate North Carolina gambling statutes, which creates indirect enforcement pressure on venue partners.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 80227,
+  "generated": "2026-11-03T22:16:33.191Z"
+ },
+ "NC-H462": {
+  "summary": "Part I of NC H462 (committee substitute, 4/29/25) enacts a comprehensive consumer data privacy law, new Chapter 75F, modeled on the Connecticut/Virginia template. It gives North Carolina residents rights to access, correct, delete and port their data and to opt out of targeted advertising, data sales and significant automated profiling, and it imposes controller and processor duties. The bill's title also references a Social Media Safety Act, but the supplied text is truncated partway through G.S. 75F-110, so neither that Part nor the enforcement provisions can be reviewed.",
+  "mechanics": [
+   "Applicability (G.S. 75F-103): covers persons doing business in NC or targeting NC residents that, in the prior year, either processed personal data of at least 35,000 consumers (excluding payment-only data), or processed data of at least 10,000 consumers and derived more than 20% of gross revenue from data sales. State bodies and GLBA-covered financial institutions are exempt at the entity level.",
+   "Consumer rights (G.S. 75F-104): access, correction, deletion, portability, and a list of specific third-party recipients. Consumers may opt out of targeted advertising, sale, and profiling for legal or similarly significant decisions. Controllers must respond within 45 days, extendable by 45, and must offer an appeal process answered within 60 days.",
+   "Universal opt-out (G.S. 75F-105, 75F-106(e)): controllers must honor authorized agents and browser or global-device opt-out preference signals. An opt-out signal overrides conflicting controller-specific settings or loyalty enrolment, though the controller may ask the consumer to confirm.",
+   "Sensitive data and minors (G.S. 75F-102(27), 75F-106(a)(4) and (7)): sensitive data, which includes precise geolocation within a 1,750-foot radius and biometrics, requires opt-in consent. Targeted advertising to, or sale of data of, consumers aged 13 to 17 requires consent where the controller has actual knowledge or wilfully disregards their age. Dark-pattern consent is invalid.",
+   "Data protection assessments (G.S. 75F-108): required for controllers processing data of at least 100,000 consumers, covering targeted advertising, sales, risky profiling and sensitive data. The Attorney General can demand them in an investigation; they are confidential but usable in enforcement.",
+   "Effective January 1, 2026 (Section 1.2). Exclusions in G.S. 75F-110 include compliance with law and regulatory inquiries, and fraud and security prevention. Penalty and enforcement terms are not in the supplied excerpt."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "incidental",
+  "comparison": "Unlike the gaming-specific advertising bills on the list, NC H462 regulates advertising only through general privacy rules. Michigan SB0713/SB0714 add internet gaming advertising and promotion rules, and Connecticut HB05038 bars prediction market use by or advertising to under-21s; H462 instead imposes targeted-ad opt-outs and minor-consent rules that apply to every covered business. Its social media component sits alongside Colorado HB1255 (platform reporting to law enforcement), Maryland SB932 (display of user location) and Michigan HB4388 (minors' social media use), but the visible text is a horizontal privacy statute. That statute is notable for a low 35,000-consumer threshold and a mandatory universal opt-out signal.",
+  "watch": "Operators should check whether geolocation compliance checks (precise geolocation is sensitive data needing consent), cross-site targeted and affiliate marketing, player-behaviour profiling, and loyalty or bonus programs fit within the G.S. 75F-110 compliance-with-law and fraud exclusions and the G.S. 75F-106(b) loyalty carve-out, and should obtain the missing enforcement and Social Media Safety Act text before the January 1, 2026 effective date.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 65891,
+  "generated": "2026-11-03T22:16:45.504Z"
+ },
+ "NM-HB2": {
+  "summary": "HB2 is New Mexico's General Appropriation Act of 2026 (signed as Chapter 67 on March 11, 2026). It makes fiscal year 2027 operating appropriations to state agencies, with amounts stated in thousands of dollars, sets reversion rules for unexpended balances, and attaches performance measures to agency programs. The portion of the text provided covers the legislative branch, the judiciary, district attorneys, the public defender, and general control agencies through part of the Department of Finance and Administration, and contains no gaming, wagering, sweepstakes, or collectibles provisions.",
+  "mechanics": [
+   "Section 3(C) appropriates Section 4 amounts for expenditure in FY2027. Section 3(D)-(E) revert unexpended FY2026 and FY2027 balances to the general fund by October 1, 2026 and October 1, 2027 respectively, unless otherwise provided.",
+   "Section 3(F) directs the state budget division to cut the operating budget of any agency whose non-general-fund revenue falls short of projections, with notice to the legislative finance committee.",
+   "Section 3(H) requires DFA to present a deficit plan to the legislative finance committee if FY2027 revenues are not expected to meet appropriations.",
+   "DFA may transfer up to $6,000,000 in aggregate from the general fund operating reserve to the board of finance emergency fund on certification of a critical emergency.",
+   "The Attorney General's legal services program draws $23,057,300 from the consumer settlement fund, including $1,500,000 reserved for the office of the child advocate.",
+   "Taxation and Revenue Department tax administration carries targets of collecting 23% of prior-year outstanding collectible balances and 50% of prior-year audit assessments."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "HB2 is a general operating budget, comparable in form to AK HB53 (operating budget), CA AB109 (Budget Act of 2026), and AL HB238 (Education Trust Fund appropriations), rather than to any substantive gaming bill on the list. None of the listed bills addresses sports betting, iGaming, sweepstakes, or card breaks either. Unlike California's practice of amending prior budget acts by item (e.g., CA AB111, AB112), New Mexico uses a single annual act with program purpose statements and embedded performance targets. The excerpt ends mid-DFA, so any appropriation to the New Mexico Gaming Control Board or Racing Commission is not in the provided text and cannot be assessed.",
+  "watch": "Check the later, unexcerpted sections of HB2 for the Gaming Control Board and Racing Commission appropriations, any staffing or enforcement language, and any performance measures that could signal regulatory priorities, along with any contingent appropriations tied to gaming legislation passed in the same session.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 159138,
+  "generated": "2026-11-03T22:16:47.627Z"
+ },
+ "NC-H680": {
+  "summary": "H680 creates a new Chapter 18D that brings hemp-derived consumable products (finished goods for ingestion or inhalation with no more than 0.3% delta-9 THC on a dry weight basis, but possibly higher levels of other cannabinoids such as delta-8, delta-10 and THCA) under a permit regime run by the ABC Commission, with enforcement by the ALE Division. It requires a permit for any sale to a North Carolina consumer, whether in store or by delivery. It also sets permit eligibility rules, age-verification duties, inspection powers, administrative penalties, and seizure and forfeiture procedures. Gambling appears only once, as a disqualifier in the change-of-ownership provision.",
+  "mechanics": [
+   "Under § 18D-200 it is unlawful to sell hemp-derived consumable products to a consumer in NC without a Commission permit. There are two permit types: retail seller (in-person sales on fixed premises only) and delivery seller (in-state or out-of-state, covering online, phone and mail orders). Delivery services carrying goods for a permittee are exempt.",
+   "Under §§ 18D-302 and 18D-303 the application fee is $2,000 per location or per delivery website, capped at $50,000 for entities with more than 25 locations or websites. Fees are non-refundable and go to the General Fund. Permits run May 1 to April 30, renewal costs the same as the application fee, and late renewal carries a 25% surcharge.",
+   "Under § 18D-300 owners, officers and holders of 25% or more must be at least 21 and must meet residency requirements (or appoint a resident attorney-in-fact). They must have no felony conviction within 3 years, no hemp-law or misdemeanor drug conviction within 5 years, and no permit revocation within 5 years, and must be current on state taxes. Applicants submit fingerprints for SBI/FBI background checks.",
+   "Under § 18D-400 retail sellers must demand proof of age from anyone who reasonably appears to be under 30. Delivery sellers must use an independent third-party age verification service that checks against public records. The text is truncated at this point; the preamble targets under-21s.",
+   "Under § 18D-103 the Commission may suspend a permit for up to 3 years, revoke it, or impose fines of up to $500, $750 and $1,000 for first, second and third violations within 3 years. It may instead accept an offer in compromise of up to $5,000. Under § 18D-102, obstructing an inspection is a Class 2 misdemeanor.",
+   "Under § 18D-303(d)(2)d, a successor owner may keep operating under the prior permit during a change of ownership only if the establishment has not been found responsible for a gambling, assault, disorderly conduct, prostitution or controlled substance violation in the prior 12 months. Under § 18D-304(c), no permits are issued on public school, college or university property."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest listed bills are the cannabis bills: OH SB56 and VA HB642, SB542, SB671 and SB826. Those build full adult-use marijuana markets with dedicated licensing authorities, and in Virginia's SB826 a 12.875% marijuana tax plus sales and local taxes. NC H680 is narrower: it regulates only intoxicating hemp-derived products under the federal 0.3% delta-9 threshold. It bolts that regulation onto the existing ABC Commission and ALE structure, and the excerpt contains no excise tax. Its only gaming touchpoint is the gambling-violation bar on successor operation, which is far more tangential than gaming-focused bills like NY S 10092 (youth gambling ad ban) or OH HB344 (electronic instant bingo).",
+  "watch": "The bill is essentially irrelevant to wagering, but operator counsel should note two things: the § 18D-303(d)(2)d gambling-violation disqualifier could affect convenience-store or bar licensees that also host gaming, sweepstakes or lottery activity, and the delivery-seller third-party age-verification and permit-number-in-advertising requirements could become a template for future NC online gaming or sweepstakes rules.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 73395,
+  "generated": "2026-11-03T22:16:48.283Z"
+ },
+ "NC-H999": {
+  "summary": "H999 creates a new Article 11 in Chapter 18C authorizing video gaming terminals (VGTs), classified as a lottery game, regulated by the NC Lottery Commission and placed with ABC-permitted retailers through licensed operators and manufacturers. It also creates Article 2F of Chapter 105, a $10,000-per-machine excise stamp tax on unauthorized gaming machines, including illegal video sweepstakes devices. Several of its general Chapter 18C amendments, on records, gifts and dispute resolution, reach existing sports wagering licensees under Articles 9 and 10.",
+  "mechanics": [
+   "Placement (18C-1102): up to 3 VGTs per location, plus up to 3 more based on a Commission net machine revenue benchmark. Terminals must be at ABC-permit merchants, more than 1,000 feet from churches and schools, on no government property, and connected at all times to a central monitoring system.",
+   "Revenue split of net machine revenue (18C-1103): 32% to the NC Video Gaming Fund; 8% for administration and enforcement, including at least $3M a year to ALE, $1M in local anti-illegal-gaming grants and $225K for a prosecutor; 30% to operators; 30% to merchants.",
+   "Licensing (18C-1114, 18C-1120): initial fees are $150K for manufacturers, $250K plus $150 per terminal for operators, and $1,500 per location for merchants; renewals are $100K, $100K plus $150 per terminal, and $1,000. Operators need 2 years of uninterrupted in-state amusement operation and residency or organization, and no foreign change of control within 2 years. Strict tier separation (18C-1122).",
+   "Play rules: 21+ only; maximum cash award of $1,199 per wager; odds posted on or near each terminal; a voluntary exclusion program; and a total advertising ban, including websites, social media and broadcast (18C-1115), apart from a standard Commission entry sign.",
+   "Criminal penalties (18C-1142): possessing an unauthorized VGT or tampering is a Class 1 misdemeanor, escalating to a Class G felony on a third offense; manipulation or false revenue reporting is a Class G felony, then Class F.",
+   "Unauthorized machine tax (G.S. 105-113.152): $10,000 excise per unauthorized gaming machine, payable within 48 hours of placement and evidenced by a stamp. It covers unpermitted VGTs, illegal slots and devices under G.S. 14-306, 14-306.1A, 14-306.3(b) and 14-306.4 (electronic sweepstakes). Paying the tax gives no immunity from prosecution."
+  ],
+  "issue_tags": [
+   "legalize",
+   "licensing",
+   "tax",
+   "advertising",
+   "integrity",
+   "sweeps"
+  ],
+  "relevance": "core",
+  "comparison": "The closest listed analog is OH HB344, which likewise expands lottery-run terminal gaming (electronic instant bingo and lottery terminals) with a tax. H999 instead builds a full private three-tier VGT market under the Lottery Commission with a fixed 30/30 operator-merchant revenue share. H999's flat ban on all VGT advertising is far broader than NY S10092, which only bars gambling ads directed at minors on covered platforms. The NE LB402 and LB 415 winnings-setoff bills have no counterpart here beyond H999's statement that winnings are subject to state income tax, and the remaining listed bills (budgets, cannabis, revisory) are not comparable.",
+  "watch": "Sports wagering licensees should watch three spillover provisions in the Chapter 18C amendments: new 18C-114(a)(17), which lets the Commission impose mandatory dispute-resolution policies on Article 9 and 10 licensees that must be exhausted before suing; the new 18C-117 gift restrictions applying to all Chapter 18C licensees (drafted oddly as 'not exceeding $100'); and the unexplained repeals of G.S. 18C-143(e) and 18C-151(f).",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 68041,
+  "generated": "2026-11-03T22:16:54.504Z"
+ },
+ "NY-S8578": {
+  "summary": "S08578 is the City of Staten Island Act. It incorporates Staten Island (Richmond County) as a city separate from New York City, enacts a full city charter, and sets a staged transition. It also makes conforming amendments across the education, judiciary, housing, public authorities, county, election, finance and tax laws, including provisions letting the new city continue taxes currently applicable there. The portion of the text provided contains no provision on sports wagering, casino gaming, lotteries or collectibles.",
+  "mechanics": [
+   "Timeline (§1-003, §1-004): incorporation on January 1 after enactment; the charter takes effect the following November 1; full municipal powers devolve on July 1 of the second year after enactment; a judiciary transition period runs through December 31 of the fifth year after incorporation.",
+   "During the transition period New York City, the 'preceding municipality', keeps full municipal powers over the territory except as the act provides.",
+   "Charter §2-01 grants a broad general power of local self-government, stating that enumerated powers are not exclusive. The executive is a mayor elected to a four-year term (§3-02); the legislature is a 15-member common council split into 'A' and 'B' districts (§4-02).",
+   "The mayor has finance-board powers under the local finance law (§3-08(c)), and an elected comptroller has audit authority (§5-02).",
+   "The title and table of contents reference §13-001 (taxes and tax collection authority) and amendments to the general city law, chapter 772 of the laws of 1966 (city business tax) and the tax law, so the new city can continue presently applicable taxes. The substance of those sections is not in the excerpt provided."
+  ],
+  "issue_tags": [
+   "tax"
+  ],
+  "relevance": "incidental",
+  "comparison": "Nothing listed is truly comparable. The nearest analogues are large structural or omnibus vehicles, such as IL SB3731 (general revisory), IL HB2949 and OH HB96 (budget implementation) and MI HB5619 (omnibus appropriations), where gaming can be touched only through cross-references or tax continuations. That contrasts with bills squarely on gaming like NC H999 (video gaming terminals) and OH HB344 (electronic instant bingo and lottery terminals). What is unusual here is the creation of an entirely new city of roughly half a million residents, carved out of New York City, with a broad home-rule grant and wholesale re-mapping of state statutes that currently refer to 'the city of New York'.",
+  "watch": "Review the untruncated §13-001 tax-continuation provisions and the conforming statutory amendments to see whether any New York City-specific wagering-related taxes, local gaming or licensing powers, or statutory references to 'the city of New York' (for example, in casino siting or local-share provisions) are reallocated to or newly exercisable by the city of Staten Island under its broad charter §2-01 home-rule grant.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 5009470,
+  "generated": "2026-11-03T22:17:03.342Z"
+ },
+ "OK-HB1275": {
+  "summary": "HB1275 bars social media companies from letting Oklahoma users under 16 hold accounts on covered platforms and requires express parental consent for 16- and 17-year-olds, backed by mandatory age verification. It also imposes minor-specific data limits on platforms accessed by minors, including no profiling without safeguards, no sale or sharing of minors' data, and limits on geolocation and dark patterns. Enforcement is by the Attorney General plus a private right of action. Gambling appears only in the legislative-intent analogy and in a carve-out for interactive gaming services.",
+  "mechanics": [
+   "Sec. 3: no accounts for Oklahoma minors under 16. Ages 16–17 need express parent or guardian consent, confirmed when the account is opened. Age verification can use a digital ID, government ID, any commercially reasonable method, or app-store age confirmation, and may be done through a third-party vendor.",
+   "Sec. 2(B)(11): a covered 'social media platform' must have Oklahoma users, use algorithmic content selection, feature infinite scrolling, and have social interaction as a substantial function. Exclusions cover e-commerce where user interaction is generally limited to reviews and lists, preselected sports or entertainment content with incidental chat, and businesses with under $100 million in annual gross revenue from US users.",
+   "Sec. 2(B)(10)(b)(2): companies that exclusively offer interactive or virtual gaming, or user content created for gaming or entertainment, are outside the 'social media company' definition.",
+   "Sec. 4: platforms accessed by minors may not process minors' data where they know, or willfully disregard, that it risks substantial harm. They also may not profile minors without safeguards, collect precise geolocation unless strictly necessary and visibly signalled, use dark patterns, or sell or share minors' personal information or geolocation. Violations go to the AG, who must give notice, followed by a 45-day cure period.",
+   "Sec. 5: knowing violators are liable for failing to verify age or to comply with Sec. 4. The AG may bring enforcement actions. Individuals may recover $2,500 per violation, or damages for a minor's access without consent, plus costs and attorney fees. There is a safe harbor where a minor gets in by fraud or fake ID after reasonable verification.",
+   "Age-verification data retention conflicts within the bill: Sec. 5(A)(2) bars keeping identifying information after access is granted, while Sec. 6 allows retention for audit and testing for up to 30 days. Sec. 6 also creates a private damages action for knowing retention. No effective date appears in the text."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "This bill sits alongside the minors-and-social-media bills on the list, NC H462 and MI HB4388. It goes further than a parental-consent model by imposing an outright account ban under 16, layering in a Sec. 4 data-minimization regime, and adding a $2,500-per-violation private right of action. It is unrelated to the platform-reporting focus of CO HB1255 and the location-display mandate of MD SB932. Unlike CT HB05038, which restricts under-21 access to prediction markets, it does not regulate wagering platforms; gambling is invoked only as a policy analogy in Sec. 1.",
+  "watch": "Watch whether the exclusive-interactive-gaming and e-commerce carve-outs are narrowed. Live card-break and collectibles streaming marketplaces with algorithmic feeds, infinite scroll and live chat that goes beyond reviews and lists could fall within the platform definition if they exceed the $100 million revenue threshold, triggering under-16 bans, age verification and private suits.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 22491,
+  "generated": "2026-11-03T22:17:09.170Z"
+ },
+ "OH-SB56": {
+  "summary": "Ohio SB 56, now signed, overhauls the state's medical and adult-use marijuana laws. It repeals the voter-initiated adult-use chapter (R.C. 3780) and folds that program into the Division of Cannabis Control's Chapter 3796. It also revises hemp law (R.C. 928), enacts new provisions in 3779.21 to 3779.30, amends the commercial driver's license law, and makes an appropriation. It does not regulate wagering or gaming.",
+  "mechanics": [
+   "Repeals R.C. 3780.01 to 3780.99 and renumbers 3780.37 as 3796.34, consolidating adult-use cannabis regulation under Chapter 3796 and the Department of Commerce's Division of Cannabis Control.",
+   "Amends R.C. 9.79(I)(10) to exempt Division of Cannabis Control licenses from the general rules limiting how licensing authorities may use criminal convictions. Disqualifying offenses for those licenses are instead set by rules under 9.79 and 3796.03 (see 109.572(A)(13) and (A)(14)).",
+   "Requires criminal records checks under 109.572(A)(13) and (A)(14) for owners, officers, board members, administrators and employees of Chapter 3796 licensees.",
+   "Enacts R.C. 3779.21 to 3779.30 and 3779.99, and separately repeals those same newly enacted versions effective December 31, 2026. It also enacts new hemp provisions at 928.01, 928.031 and 928.08.",
+   "Amends R.C. 4506.01 (commercial driver's licenses) effective December 31, 2026, and makes an appropriation; the appropriations provisions took effect December 19, 2025.",
+   "The excerpt provided is truncated, so the marijuana tax rates referenced in the title cannot be confirmed from the text supplied."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest listed analogues are the Virginia retail cannabis bills (VA HB642, SB542, SB671 and SB826), which build a new retail market from scratch. SB826 sets a 12.875% marijuana tax, a 1.125% sales tax and a 3% local tax. Ohio SB 56 instead restructures an existing voter-approved adult-use market and moves it into the medical marijuana chapter. NC H680 addresses youth cannabis protection, and none of the listed bills, including NC H999 on video gaming terminals or NY S 10092 on gambling ads, overlaps with SB 56 on gaming. The only gaming touchpoints are existing cross-references in R.C. 109.572 to casino and sports-gaming background checks (3772.07, 3775.03) and charitable gaming (2915.081, 2915.082), which appear to carry over unchanged.",
+  "watch": "Operators should confirm that the cross-references in R.C. 109.572(A)(11), (A)(18) and (A)(19) to Casino Control Commission and sports-gaming background checks were left unchanged, and should watch whether Ohio extends SB 56's approach of carving a regulated vice industry out of the general 9.79 criminal-record limits to gaming licensing.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 310187,
+  "generated": "2026-11-03T22:17:09.964Z"
+ },
+ "OK-HB1388": {
+  "summary": "HB1388 creates the Protecting Oklahoma's Children on Social Media Act of 2025, which imposes school-technology duties on Oklahoma public school districts and charter schools. Each must adopt an internet acceptable-use policy and a social media policy that bars students from reaching social media platforms on school equipment or networks, subject to State Department of Education and State Board of Education review. It does not regulate gambling, gaming operators, or commercial platforms directly.",
+  "mechanics": [
+   "Acceptable-use policy due by October 1, 2025 (Sec. 4). It must block obscene material, child pornography, and material harmful to minors on school equipment. Policies go to the State Board of Education each October 15, and districts get a 30-day cure period after a notice of noncompliance.",
+   "Social media policy due by April 1, 2026, and submitted by April 15, 2026 (Sec. 6). Student access is allowed only when directed and supervised by staff, for age-appropriate educational resources, during a school activity. Districts must use blocking and monitoring software or servers, and parents may opt their child out of specific platforms.",
+   "The 'social media platform' definition (Sec. 2(10)) excludes 22 categories. These include (f) interactive gaming and virtual gaming, (e) e-commerce where interaction is limited to reviews and lists of goods for sale, and (b) services that bar minors and use commercially reasonable age assurance.",
+   "The Department of Education must set annual technology-protection-measure standards by April 1, 2026 (Sec. 5). It must also publish a list of compliant vendors, require providers to verify compliance each year, and issue staff training guidelines by December 1, 2025.",
+   "Sec. 7 sets an effective date of July 1, 2025, and Sec. 8 adds an emergency clause. The Senate floor version is a committee substitute, placed on General Order on April 22, 2025."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest analogues on the list are CT HB05035, which bans cellphones in classrooms, and MI HB4388 and NC H462, which regulate minors' social media use. Unlike the Michigan and North Carolina bills, HB1388 places no duties on platform operators; every obligation falls on school boards and state education agencies. CO HB1255 and MD SB932 likewise impose operator-facing duties that this bill lacks. Its only gaming touchpoint is the Sec. 2(10)(f) carve-out of interactive and virtual gaming from the 'social media platform' definition, which differs from the iGaming bills listed (IL HB3080, MD HB1343) that actually authorize or regulate wagering.",
+  "watch": "Operators should watch whether the 'interactive gaming' and 'age assurance' carve-outs in Sec. 2(10)(b) and (f) are carried into later Oklahoma operator-facing social media bills, since those exemptions could shield adult-only betting and iGaming apps. Collectibles clients should note that the e-commerce exclusion in (e) is narrow, so streamed card breaks on social platforms would likely fall within school blocking requirements.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 29434,
+  "generated": "2026-11-03T22:17:12.187Z"
+ },
+ "OK-HB4130": {
+  "summary": "HB4130 amends Oklahoma's core gambling-game crime, 21 O.S. Section 941, to expressly cover online casino games and to extend criminal liability beyond owners and dealers to geolocation providers, gaming suppliers, platform providers, promoters and media affiliates who provide support for an illegal game. It defines 'representatives of value' by reference to dual-currency systems, which squarely targets sweepstakes-model online casinos. The House Judiciary and Public Safety Oversight committee reported it Do Pass as amended on 02/26/2026.",
+  "mechanics": [
+   "Section 941(A) makes it a Class C2 felony to open, conduct or carry on poker, roulette, craps, banking or percentage games, or any gambling game played with dice, cards or any device, 'including, but not limited to, online casino games'; the penalty is a $500 to $2,000 fine plus imprisonment under subsections B through F of 21 O.S. Section 20M.",
+   "Covered persons expand from 'owner or employee' to include any geolocation provider, gaming supplier, platform provider, promoter or media affiliate who, whether for hire or not, 'deals or provides support for' those engaged in the game.",
+   "Section 941(B)(1) defines 'online casino games' as any gambling game accessed over the Internet by computer, phone, smartwatch, tablet or similar device that, upon risking representatives of value, simulates a Section 941 game or any other gambling, including slot machines (21 O.S. 964), lotteries (21 O.S. 1051), bingo and U-PIK-EM bingo (3A O.S. 402), and prohibited games under 3A O.S. 262(H).",
+   "Section 941(B)(2) defines 'representatives of value' as any currency used in a dual-currency payment system that can be exchanged for a prize, award, cash or cash equivalent, or a chance to win one.",
+   "The existing carve-outs remain for the Oklahoma Charity Games Act and for tribal gaming conducted under the Indian Gaming Regulatory Act.",
+   "The act takes effect November 1, 2026."
+  ],
+  "issue_tags": [
+   "sweeps",
+   "advertising"
+  ],
+  "relevance": "core",
+  "comparison": "Like MD HB295 and SB112, which prohibit operating or promoting 'interactive games' and require licensees to report ties to illegal-market actors, HB4130 is a prohibition bill aimed at sweepstakes and offshore online casinos rather than a legalization framework. It contrasts sharply with IL HB3080 and HB4797, MD HB1343 and SB885, MA H332 and S235, and ME LD1164, all of which would authorize and license iGaming. HB4130 is unusual in using the existing criminal gambling statute, rather than a regulatory act, to reach B2B vendors and marketing affiliates. Those vendors include geolocation providers, platform providers and media affiliates, and they face direct felony exposure.",
+  "watch": "Watch the felony exposure for geolocation providers, platform providers, gaming suppliers, promoters and media affiliates who 'provide support' to dual-currency or online casino games, which could reach vendors and affiliates that serve licensed operators in other states. Also watch whether the broad 'simulates any gambling game' and dual-currency definitions could be read to sweep in prize-redeemable digital collectibles, mystery packs or card-break platforms that use coin or credit systems.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 3867,
+  "generated": "2026-11-03T22:17:20.753Z"
+ },
+ "OK-SB1589": {
+  "summary": "SB1589 amends Oklahoma's core gambling-house offense (21 O.S. Section 941) to expressly cover online casino games, including sweepstakes-style casinos that use a dual-currency system. It also extends felony liability beyond owners and dealers to geolocation providers, gaming suppliers, platform providers, promoters and media affiliates that deal or provide support for such games. It was signed and filed with the Secretary of State and takes effect November 1, 2026.",
+  "mechanics": [
+   "Section 941(A)(1) defines \"online casino games\" as any internet-accessed game on a computer, phone, smartwatch, tablet or similar device that, upon risking any representative of value, simulates a gambling game or any other form of gambling. The listed examples are slot machines (21 O.S. 964), lotteries (21 O.S. 1051(A)), bingo and U-PIK-EM bingo (3A O.S. 402), and prohibited games under 3A O.S. 262(H).",
+   "Section 941(A)(2) defines \"representative of value\" to include any currency in a dual-currency system that can be exchanged for any prize, award, cash or cash equivalent, or for any chance to win one. This targets the sweeps-coin model directly.",
+   "Section 941(B) makes it a crime to open, conduct or carry on poker, roulette, craps, banking or percentage games, or any game played with dice, cards or any device, including online casino games, for money, checks, credits or representatives of value. Liability reaches anyone acting as owner, employee, geolocation provider, gaming supplier, platform provider, promoter or media affiliate who deals or provides support, whether for hire or not.",
+   "The penalty is a Class C2 felony with a fine of $500 to $2,000 plus imprisonment under subsections B through E of 21 O.S. Section 20M.",
+   "Activities under the Oklahoma Charity Games Act and tribal gaming conducted on Indian lands in compliance with IGRA are carved out. There is no exemption for sweepstakes promotions, and none of the new supporting-party roles (such as \"media affiliate\" or \"platform provider\") is defined.",
+   "Effective November 1, 2026."
+  ],
+  "issue_tags": [
+   "sweeps",
+   "advertising"
+  ],
+  "relevance": "core",
+  "comparison": "The closest analogs are Maryland HB295 and SB112, which also prohibit operating, conducting or promoting unlicensed \"interactive games.\" Those bills work through the gaming regulator, requiring licensees to report business relationships with illegal-market actors. Oklahoma's bill instead works through the criminal code, imposing felony exposure on third-party vendors such as geolocation, platform, supplier and media/affiliate businesses. It sits at the opposite end from the iGaming legalization bills in Illinois (HB3080, HB4797), Massachusetts (H332, S235), Maryland (HB1343, SB885) and Maine (LD1164), offering no licensing pathway at all.",
+  "watch": "Watch the undefined supporting-party categories, especially \"media affiliate,\" \"promoter\" and \"platform provider,\" and the broad dual-currency and \"simulates any other form of gambling\" language. These could expose affiliates, payment and geolocation vendors, and potentially online card-break or digital mystery-pack sellers using redeemable currencies to felony liability starting November 1, 2026, because the text contains no express knowledge requirement and no sweepstakes safe harbor.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 3977,
+  "generated": "2026-11-03T22:17:26.967Z"
+ },
+ "OK-HB4356": {
+  "summary": "HB4356 would bar social media companies from letting Oklahoma users under 16 hold accounts on covered platforms and would require age verification of every account holder. It also restricts how platforms accessed by minors (under 18) may process their data, including profiling, precise geolocation and dark patterns. Enforcement is by the Attorney General, with a private right of action. The bill does not address wagering, and its exclusion for exclusively interactive-gaming services means it only touches gaming or collectibles businesses at the definitional margins.",
+  "mechanics": [
+   "Sec. 2: no Oklahoma user under 16 may be an account holder, and all account holders must be age-verified. Permitted methods include a digitized ID or driver license, government ID, any 'commercially reasonable' method, or app-store confirmation, and third-party vendors may be used.",
+   "Sec. 1(B)(11): a covered 'social media platform' must have Oklahoma users, use algorithmic content selection, feature infinite scrolling and have social interaction as a substantial function. Entities under $100M in annual gross revenue from U.S. users are carved out, as are e-commerce services whose user interaction is limited to reviews, lists of goods or wish lists, and services that exclusively offer interactive gaming (Sec. 1(B)(10)(b)(2)).",
+   "Sec. 3: platforms accessed by minors (defined as under 18) may not process personal information that risks substantial harm, profile minors without safeguards and necessity, collect unnecessary data, or collect or sell precise geolocation unless strictly necessary and visibly signalled. They also may not use dark patterns. The AG gives notice of violations and there is a 45-day cure period.",
+   "Sec. 4: knowing violators are liable, the AG may bring enforcement actions, and individuals may recover $2,500 per violation or damages for a minor's access without parental consent, plus costs and attorney fees. There is a safe harbor where a minor gets access by fraud or fake ID after reasonable verification.",
+   "Sec. 4(A)(2) and Sec. 5: identifying information may not be retained after access is granted, with an audit and testing exception of up to 30 days in Sec. 5. Knowing retention creates a private damages claim.",
+   "Effective November 1, 2026."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "MI HB4388 and NC H462 are the closest comparators: both regulate minors' social media use and data, although their texts are not provided here for a detailed comparison. MD SB932 instead mandates displaying adult users' locations, and CO HB1255 concerns platform reporting to law enforcement. Neither imposes an account ban. The age-gating approach loosely parallels CT HB05038's under-21 bar on prediction markets, but HB4356 has no gambling nexus. Unusually, it sets a hard under-16 account ban while defining 'minor' as under 18 for its data-practice rules. It also pairs a 45-day AG cure period with an uncured private right of action at $2,500 per violation.",
+  "watch": "Clients running livestreamed card breaks, collector communities, or social or community features in betting and casino apps should check whether their feeds meet the algorithm, infinite-scroll and social-interaction tests. The e-commerce carve-out is limited to reviews and lists, and the interactive-gaming exclusion requires that gaming be the 'exclusive' offering, so neither may protect them.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 20039,
+  "generated": "2026-11-03T22:17:30.653Z"
+ },
+ "PA-HB257": {
+  "summary": "Although framed as a transportation omnibus, HB257 (Senate-amended, PN 2211) contains one gaming provision. Section 1 amends 4 Pa.C.S. § 13B52(d)(2)(ii) to divert money from the restricted receipt account funded by 10% of the interactive gaming tax imposed under § 13B52(a)(3) to transit and secondary-road funding. It does not change any interactive gaming tax rate or operator obligation; the rest of the bill covers transit funding, fare indexing, a mass-transit special prosecutor, new transit crimes and driver licensing.",
+  "mechanics": [
+   "One-time FY2025-26 transfers within 30 days of effectiveness from the § 13B52(d)(2)(ii) restricted receipt account: $87.5M to the Public Transportation Trust Fund and $87.5M to the new Supplemental Funding for Three and Four Digit State Routes Account in the Motor License Fund (new clause (C.1)).",
+   "Recurring transfers beginning FY2025-26: $43M each year to the Public Transportation Trust Fund and $43M each year to the Three and Four Digit State Routes Account, paid at least quarterly (new clause (C.2)).",
+   "Floor in new clause (D.1): the account balance may not fall below $20M, except as needed for county distributions under existing clauses (B) or (C). The year-end 60-day distribution deadline in clause (D) no longer applies to the new transfers.",
+   "Within the Public Transportation Trust Fund, iGaming-sourced deposits (new 74 Pa.C.S. § 1506(c)(3.5)) are split 86.76% to the operating program (§ 1513) and 13.24% to programs of statewide significance (§ 1516).",
+   "No change to tax rates, licensing, advertising or operator conduct; the gaming section only reallocates existing receipts. The available text is truncated, so the effective date for Section 1 is not shown."
+  ],
+  "issue_tags": [
+   "tax"
+  ],
+  "relevance": "partial",
+  "comparison": "Like Michigan HB4346 (removing the cap on internet gaming revenue for the equine industry fund) and MI HB6127 (modifying internet gaming fund expenditures), PA HB257 reallocates existing iGaming receipts rather than changing the rate or regulatory framework. It differs from the authorization bills, IL HB3080/HB4797, MD HB1343/SB885 and MA H332/S235, which would create iGaming markets and set taxes from scratch. Unusually, it ties fixed dollar amounts ($175M one-time, $86M a year) from a county-oriented iGaming account to statewide transit and road funding, and attaches them to unrelated transportation and criminal provisions.",
+  "watch": "Watch whether committing fixed annual sums ($86M plus a $20M floor) from the iGaming restricted receipt account to transit and roads creates pressure to raise the § 13B52 interactive gaming tax or expand the base if receipts fall short, and how the bill fares in House Rules after Senate amendment.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 58670,
+  "generated": "2026-11-03T22:17:33.574Z"
+ },
+ "PA-HB416": {
+  "summary": "Act 45 of 2025 is Pennsylvania's omnibus Fiscal Code amendment implementing the 2025-2026 budget. Among many unrelated provisions, it creates a child care staff bonus program, extends the 911 surcharge, decouples the corporate net income tax from several One Big Beautiful Bill Act changes, restructures the Joint Underwriting Association and takes $100 million from it, and creates a Rural Health Transformation Program. Its only gaming connection is a title reference to amending distributions from the Pennsylvania Race Horse Development Fund, which falls in a part of the text not provided.",
+  "mechanics": [
+   "Child Care Staff Recruitment and Retention Program (Art. I-H.1): DHS pays qualified subsidized providers an individual retention bonus of at least $450 per direct-care staff member, with remaining funds allocated by provider type and licensed capacity. Applications are due within 45 days of the form being posted, and annual reports start September 15, 2026.",
+   "The 911 surcharge under 35 Pa.C.S. § 5306.2(a) stays at $1.95 until February 1, 2029, extended from 2026 (§ 102-K).",
+   "CNIT decoupling (§§ 216-217): R&E deductions under IRC §§ 174, 174A and 59(e), § 481 adjustments, and § 168(n) qualified production property depreciation are added back and recovered at 20% per year. For tax years after December 31, 2024, interest expense under § 163(j) is computed as the federal rule stood on December 31, 2024. DOR must report on the impact by December 31, 2026.",
+   "Joint Underwriting Association (§§ 208-D to 216-D): the 2017 sunset is repealed and $100 million must be transferred to the General Fund within 30 days for Medicaid capitation. From June 1, 2026, the Commissioner certifies amounts available for transfer when risk-based capital exceeds 1,000%. A new seven-member board is created, and the association is treated as an independent agency for Right-to-Know and procurement purposes.",
+   "Treasury (§ 313): the Treasurer may waive interest on 2025-26 budget-impasse loans to counties, domestic violence, rape crisis, Head Start and Pre-K Counts entities. From FY 2026-27, such loans replacing anticipated appropriations are barred. Separately, the Governor's disaster transfer cap under § 1508 rises from $20 million to $40 million.",
+   "The title lists amendments to distributions from the Pennsylvania Race Horse Development Fund, but the provided text is truncated before that section, so its terms cannot be confirmed."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills addresses gaming, and this act is closest in form to the omnibus budget vehicles on the list, such as CA AB101 (Budget Act of 2025) and AK HB53 (operating budget). Unlike those pure appropriation acts, PA HB416 is a substantive Fiscal Code trailer. It makes permanent tax-base changes, notably decoupling the CNIT from federal § 174A, § 168(n) and § 163(j) changes, and restructures a state insurance instrumentality. Its only gaming touchpoint is the Race Horse Development Fund distribution amendment named in the title.",
+  "watch": "Operators should obtain and review the truncated Race Horse Development Fund distribution amendments, since that fund is fed by slot gaming revenue, and should model the impact of the § 217 interest-expense and § 216 R&E/depreciation decoupling on their Pennsylvania CNIT liability for tax years beginning after December 31, 2024.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 165454,
+  "generated": "2026-11-03T22:17:45.162Z"
+ },
+ "PA-SB146": {
+  "summary": "Act 21 of 2026 is Pennsylvania's omnibus Fiscal Code amendment implementing the 2026-2027 budget. The excerpt provided covers COVID-19 fund reallocation, child care retention bonuses, cigarette stamping agent sourcing limits, Joint Underwriting Association transfers, a new food processing residuals regulatory article, and a Veterans' Trust Fund Board. The title also lists amendments on distributions from the Pennsylvania Race Horse Development Fund, the State Gaming Fund, and an amusement tax clarification, but those sections are not in the text supplied, so their content cannot be confirmed.",
+  "mechanics": [
+   "New Section 197-C: PHFA must transfer $11,789,348 of ARPA housing relief funds to the COVID-19 Response Restricted Account by September 10, 2026, for the Department of Corrections. Funds unspent by December 11, 2026 are swept by December 18, and all such money must be spent by December 31, 2026.",
+   "Section 103-H.1: the child care retention bonus rises from at least $450 to at least $540 per qualified staff member, and the application decision window extends from 45 to 60 days.",
+   "New Section 204.1-A: licensed cigarette stamping agents may buy only directly from a tobacco product manufacturer or from a newly defined 'related entity supplier' (majority common ownership), and may not sell unstamped cigarettes to other dealers.",
+   "Section 209-D: $14,300,000 is transferred from the Joint Underwriting Association to the General Fund for FY beginning July 1, 2026, earmarked for Medical Assistance capitation payments.",
+   "New Article XIII (food processing residuals) requires land application systems and three-year notifications to the State Conservation Commission, with civil penalties up to $500 for the first day and $100 per day after (Section 1314). It also creates a Department of Agriculture hauler/broker certification program with penalties up to $1,000 for the first day and $500 per day after (Section 1323).",
+   "The Veterans' Trust Fund Board is created as an advisory board with a quorum of four, and the Auditor General must deliver a performance audit by July 31, 2028 and every three years thereafter."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills address gaming. The closest analogues are other omnibus budget vehicles such as AK HB53, AL HB238, and California's budget and trailer bills (CA AB101, AB109, AB111). Unlike those appropriation acts, PA SB146 is a substantive Fiscal Code rewrite that carries unrelated regulatory programs, such as food processing residuals certification and cigarette stamping agent sourcing rules, alongside budget transfers. Its title also flags gaming-fund items (Race Horse Development Fund distributions and the State Gaming Fund) that the other states' bills do not touch.",
+  "watch": "Obtain the full enacted text to review the Race Horse Development Fund distribution, State Gaming Fund, and amusement tax clarification sections, which are listed in the title but absent from this excerpt and could redirect gaming tax revenue or affect local amusement tax exposure for gaming or entertainment operators.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 165230,
+  "generated": "2026-11-03T22:17:46.095Z"
+ },
+ "RI-H7953": {
+  "summary": "H7953 would create a new chapter 6-63 requiring social media companies with at least 5 million account holders worldwide to bar Rhode Island residents under 18 from holding accounts and to verify the age of all new and existing Rhode Island account holders starting January 1, 2027. It is enforced by the Department of Business Regulation and the Attorney General, subject to a 30-day cure period, and it also creates a private right of action. Wagering appears only in an exclusion: platforms providing interactive or virtual gaming are carved out of the definition of social media platform.",
+  "mechanics": [
+   "Coverage (6-63-1(8)-(9)): an interactive computer service with at least 5,000,000 account holders worldwide that lets users create profiles, upload posts, view others' posts and interact. There are 21 exclusions, including interactive or virtual gaming services (9)(ii)(E) and e-commerce where interaction is 'generally limited' to reviews, comments and lists of goods (9)(ii)(D).",
+   "Outright ban and age verification (6-63-2): from January 1, 2027, no minor (under 18) Rhode Island resident may be an account holder, and there is no parental-consent path despite the section heading. Age must be verified when an account is opened, or within 14 days of an existing user's attempt to access the account. Accounts that are not verified must be denied access.",
+   "DBR rulemaking: rules must cover verification methods, specifically valid government-issued ID. Verification data must be used only for compliance and securely disposed of, and any verification agent must have its principal place of business in the U.S.",
+   "Agency enforcement (6-63-4): DBR may impose administrative fines up to $2,500 per violation. A 30-day notice-and-cure period applies before any action. Repeat violators of an order face civil penalties up to $5,000. The AG may seek injunctions, disgorgement and damages, and the AG can act without a referral.",
+   "Private right of action (6-63-6): suit is filed in superior court and the plaintiff recovers the greater of $2,500 per incident or actual damages, plus attorneys' fees. Waivers, arbitration limits and choice-of-law clauses are void (6-63-7).",
+   "Status: held for further study in committee on April 8, 2026. The effective date would be January 1, 2027."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "This is closest to MI HB4388 (regulation of social media use by minors) and NC H462 (personal data privacy/social media safety). Unlike a parental-consent model, H7953 imposes a flat under-18 ban with mandatory government-ID-based verification and a $2,500 statutory-damages private right of action. CO HB1255 (operator reporting to law enforcement) and MD SB932 (display of user location) regulate platforms on different axes. The gaming-focused bills on the list, such as CT HB05038 (under-21 bar on prediction-market use and advertising) and the IL, MD and MA iGaming bills, regulate wagering directly, whereas H7953 expressly excludes interactive gaming services from its scope.",
+  "watch": "Operators should confirm their products fall within the interactive-gaming exclusion in 6-63-1(9)(ii)(E). Collectibles clients running live card breaks or community features on e-commerce platforms should check whether live chat and social interaction push them beyond the narrow 'generally limited' e-commerce carve-out in (9)(ii)(D) and the 5-million-account threshold, which would expose them to the under-18 ban and the private right of action if the bill revives.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 16405,
+  "generated": "2026-11-03T22:17:46.406Z"
+ },
+ "RI-S2968": {
+  "summary": "S2968 would create a Rhode Island Social Media Regulation Act (new chapter 6-63) requiring social media companies with at least 5 million account holders worldwide to verify the age of every Rhode Island account holder and bar minors under 18 from holding accounts without express parental or guardian consent. Minor accounts would be subject to an advertising ban, data-collection limits, direct-messaging and search restrictions, parental access, and a default 10:30 p.m. to 6:30 a.m. curfew. The Department of Business Regulation would enforce the Act, and there is a private right of action. The bill is not a gaming bill, and Senate Judiciary held it for further study on 2026-04-07.",
+  "mechanics": [
+   "Coverage (6-63-1(8)-(9)): the Act applies to interactive computer services running a social media platform with 5,000,000 or more account holders worldwide. Twenty-one carve-outs are listed, including interactive or virtual gaming services (9)(ii)(E), licensed-media streaming (B), preselected news and sports content (C), and e-commerce where user interaction is generally limited to reviews, product lists and wish lists (D).",
+   "Age verification and consent (6-63-2): starting January 1, 2027, companies must verify age at account opening, or within 14 days of an existing user's attempted access, and deny access until verification and parental consent are complete. DBR must write rules on acceptable ID methods, consent confirmation, and data retention and disposal, and any verification agent must have its principal place of business in the U.S.",
+   "Restrictions on minor accounts (6-63-3): no advertising may be displayed, no personal data may be collected beyond what compliance requires, no direct messages or search visibility for unlinked (non-friend) users, and no targeted or suggested content, groups, products or accounts.",
+   "Parental access and curfew (6-63-4, 6-63-5): consenting parents must get full access to the minor's posts and messages. A default 10:30 p.m. to 6:30 a.m. lockout applies, measured by the minor's IP address, and parents can change it and set daily hour limits.",
+   "Agency enforcement (6-63-7): DBR may impose administrative fines of up to $2,500 per violation, sue for injunction, disgorgement and damages, and recover attorney fees. Repeat violators of an order face up to $5,000. A mandatory 30-day notice-and-cure period applies before DBR can act.",
+   "Private action and waivers (6-63-9, 6-63-10): subsection (a) authorizes private suits only for 6-63-2 violations, but subsection (c) awards relief for violations of 6-63-2, 6-63-3 or 6-63-4, which is internally inconsistent. Relief is the greater of $2,500 per incident or actual damages, plus attorney fees. Contractual waivers and choice-of-law limits on these protections are void."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "incidental",
+  "comparison": "This is a minor-access social media bill most comparable to MI HB4388 (regulation of social media use by minors) and NC H462 (personal data privacy and social media safety). It differs from MD SB932, which requires location display, and CO HB1255, which covers law-enforcement reporting and warrants. Its only gaming touchpoint is the express exclusion of interactive gaming services from the definition of social media platform. That makes it unlike CT HB05038, which age-gates prediction markets to 21 and restricts advertising to under-21s directly, and unlike the iGaming authorization bills listed (for example IL HB4797 and MD HB1343).",
+  "watch": "Operators should note that the 6-63-1(9)(ii)(E) gaming exclusion and the narrow e-commerce exclusion in (D) may not shelter live-streamed card breaks or mystery-pack platforms that offer open chat, and that the ban on displaying advertising in minor accounts would affect any operator or affiliate social media marketing that reaches Rhode Island minors if the bill is revived after being held for study.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 19905,
+  "generated": "2026-11-03T22:17:53.089Z"
+ },
+ "SD-SB111": {
+  "summary": "SB111 amends South Dakota's electronic transactions chapter (ch. 53-12) to require very large social media services, those with more than 100 million monthly active users whose primary focus is not charity or religion, to give South Dakota users their personal data in a portable format. It also requires those services to maintain a transparent, third-party-accessible interoperability interface, including one-time or continuous export of a user's social graph. It does not regulate gambling, and its only connection to gaming is that it excludes 'interactive gaming' services from the definition of social media service.",
+  "mechanics": [
+   "Coverage (Sections 3 to 6): applies only to a social media service or company with more than 100 million active monthly users whose primary focus is not charity or religion. Section 7 exempts entities owned or operated by a religious organization that are property-tax exempt.",
+   "Definitions (§53-12-1(19)): a 'social media service' excludes services identifiable as email, cloud storage, interactive gaming, or document sharing, and excludes services consisting primarily of e-commerce where chat or comments are incidental. A 'user' is a South Dakota resident acting in an individual or household context.",
+   "Data access (Section 3): on request, a covered service must provide the user's personal data in a format that is portable, readily usable, and transmittable to another social media service without impediment.",
+   "Social graph export (Section 5): users may export all or a subset of their data (by type, by date, or since the last transfer). Exports must be machine-readable and use a royalty-free, patent-free public standard. Users may choose a single export or continuous exports at least every 24 hours. Reasonable privacy and security terms are permitted if they are non-discriminatory and do not self-preference.",
+   "Security and safe harbors: Section 6 requires securing personal data obtained through the interface. Section 5 preserves platforms' ability to act on security, fraud, harassment, or illegal activity, and Section 8 imposes no obligation to import data.",
+   "Effective July 1, 2027 (Section 9). The text contains no express enforcement mechanism or penalty provision."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Several listed bills also regulate social media platforms but take different approaches. CO HB1255 requires reporting adverse user actions to law enforcement, MD SB932 requires displaying users' general location, MI HB4388 targets minors' use, and NC H462 pairs data privacy with social media safety. SD SB111 is distinct as a data-portability and interoperability mandate limited to platforms above 100 million monthly active users. None of the listed gaming bills, such as the IL HB3080/HB4797 or MD HB1343 iGaming authorizations, overlap substantively, because SB111 expressly carves interactive gaming out of its scope.",
+  "watch": "Operators should confirm that the 'interactive gaming' and primarily-e-commerce exclusions in §53-12-1(19)(e)-(f) keep betting, iGaming, sweepstakes, and live card-break marketplaces out of scope, though the 100 million monthly active user threshold makes coverage unlikely in practice; they should also note that player data they receive via social-graph imports from major platforms after July 1, 2027 may trigger the Section 6 security obligations only if they themselves are a covered service.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 12417,
+  "generated": "2026-11-03T22:18:03.979Z"
+ },
+ "SC-H3431": {
+  "summary": "The text provided (House amendment 1A of January 14, 2026) adds a new Chapter 80 to Title 39, an 'Age-Appropriate Code Design' law that imposes a duty of reasonable care on large online services reasonably likely to be accessed by minors under 18. It requires default-on safety and privacy settings, data minimization, bans on targeted advertising and profiling of known minors, parental tools, and annual independent third-party audit reports. It also prohibits facilitating ads for gambling and other age-restricted products to known minors, and is enforced by the Attorney General with treble damages and possible personal liability for officers. The bill's long title still describes a different social-media account bill (Article 9, Chapter 5), so the enacted Act No. 96 should be checked against this amendment text.",
+  "mechanics": [
+   "Coverage (39-80-10(4), (17)): applies to entities doing business in SC that meet one of three tests: over $25M annual gross revenue (CPI-adjusted), data on 50,000+ consumers, or 50%+ of revenue from selling or sharing personal data. The service must also be 'reasonably likely to be accessed by minors', meaning it has actual knowledge, including inferred or marketing-attributed age, or is directed to children under COPPA.",
+   "Duty of care (39-80-20): reasonable care to prevent compulsive usage, severe psychological harm, financial injury and other listed harms, limited to harms actionable notwithstanding 47 U.S.C. 230. 'Covered design features' include gamification (streaks, badges, rewards), in-game purchases of digital items or tokens, notifications, infinite scroll and autoplay.",
+   "User tools and defaults (39-80-30, -40): known minors get default-on safeguards, including opt-outs from design features, time limits, user-set caps on purchase value, and opt-out of personalized recommendations. Other rules: no targeted advertising to minors, no profiling, data minimization, deletion of age-verification data, and a notification-blocking option for 10 p.m.–6 a.m. daily and 8 a.m.–3 p.m. on weekdays from August to May.",
+   "Advertising and dark patterns (39-80-60(B)-(C)): bars facilitating ads directed to known minors for products prohibited to minors, expressly including gambling, tobacco, alcohol and narcotics. Dark patterns are an unfair trade practice under SCUTPA (39-5-20).",
+   "Parental tools and audit (39-80-50, -70): parental controls over settings, purchases and time-of-day use are on by default. An annual public report by an independent auditor is due by July 1 to the Attorney General and must cover design features, data use, age-verification methods and algorithms.",
+   "Enforcement (39-80-80, Sections 2–4): the Attorney General enforces, with treble financial damages. Officers and employees face personal liability for wilful and wanton violations. Where laws conflict, the most protective law controls. The act is severable and effective on the Governor's approval."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is a comparable age-appropriate design code. AL HB351 is a general consumer data-privacy bill, AL HJR51 only creates a study commission on AI and children's internet safety, CA AB1159 addresses student personal information, and AK HB47 targets AI-generated sexual depictions. Unusual features of SC H3431 on its own are: personal officer and employee liability for wilful violations; treble damages; a mandatory third-party audit posted by the Attorney General; a statutory school-hours notification blackout; and an express bar on gambling ads to known minors embedded in a platform-design law.",
+  "watch": "Operators should watch whether ad-delivery platforms over-filter gambling and iGaming ads to avoid 'facilitating' them to users with inferred minor age under 39-80-60(B). Collectibles companies selling digital or mystery packs or running gamified breaks on covered platforms should watch whether 'in-game purchases' and 'gamification' design features pull them into the duty-of-care and purchase-limit requirements, especially given treble damages and personal officer liability.",
+  "model": "claude-opus-5-5",
+  "version": "Amended",
+  "text_chars": 26133,
+  "generated": "2026-11-03T22:18:04.088Z"
+ },
+ "SC-S268": {
+  "summary": "S. 268 adds Chapter 80 to Title 39, an Age-Appropriate Code Design act imposing a duty of reasonable care on large online services reasonably likely to be accessed by minors (under 18) to prevent listed harms, including compulsive use and material financial injury. It requires default-on safety and privacy settings, parental tools, data minimization, a ban on targeted advertising to minors, and annual independent third-party audits filed with the Attorney General. Gambling appears only in 39-80-60(B), which bars covered services from facilitating ads for gambling and other age-restricted products to users they know are minors.",
+  "mechanics": [
+   "Covered online service (39-80-10(4)): an entity doing business in SC, reasonably likely to be accessed by minors, that determines the purposes and means of processing personal data, and that either has over $25M in annual gross revenue (CPI-adjusted), handles personal data of 50,000 or more consumers, households or devices, or derives 50% or more of revenue from selling data. Exempt are COPPA-compliant interactive gaming platforms, educational and career services, telecom, broadband and video programming services, and the sale of physical products.",
+   "Actual knowledge of minor status includes any age the service has inferred or attributed for marketing, advertising or product development (39-80-10(7)). Covered design features include infinite scroll, rewards for visits or engagement, push notifications, in-game purchases, and appearance filters.",
+   "Required tools default to the highest protection (39-80-30, 39-80-40(F)): minors must be able to opt out of covered design features, limit or block in-game purchases and other transactions, and control geolocation sharing. Parents must be able to restrict purchases and financial transactions, set time limits, and block use during school hours and at night (39-80-50).",
+   "Prohibitions: no targeted advertising to minors (39-80-40(B)); no notifications to known minors from 10 p.m. to 6 a.m. daily, or from 8 a.m. to 3 p.m. on weekdays August through May (39-80-40(D)); no facilitating ads for narcotics, tobacco, gambling or alcohol to known minors (39-80-60(B)); no dark patterns that undermine safeguards (39-80-60(C)).",
+   "Annual public report due July 1, prepared by an independent third-party auditor and posted by the Attorney General (39-80-70). It must cover user counts by age band, time spent, sensitive data use, age verification methods, and algorithms.",
+   "Enforcement (39-80-80): the Attorney General enforces; services are liable for treble financial damages; officers and employees face personal liability for willful and wanton violations. Harms are limited to those actionable under 47 U.S.C. 230 (39-80-20(B)). Where laws conflict, the most protective law controls. The act is effective on the Governor's approval."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is a comparable age-appropriate design code. AL HB351 is a general consumer data privacy bill, AL HJR51 only creates a study commission on AI and children's internet safety, CA AB1159 addresses student personal information, and AK HB47 targets generated sexual imagery. S. 268 is unusual for combining a statutory duty of care, school-hours and overnight notification curfews, mandatory third-party audits published by the Attorney General, treble damages, and personal liability for officers and employees. It also expressly names gambling in an ad-facilitation ban tied to actual or inferred knowledge of a user's age.",
+  "watch": "Watch 39-80-60(B) and the broad inferred-age definition of 'know to be a minor': platforms may respond by restricting or over-filtering sportsbook and iGaming ad buys. Collectibles clients running card-break or mystery-pack apps or streams that minors use could themselves be covered services, triggering purchase-limit tools, reward-feature opt-outs, notification curfews, audits, and treble or personal liability, so the drafting errors in the definitions (duplicate numbering, the stray 'subsection (5)' cross-reference) are worth tracking in House Judiciary.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 24841,
+  "generated": "2026-11-03T22:18:05.433Z"
+ },
+ "TN-SB1799": {
+  "summary": "SB1799 adds a new part to Tennessee's consumer protection chapter (Title 47, Chapter 18, new §§ 47-18-3501 to -3503) requiring a social media platform to delete all personal information tied to an account when the account holder deletes that account. Account holders who request deletion of personal information without deleting the account fall back on the Tennessee Information Protection Act, including § 47-18-3304. Violations are enforceable through a private right of action carrying actual and punitive damages, injunctive relief, and attorney fees.",
+  "mechanics": [
+   "Deletion duty (§ 47-18-3502(a)): when an account holder deletes an account, the platform must delete all personal information about that account, or collected through it, by the account holder or another user.",
+   "Definitions (§ 47-18-3501): 'social media platform' means a site or app that allows account creation and lets account holders communicate through posts. It excludes email, broadband, cloud services, career sites, preselected-content services, online shopping, and peer-to-peer payment platforms where user interaction is limited. 'Content' excludes interactive gaming and educational entertainment.",
+   "'Personal information' excludes publicly available information, de-identified data, and aggregate consumer information.",
+   "TIPA preserved (§ 47-18-3502(b)): requests to delete data from an account that remains open are governed by TIPA, part 33, to the extent TIPA applies.",
+   "Private right of action (§ 47-18-3503): any person who believes a platform violated the deletion duty may sue for an injunction, actual damages, punitive damages, and reasonable costs and attorney fees.",
+   "Effective January 1, 2027, applying to conduct on or after that date. The bill passed the Senate and is held on the House desk as of 2026-03-12."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "This is a data-deletion privacy bill and shares no gaming subject matter with the listed gambling bills, such as IL HB3080/HB4797, MD HB1343/SB885, NJ A 3258, or MI SB0713/SB0714. Its closest peers are the social media bills: MI HB4388 regulates minors' use of social media, NC H462 combines data privacy with social media safety, MD SB932 requires platforms to display user location, and CO HB1255 requires platforms to report adverse actions to law enforcement. SB1799 is unusual among these because it focuses narrowly on post-deletion data purging and backs that duty with a private right of action that includes punitive damages, rather than relying on attorney general enforcement.",
+  "watch": "Operators should check whether community features in their betting, casino, or card-break apps (chat, social feeds, user posts) could make them a 'social media platform', since the gaming carve-out in § 47-18-3501(2) applies only to the 'content' definition and not to the platform definition, and blanket deletion of account data could conflict with gaming-regulator record-retention, KYC, and AML obligations while exposing the operator to private suits for punitive damages.",
+  "model": "claude-opus-5-5",
+  "version": "Draft",
+  "text_chars": 5169,
+  "generated": "2026-11-03T22:18:07.261Z"
+ },
+ "TX-HB499": {
+  "summary": "HB 499 adds Subchapter Z to Chapter 161 of the Texas Health and Safety Code. It requires covered social media platforms to show a mental-health warning label on their landing page every time a user opens the platform, and to block use until the user confirms they understand the warning. The Health and Human Services Commission executive commissioner must adopt evidence-based rules on the label's form and content. Wagering appears only through an exemption for sites or apps used primarily for interactive gaming.",
+  "mechanics": [
+   "Sec. 161.801 borrows the definitions of 'social media platform' and 'user' from Bus. & Com. Code Sec. 120.001, and Sec. 161.8015(a) limits coverage to platforms described in Sec. 120.002(b).",
+   "Sec. 161.8015(b) exempts any website or application 'used primarily for the purpose of interactive gaming.' That term is not defined in the bill.",
+   "Sec. 161.802(a) requires the label on every open. It must include mental-health resources, including the 988 Suicide & Crisis Lifeline phone number or website link, and a statement on the platform's use of personal data and the addictive nature of social media.",
+   "Sec. 161.802(b) requires a gate: the user cannot operate the platform until they verify they understand the warning.",
+   "HHSC rules are due by January 1, 2026, compliance is not required before April 1, 2026, and the Act takes effect September 1, 2025.",
+   "The bill text contains no penalty or enforcement provision."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "This is a youth social-media health bill, closest to MI HB4388 (regulation of minors' social media use), NC H462 (data privacy and social media safety), MD SB932 (location display) and CO HB1255 (platform reporting duties), none of which use a per-session warning gate. Unlike the gambling-focused youth measures listed, such as CT HB05038 (no prediction-market use or advertising to under-21s) and CT SB00240 (internet gaming disorder and its link to gambling), HB 499 does not regulate wagering at all. Its one gaming-related feature is a carve-out for interactive gaming platforms. The mandatory click-through acknowledgment on every open, coupled with agency-written label content, is unusual.",
+  "watch": "Watch whether the undefined 'interactive gaming' exemption in Sec. 161.8015(b) is read to cover gambling-adjacent apps with social or chat features (and, for the collectibles clients, live card-break streaming communities), and whether the warning-label-plus-acknowledgment model is later borrowed for responsible-gaming or prediction-market messaging.",
+  "model": "claude-opus-5-5",
+  "version": "Engrossed",
+  "text_chars": 3778,
+  "generated": "2026-11-03T22:18:16.869Z"
+ },
+ "UT-HB505": {
+  "summary": "Utah 1st Sub. H.B. 505 reclassifies Utah's vehicle registration charges into service fees, regulatory fees, and vehicle taxes, and reorganizes the related imposition and revenue-distribution provisions in Title 41, Chapter 1a, Part 12. It also creates a new Motor Vehicle Division Restricted Account and eliminates the six-month registration option. The bill has no sports-betting, iGaming, sweepstakes, or collectibles content, and it died when it was filed in the House file for bills not passed on March 6, 2026.",
+  "mechanics": [
+   "Most provisions take effect January 1, 2027, under a special effective date. Section 41-1a-1201 is repealed and reenacted, along with sections 41-1a-1206, -1211 and -1218, to restructure vehicle taxes and fees and how they are distributed.",
+   "New section 41-1a-124 creates the Motor Vehicle Division Restricted Account within the General Fund, funded from deposits described in 41-1a-1201. Appropriations from the account to the Tax Commission are nonlapsing.",
+   "The six-month registration under 41-1a-215.5(1) is repealed. The 24-month registration remains available for trailers, electric motor vehicles, off-highway vehicles and street-legal ATVs at double the 12-month tax or fee, but apportioned interstate vehicles are excluded.",
+   "Fleet registration-period adjustments under 41-1a-215(3)(c) are charged at 25%, 50%, 75% or 100% of the regular vehicle tax or fees, depending on adjustment length in three-month bands.",
+   "The bill appropriates $9,883,900 in General Fund capital project funds for FY2027. It also makes conforming changes that replace 'registration fee' with 'vehicle tax or fee' across insurance, health, education, tax and transportation code sections."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is substantively comparable. The closest analogue is IL HB2755, an Illinois revenue omnibus that touches Road Fund deposits, but HB 505 is a narrow vehicle-fee recodification with no gaming component. It shares nothing with the gaming-focused bills on the list: NC H999 (video gaming terminals), OH HB344 (electronic instant bingo tax), NY S 10092 (gambling ad restrictions for minors) and NE LB402/LB415 (gambling winnings setoff). The provided text is truncated, but nothing in the visible portion references wagering.",
+  "watch": "Nothing in this bill affects sports-betting, iGaming or card-break clients, and because it is dead no action is needed beyond confirming that any 2027 reintroduction does not add unrelated gaming or excise provisions.",
+  "model": "claude-opus-5-5",
+  "version": "Substitute",
+  "text_chars": 232989,
+  "generated": "2026-11-03T22:18:18.309Z"
+ },
+ "TX-HB186": {
+  "summary": "HB 186 would bar anyone under 18 from using a social media platform in Texas and require platforms to verify that a new account holder is 18 or older, using a commercially reasonable method based on public or private transactional data. It amends the Business & Commerce Code definition of social media platform (Sec. 120.001(1)) to add an exclusion for services used primarily for interactive gaming. Violations are enforceable by the Attorney General as deceptive trade practices.",
+  "mechanics": [
+   "New Sec. 120.112 says a child (under 18) may not use a social media platform, to the extent permitted by federal law including COPPA. Sec. 120.113 requires platforms to bar children from contracting for accounts and to verify age before accepting an account holder.",
+   "Age verification under Sec. 120.113(b) must use a commercially reasonable method relying on public or private transactional data. Under Sec. 120.113(c), the data may be used only for verification, may not be retained or transferred, and must be deleted immediately once verification is complete.",
+   "Sec. 120.114 requires a company to delete a child's account on all of its platforms within 10 days of a verified request from a parent or guardian, and to provide an accessible, verifiable way to make that request.",
+   "The amended definition in Sec. 120.001(1)(D) excludes any online service, application, or website used primarily for interactive gaming. 'Interactive gaming' is not defined. The existing exclusion for provider-preselected news, sports, or entertainment content with only incidental chat is retained.",
+   "Under Sec. 120.115, a violation requires a knowing failure to verify, knowingly allowing a child to use the platform, misuse of verification data, or failure to remove an account. Violations are DTPA deceptive trade practices enforceable by the AG consumer protection division under Secs. 17.47, 17.58, 17.60 and 17.61.",
+   "The Act takes effect September 1, 2025 and applies to platform access on or after January 1, 2026. The bill passed the House and was reported favorably 8-3 by Senate State Affairs on May 23, 2025."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Among the listed bills, MI HB4388, which regulates minors' use of social media, and NC H462 (Personal Data Privacy/Social Media Safety) are the closest analogues. Texas's version is unusually blunt: it is an outright under-18 ban with mandatory transactional-data age verification, not a consent or design-code model. MD SB932 (displaying user location) and CO HB1255 (law-enforcement reporting and warrants) address other social media duties and impose no age ban. CT HB05038, which bars prediction-market use by and advertising to under-21s, is the nearest gaming-side parallel, but it targets wagering platforms directly, whereas TX HB186 expressly carves 'interactive gaming' services out of its scope.",
+  "watch": "Track how 'used primarily for the purpose of interactive gaming' is read, since the term is undefined and could shield gaming apps, along with whether live-stream commerce or card-break platforms with user chat fall within the social media definition. Also watch the downstream effect on operator and collectibles marketing that reaches teen audiences through mainstream platforms, which would have to purge under-18 users.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 8132,
+  "generated": "2026-11-03T22:18:21.159Z"
+ },
+ "VA-SB201": {
+  "summary": "SB201 would have amended Virginia's Consumer Data Protection Act by adding § 59.1-577.2, which requires covered controllers and processors to obtain verifiable parental consent before registering anyone under 18 or before collecting, using, or disclosing that minor's personal data. This would raise the effective age for parental-consent obligations from the Act's general under-13 'child' definition to under 18. The bill died in Senate General Laws and Technology on February 4, 2026, failing to report on a 7-7-1 vote.",
+  "mechanics": [
+   "New § 59.1-577.2(A) defines 'child' as under 18 for that section only; the general § 59.1-575 definition stays at under 13, so 'sensitive data' from a 'known child' is still tied to under-13s.",
+   "Under § 59.1-577.2(B), verifiable parental consent is required before registering a child or collecting, using, or disclosing the child's personal data, and parents must be offered the option to consent to collection and use without consenting to disclosure to third parties.",
+   "Under § 59.1-577.2(C), operators must make 'reasonable efforts,' considering available technology, to verify the consenting adult is the parent or guardian, via (1) a signed consent form, (2) a credit card, debit card, or online payment transaction that notifies the primary account holder, or (3) any valid government-issued ID.",
+   "Under § 59.1-576(A), the Act applies only to entities that control or process personal data of at least 100,000 Virginia consumers a year, or at least 25,000 consumers while deriving over 50% of gross revenue from data sales; § 59.1-576(B) exempts state bodies, GLBA financial institutions, HIPAA entities, nonprofits, and higher-ed institutions.",
+   "Under § 59.1-576(D), compliance with COPPA's verifiable parental consent requirements is deemed compliance with the chapter's parental consent obligations, although COPPA itself covers only under-13s.",
+   "No new penalty or enforcement mechanism is added, so the Act's existing enforcement would apply. Status: defeated in committee on February 4, 2026."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Unlike CT HB05038, which bars prediction-market platforms from serving or advertising to under-21s, SB201 is a general privacy measure and does not target wagering. Its only gaming reference is the existing exclusion of 'interactive gaming' services from the 'social media platform' definition. It is closest to NC H462 (personal data privacy and social media safety) and MI HB4388 (regulation of minors' social media use), but it is not limited to social media: it applies to any covered controller's 'product or service' for all users under 18. The listed iGaming and sports-wagering bills (e.g., IL HB3080, MD HB1343, NJ A 3258) do not address data privacy for minors.",
+  "watch": "Although the bill is dead for 2026, a reintroduction would push teen-facing collectibles, card-break, and mystery-pack platforms that meet the 100,000-consumer threshold toward verifiable parental consent for every 13–17-year-old user, and because § 59.1-577.2(B) has no actual-knowledge qualifier, it would effectively require age-screening all users.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 18014,
+  "generated": "2026-11-03T22:18:25.207Z"
+ },
+ "VA-SB245": {
+  "summary": "Virginia SB245 (Chapter 338, approved April 6, 2026) adds Va. Code § 22.1-79.3:2, requiring each school board to bar public K-12 schools, school board employees, and school volunteers from using a social media platform as the sole means of communicating with students to facilitate school-related extracurricular activities. Division-approved communication or messaging apps remain permitted, and superintendents may grant revocable written exceptions. The bill has nothing to do with sports betting, iGaming, or collectibles.",
+  "mechanics": [
+   "Definitions cross-reference existing law: \"extracurricular activities\" as defined in § 22.1-370 and \"social media platform\" as defined in § 59.1-575 (subsection A).",
+   "Covered actors are public elementary and secondary schools, school board employees, and school volunteers (subsection B).",
+   "The prohibition is narrow. It bars social media only as the sole means of communication with students for school-related extracurricular activities, and it expressly preserves school division-approved communication or messaging applications (subsection B).",
+   "A division superintendent or designee may grant a written exception where social media use is required to meet an objective that cannot reasonably be achieved otherwise, must give clear written instructions, and may revoke the exception at any time (subsection C).",
+   "The text specifies no penalty or enforcement mechanism and no special effective date, so Virginia's default July 1 effective date would presumably apply."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is a close analogue. The nearest overlap is with child online-safety and student-data measures such as AL HJR51 (AI and Children's Internet Safety Study Commission), CA AB1159 (student personal information), and AK HB47 (generated child sexual abuse material and teaching certificates). Those target platforms, data processors, or criminal conduct, whereas SB245 regulates only how school personnel communicate with students. What is unusual is its modest design: it does not ban social media outright, but forbids it as the exclusive channel for extracurricular communications, with a superintendent exception process.",
+  "watch": "There is nothing for sports-betting, iGaming, or trading-card clients here beyond a general signal of Virginia's interest in minors' online exposure, which could resurface in age-verification or youth-marketing proposals affecting social-media advertising or live card-break streams.",
+  "model": "claude-opus-5-5",
+  "version": "Chaptered",
+  "text_chars": 1639,
+  "generated": "2026-11-03T22:18:27.242Z"
+ },
+ "VA-SB615": {
+  "summary": "SB615 adds a new § 59.1-577.2 to Virginia's Consumer Data Protection Act that bars controllers and processors from setting a price offered to a consumer through the consumer's online device based on the device's hardware or hardware state, the presence or absence of software on the device, or precise geolocation data used to infer things about the consumer. It also adds supporting definitions to § 59.1-575 and carves out device repair and trade-in pricing, real-time local demand pricing, legitimate location-based cost and tax differences, and generally available coupons and discounts.",
+  "mechanics": [
+   "Prohibited inputs (§ 59.1-577.2(A)): in connection with a 'consumer transaction' (as defined in § 59.1-198), a price may not be generated 'in whole or in part' from (1) device hardware or hardware state, (2) presence or absence of any software, or (3) precise geolocation data (within 1,750 feet) when used to infer things about the consumer.",
+   "New definitions in § 59.1-575: 'hardware state' (battery life, number of wireless connections detected, performance characteristics, device age, and volatile and persistent data); 'online device' (laptop, tablet, phone, or other smart hardware); 'coupon'; 'discount'; and 'consumer transaction' by cross-reference to the Virginia Consumer Protection Act.",
+   "Exceptions (§ 59.1-577.2(B)): hardware-based pricing for device repair, maintenance, or trade-in value; geolocation pricing based on real-time demand nearby for goods or services provided immediately on request, or on legitimate location cost differences including state or local taxes, duties, and fees.",
+   "Promotions safe harbor: coupons, discounts, rebates, sales, or promotions are allowed only if they are separate from the price, offered to the general public on the same terms, and do not use any of the prohibited inputs.",
+   "Applies to controllers and processors through the existing CDPA framework; the bill text adds no separate penalty or effective-date clause.",
+   "Status: continued to the 2027 session by Senate General Laws and Technology, 15-0."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills addresses algorithmic or device-based price discrimination. The closest are general privacy and platform bills such as NC H462 (personal data privacy/social media safety), MD SB932 (displaying social media users' locations), and MI HB4388 (minors' social media use), none of which regulates pricing inputs. The gaming bills listed, such as MI SB0713/SB0714 on iGaming advertising and promotions and NJ A 3258 on micro-bets, regulate wagering products directly rather than through consumer data law. What stands out in SB615 is that it targets 'surveillance pricing' based on device fingerprinting and inferred location, not data collection or disclosure.",
+  "watch": "Operators should watch whether odds, deposit bonuses, or personalized promotions could be treated as a 'price' in a 'consumer transaction', since the promotions safe harbor covers only offers made to the general public on the same terms without device or geolocation inputs, which could reach tailored, device-segmented, or geolocation-informed offers and personalized pack or card-break pricing.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 14440,
+  "generated": "2026-11-03T22:18:37.502Z"
+ },
+ "VA-SB232": {
+  "summary": "SB232 amends Virginia's Consumer Data Protection Act to add a general \"minor\" definition (under 18) and new duties for controllers of any \"online service, product, or feature\" toward known minors. It bars such controllers from entering terms of service, user, or account-creation agreements with a known minor unless a parent gives verified consent, and requires parental controls at that point, including the ability to block the minor's purchases. It also imposes advertising and algorithm disclosure duties and a duty of reasonable care to prevent specified harms to minors, including exposure to ads for gambling and other products unlawful for minors.",
+  "mechanics": [
+   "Scope is unchanged under § 59.1-576 A: businesses that control or process personal data of at least 100,000 Virginia consumers a year, or at least 25,000 consumers if over 50% of gross revenue comes from data sales. Nonprofits, state agencies, GLBA financial institutions, HIPAA entities and higher education remain exempt.",
+   "New § 59.1-577.2 bars agreements (terms of service, user, or account creation) with known minors under 18 absent verified parental consent. Permitted consent methods include a signed form, toll-free call, videoconference, government ID check with deletion afterward, email plus additional verification, or any other commercially reasonable method.",
+   "At consent, the parent must be offered controls under § 59.1-577.2 C. These include the highest privacy setting, data minimization, no sale of the minor's data, no precise geolocation, no targeted ads, and the ability to prevent the minor from making purchases or financial transactions.",
+   "§ 59.1-577 B gives parents an expanded access right to all data held on the minor. The response must cover third-party recipients, sources, retention period, and any index or score assigned to the minor and how it is used.",
+   "Under § 59.1-577.3 A–B, controllers that let advertisers reach known minors must disclose at display time the brand, subject matter, why and how the ad was targeted, and whether the content is an ad. Controllers using recommendation algorithms on known minors must describe them in the terms of service.",
+   "§ 59.1-577.3 C imposes a duty of reasonable care to prevent listed harms to known minors, including addiction-like patterns of use and ads for products unlawful for minors (expressly including gambling), plus predatory, unfair, or deceptive marketing. Effective January 1, 2027; enforcement runs through the existing Act's Attorney General mechanism."
+  ],
+  "issue_tags": [
+   "advertising"
+  ],
+  "relevance": "incidental",
+  "comparison": "Unlike CT HB05038, which directly bars prediction-market platforms from serving or advertising to under-21s, SB232 reaches gambling only through a general duty of care to prevent gambling ads to known minors under 18 on any covered online service. It is closer to NC H462 and MI HB4388, which address minors' data and social media. However, SB232 goes beyond social media to cover any online service, product, or feature, and adds a parental-consent gate on minors' account agreements. Its existing social-media definition expressly excludes services \"for interactive gaming,\" but the new §§ 59.1-577.2 and 59.1-577.3 duties are not limited to social media.",
+  "watch": "Watch the § 59.1-577.3 C(5) duty to prevent gambling ads to known minors and the \"addiction\" and \"predatory marketing\" prongs, which could be invoked against operator advertising on third-party platforms. For card-break and mystery-pack sellers, the § 59.1-577.2 parental-consent requirement for minors' accounts and the parental purchase-blocking control apply to any business meeting the 100,000-consumer threshold.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 29873,
+  "generated": "2026-11-03T22:18:37.956Z"
+ },
+ "VA-SB85": {
+  "summary": "SB85, as substituted by the House Communications, Technology and Innovation Committee, amends Virginia's Consumer Data Protection Act to extend deletion and portability rights to \"social graph data\" held by social media platforms and \"contextual data\" held by deployers of general-purpose generative AI models. It requires both to build open-protocol, third-party-accessible interoperability interfaces so users can share that data in real time with competing platforms or AI models. The House committee tabled the bill 18-3 on March 9, 2026, so it is effectively dead for the session.",
+  "mechanics": [
+   "New definitions in § 59.1-575 cover \"social graph data\" (user content, followers and follows, engagements, public profile, metadata and relational references, but not other users' content), \"contextual data\" (prompts, conversation histories, files, preferences and metadata across sessions, excluding model trade secrets), \"deployer\", \"general-purpose generative AI model\" and \"open protocol\".",
+   "§ 59.1-577(A)(3)-(4) adds social graph and contextual data to the existing deletion and portability rights; the portability right expressly does not require a controller to reveal trade secrets.",
+   "New § 59.1-577.2(A)-(C) requires platforms and deployers to offer interoperability interfaces with continuous, real-time sharing on an open protocol and on non-discriminatory terms. Covered entities must also provide consent mechanisms and disclosures, and may set reasonable request thresholds, including a reasonable access fee.",
+   "§ 59.1-577.2(D) exempts internally derived inferences, proprietary algorithms and ranking systems, and certain proprietary-format data, and does not require platforms to import data. Subsection (E) limits use of received data to security, the user-requested service and maintaining interoperability.",
+   "The existing \"social media platform\" definition excludes services that are primarily news, sports, entertainment or ecommerce with only incidental interactive features, as well as services \"for interactive gaming\".",
+   "The effective date is July 1, 2027, with enforcement through the existing CDPA Attorney General framework."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "AL HB351 is a general consumer data privacy bill that regulates processing and consumer actions, but on its description it does not impose the social-graph and AI-context interoperability mandate found in SB85. The AI bills listed, such as CA AB1018 (automated decision systems), CA AB1609 (chatbots) and AZ SB1786 (content verification), address disclosure, accuracy or verification rather than data portability to competitors. SB85 is unusual in bringing a competition-style, real-time interoperability obligation into a state privacy statute and applying it to generative AI conversation histories.",
+  "watch": "The bill touches wagering only through the existing \"interactive gaming\" and \"sports\" carve-outs in the social media platform definition, so operators should watch whether any revived version narrows those exclusions in a way that pulls in betting apps with social or community features, or AI chat features that would count as a deployer.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 23591,
+  "generated": "2026-11-03T22:18:38.425Z"
+ },
+ "VA-SB671": {
+  "summary": "SB671 would create a licensed adult-use retail cannabis market in Virginia under the Virginia Cannabis Control Authority. It adds new licensing chapters (4.1-700 through 4.1-1008), rewrites the social-equity program as a micro business program, and revises criminal penalties, including repealing §§ 18.2-248.1 and 18.2-251.1. Nothing in the provided text concerns sports betting, iGaming, sweepstakes, or collectibles.",
+  "mechanics": [
+   "§ 4.1-606 B 7 raises the edible THC caps from 5 mg to 10 mg per serving and from 50 mg to 100 mg per package.",
+   "§ 4.1-606 B 13 replaces social-equity applicants with micro business applicants. These need 12 months' Virginia residency and at least 66% ownership and control by persons meeting criteria such as a prior marijuana misdemeanor (or a family member with one), residence or schooling in a historically economically disadvantaged community, Pell Grant receipt, or veteran status. Licensing priority rises with the number of criteria met.",
+   "The license categories are restructured: 'manufacturing' becomes 'processing' and 'wholesaler' becomes 'transporter', with each type defined in new §§ 4.1-800 to 4.1-804. 'Canopy' is defined for cultivation limits.",
+   "§ 4.1-603 D 3 requires the Cannabis Public Health Advisory Council to approve or deny Board public-health regulations within 30 days; if it does not act in time, the Board may adopt them without approval.",
+   "§ 4.1-604 gives the Board inspection access to any business selling cannabinoid-labeled consumables, quarterly reporting duties, and authority to retain its own counsel. The Cannabis Equity Reinvestment Fund (§ 2.2-2499.8) would also fund the Indigent Defense Commission and the Cannabis Equity Business Loan Fund.",
+   "§ 4.1-606 B 16 directs time, place, and manner limits on outdoor cannabis advertising. The provided text is truncated, so tax provisions such as the § 58.1-301 amendment are not visible."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest listed analog is OH SB56, which also revises adult-use marijuana law and levies marijuana taxes, and NC H680 (Protect Children from Cannabis Act). VA SB671 differs in building the retail market from scratch around a micro business preference system and expanded equity funds. None of the listed gaming bills, such as NC H999 (video gaming terminals), OH HB344 (electronic instant bingo) or NY S 10092 (gambling ads to minors), overlaps in substance.",
+  "watch": "There is no gaming or collectibles exposure in the visible text, but the truncated remainder should be checked for any amendments to § 59.1-200 (consumer protection) or other general provisions that could reach promotional or chance-based sales practices.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 473629,
+  "generated": "2026-11-03T22:18:45.570Z"
+ },
+ "VA-SJR133": {
+  "summary": "Virginia SJR 133 is a commemorative joint resolution noting the death of Winchester resident Evan Morgan Jewell on February 2, 2026, and directing the Clerk of the Senate to give a copy to his family. It creates no legal obligations and does not touch gaming, wagering, or collectibles regulation. The only arguably relevant reference is a biographical note that he was an avid Magic: The Gathering trading card game player.",
+  "mechanics": [
+   "Agreed to by the Senate on March 5, 2026 and by the House of Delegates on March 9, 2026; enrolled as SJ133ER.",
+   "Operative clauses only record the General Assembly's sadness at his death and direct the Clerk of the Senate to prepare a copy for his family.",
+   "Recitals mention his swimming, 4-H, Masonic lodge membership, conservation club work, Kenpo Karate black belt, and Magic: The Gathering play.",
+   "No definitions, rates, licensing, enforcement, or effective-date provisions."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "Nothing in the listed bills is comparable. Those include Illinois revenue and budget vehicles (IL HB2755, HB2949), Michigan omnibus appropriations (MI HB4706, HB5619, SB0878), NC H999 on video gaming terminals, OH HB344 on electronic instant bingo, and NY S 10092 restricting gambling ads to minors. All of them carry substantive policy or fiscal provisions. SJR 133 is a purely ceremonial memorial resolution, and its passing mention of a trading card game has no regulatory significance.",
+  "watch": "Nothing to watch: this is a ceremonial memorial resolution with no regulatory effect on sports betting, iGaming, or trading-card and card-break businesses, and it can be removed from the tracking list.",
+  "model": "claude-opus-5-5",
+  "version": "Enrolled",
+  "text_chars": 2200,
+  "generated": "2026-11-03T22:18:47.975Z"
+ },
+ "WA-HB1203": {
+  "summary": "HB 1203 would ban retailers from selling, offering, displaying, marketing, or advertising any flavored tobacco or nicotine product (including menthol and cooling-sensation products) or any \"entertainment vapor product\" in Washington starting January 1, 2026. Enforcement runs through Liquor and Cannabis Board licensing sanctions and the Consumer Protection Act. The bill's references to \"video games\" and \"interactive gaming\" describe vape devices with built-in screens or games and have nothing to do with wagering.",
+  "mechanics": [
+   "Sec. 2 defines \"entertainment vapor product\" as any vapor product with interactive gaming or entertainment features, such as playing music, displaying photos or video, playing virtual games, or showing animations. \"Flavored tobacco or nicotine product\" covers any non-tobacco taste or smell, including menthol and mint, or any cooling or numbing sensation. FDA-authorized products and cannabis are excluded.",
+   "Sec. 3 bars retail sale, display, marketing, or advertising of covered products from January 1, 2026. A rebuttable presumption of flavoring arises from manufacturer or retailer communications using terms such as \"cool,\" \"chill,\" \"ice,\" \"fresh,\" \"arctic,\" or \"frost.\"",
+   "Sec. 6 makes a violation a per se unfair or deceptive practice under RCW 19.86.020 (the Consumer Protection Act).",
+   "Sec. 9 adds violations of Sec. 3 to the higher RCW 70.155.100(3)(b) penalty tier: $1,000, then $2,500, then $5,000 plus a 6-month suspension, then $10,000 plus a 12-month suspension, then 5-year revocation, all within a three-year period. Sec. 11 adds Sec. 3 violations to the vapor-license sanctions in RCW 70.345.180.",
+   "Secs. 8 and 10 require new prohibition signage. Sec. 4 directs a Department of Health awareness campaign. Sec. 7 authorizes tribal compact consultations. Secs. 12 and 13 fold the new product definitions into the vapor and tobacco tax chapters."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is comparable. They address iGaming authorization (e.g., IL HB3080, MD HB1343, MA H332), gaming advertising (MI SB0713/SB0714), prediction markets (CT HB05038), and social media, while HB 1203 is a tobacco and nicotine flavor ban. Its only overlap is linguistic: the Sec. 2 definition of \"entertainment vapor product\" uses the phrase \"interactive gaming\" for vape devices with built-in games, which likely triggered the keyword match. The one structurally notable feature is its marketing-language presumption combined with per se Consumer Protection Act liability, a model sometimes borrowed for other restricted-product advertising regimes.",
+  "watch": "Nothing in HB 1203 regulates wagering, iGaming, or collectibles, so operators need only note that its \"interactive gaming\" language refers to vape devices; the advertising-terms presumption and per se Consumer Protection Act enforcement model is worth tracking only as a potential template for future restricted-product marketing bills in Washington.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 38203,
+  "generated": "2026-11-03T22:18:53.386Z"
+ },
+ "WA-HB1834": {
+  "summary": "Third Substitute HB 1834, requested by the Attorney General, creates a new chapter in Title 19 RCW that bars operators of \"addictive internet-based services or applications\" from serving algorithmically personalized \"addictive feeds\" to Washington minors and restricts push notifications to minors during overnight and school hours without verifiable parental consent. It also requires all users to be offered feed time limits, hidden like counts, a non-personalized default feed, and a private-account mode. Violations are enforceable as unfair or deceptive acts under the Consumer Protection Act, chapter 19.86 RCW. The bill does not address wagering or gaming at all.",
+  "mechanics": [
+   "Sec. 1 defines \"addictive feed\" as user-generated or user-shared media recommended, selected, or prioritized using information tied to the user or device. Carve-outs include non-persistent data, search terms, express user requests, private messages, and next-in-sequence content with no autoplay. Sites whose user interactions are limited to commercial transactions or consumer reviews, and cloud-storage feeds, are excluded.",
+   "Sec. 2 sets a two-stage age standard for providing addictive feeds. Before July 1, 2027, an operator is liable only with actual knowledge that the user is a minor (under 18 and a Washington resident). From July 1, 2027, the operator must have \"reasonably determined\" that the user is not a minor.",
+   "Sec. 3 bans push notifications to minors from 12–6 a.m., and from 8 a.m.–3 p.m. on weekdays September through May, absent verifiable parental consent. The same actual-knowledge and reasonable-determination standards apply before and after July 1, 2027. Software update, security, and account-integrity notices are exempt.",
+   "Sec. 4 requires tools available to all users, not only minors: daily time limits on the addictive feed, hiding likes and other feedback, a non-personalized default feed, and a private account mode.",
+   "Sec. 6 provides that compliance is not a defense to mental-health harm claims by minors. Sec. 7 limits use and retention of personal data collected for age determination.",
+   "Sec. 8 makes violations per se unfair or deceptive acts under RCW 19.86. Sec. 11 voids the act unless specific funding is provided in the omnibus appropriations act by June 30, 2026."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "The closest listed analogues are the minor social media bills: MI HB4388 (regulating social media use by minors) and NC H462 (personal data privacy and social media safety). WA HB1834 targets feed design and notification timing rather than account access or data privacy generally. It differs from CO HB1255 (law-enforcement reporting of adverse actions) and MD SB932 (displaying user location), which regulate platform disclosures rather than algorithmic feeds. Unlike CT HB05038, which bars prediction-market platforms from serving or advertising to under-21s, HB1834 contains no gambling-specific age gate or advertising rule.",
+  "watch": "The bill is in the House Rules \"X\" file and dies without funding under Sec. 11, but operators should check whether any app or live card-break streaming platform with personalized feeds of user-shared video, chat, or social content falls outside the Sec. 1(2)(b)(i) commercial-transaction exclusion and would trigger the post-July 1, 2027 age-determination and push-notification limits.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 9711,
+  "generated": "2026-11-03T22:18:57.394Z"
+ },
+ "WA-HB2439": {
+  "summary": "Substitute HB 2439 is a tobacco and vapor product bill. It creates a voluntary responsible vendor program for tobacco and vapor retailers and tightens licensed-distributor sourcing rules. It also requires nicotine vapor manufacturers to be certified by the Liquor and Cannabis Board from January 1, 2027, mandates digital ID verification for all tobacco and vapor sales, and from 2027 bans 'entertainment vapor products' and vapes that imitate products marketed to minors. It does not regulate wagering, gaming, or collectibles.",
+  "mechanics": [
+   "Secs. 2-4: the Liquor and Cannabis Board must create a free, voluntary responsible vendor program. Participating licensees get a 50 percent reduction of the monetary penalty for a single violation in any 12-month period.",
+   "Secs. 5-10: retailers may buy tobacco, vapor products, and cigarettes only from licensed distributors or wholesalers. Product bought from unlicensed sources, including directly from a manufacturer, is contraband subject to seizure unless the retailer also holds a distributor license. Operating without a vapor license is a class C felony (Sec. 7).",
+   "Secs. 11-13: from January 1, 2027, nicotine vapor manufacturers must be certified, at $1,000 per product type or model initially and $500 per model on each annual renewal. Nonresident manufacturers not registered in Washington must post a $25,000 surety bond and appoint an in-state agent for service of process.",
+   "Secs. 21-22: retailers must verify every tobacco or vapor purchaser's ID with a digital device or application. The defense to prosecution under RCW 26.28.080 is tied to a digital verification showing the purchaser is 21 or over.",
+   "Secs. 23-24: from January 1, 2027, the bill bans selling or advertising 'entertainment vapor products', meaning devices with interactive gaming, music, video, or animation features. It also bans vapes that imitate candy, school supplies, or characters, celebrities, or mythical creatures known to appeal to minors.",
+   "Sec. 26 declares these practices matters affecting the public interest for the Consumer Protection Act, chapter 19.86 RCW (the text is truncated there). Sec. 19 orders an Ecology study of vape extended producer responsibility, with a report due May 1, 2028."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is comparable; they concern internet gaming, sports wagering, prediction markets, social media, and budgets. The nearest thematic overlaps are age-gating and youth-appeal rules. CT HB05038 bars prediction markets from use by or advertising to under-21s, and MI SB0713/SB0714 regulate iGaming advertising and promotions. CT SB00240 likewise treats 'internet gaming' as a public-health issue. Unusually, the only 'gaming' reference in HB 2439 (Sec. 23) is to video-game features built into vape devices, not wagering.",
+  "watch": "There is no direct operator exposure, but Sec. 24's ban on imitating characters, celebrities, or mythical creatures known to appeal to minors, backed by the Consumer Protection Act, and the mandatory digital ID check in Secs. 21-22 are templates that Washington could carry over to gambling advertising or to youth-appealing collectibles and mystery-pack products.",
+  "model": "claude-opus-5-5",
+  "version": "Comm Sub",
+  "text_chars": 80170,
+  "generated": "2026-11-03T22:19:04.724Z"
+ },
+ "WA-HB2068": {
+  "summary": "HB 2068 would ban the retail sale, display, marketing, and advertising of all flavored tobacco and nicotine products, including menthol, and of 'entertainment vapor products' (vapes with built-in games, music, video, or animations) starting July 1, 2027. It also raises retailer penalties and license fees, bans nicotine analogues, adds a $2 per pack cigarette surtax, and revises vapor product taxation. It is a tobacco and nicotine control bill and does not regulate gambling.",
+  "mechanics": [
+   "Sec. 4 bars retailers from selling, displaying, marketing, or advertising flavored tobacco or nicotine products or entertainment vapor products from July 1, 2027. Marketing terms like 'cool,' 'ice,' or 'arctic' create a rebuttable presumption that a product is flavored. Flavored shisha sold in 21+ premises is exempt.",
+   "Sec. 3(1) defines 'entertainment vapor product' as any vapor product with interactive gaming or entertainment features, such as playing music, showing photos or video, playing virtual games, or displaying animations.",
+   "Enforcement sits with the Liquor and Cannabis Board (Secs. 6, 12, 19). Penalties for underage-sale and flavor-ban violations rise to $2,000, $4,000, $8,000, and $12,000 across successive violations, and to $20,000 plus five-year license revocation for a fifth violation within three years. Under Sec. 7, a violation is also a per se Consumer Protection Act violation.",
+   "Sec. 21 adds a $2 per pack cigarette tax, CPI-adjusted every three years from December 2028. The first $5M goes to the youth tobacco and vapor prevention account.",
+   "Most retailer, wholesaler, distributor, and delivery-seller license fees rise to $1,000 (Secs. 14-16, 22-23). The combined tobacco and vapor license fee discount is repealed.",
+   "Sec. 20 bans selling or furnishing any product containing a nicotine analogue. The provided text cuts off partway through the vapor product tax rewrite in Sec. 25."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is comparable. They cover internet gaming authorization (IL HB3080, MD HB1343, MA H332), sports wagering consumer protection (CT SB 296, ME LD 2080, NJ A 3258), and prediction-market age limits (CT HB05038), while HB 2068 is a tobacco control bill. Its only gaming-adjacent element is the Sec. 3 'entertainment vapor product' category, which targets devices with embedded 'virtual games.' That concerns device features, not wagering, and is unrelated to the gaming-disorder focus of CT SB00240. It is notable mainly as an example of a youth-protection ban framed around game features and advertising restrictions.",
+  "watch": "There is no direct exposure for betting, iGaming, or collectibles clients, but the bill's model of banning 'display, market, or advertise' combined with a per se Consumer Protection Act violation and steep escalating penalties is a youth-protection template worth tracking in case Washington legislators apply it to gaming or mystery-pack products.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 81736,
+  "generated": "2026-11-03T22:19:04.743Z"
+ },
+ "WA-SB5183": {
+  "summary": "SB 5183 is a tobacco-control bill, not a gaming bill. Starting January 1, 2026, it bars retailers from selling, offering, displaying, marketing or advertising any flavored tobacco or nicotine product (including menthol and cooling agents) or any \"entertainment vapor product\" in Washington. It is enforced through Liquor and Cannabis Board license penalties and makes any violation a per se Consumer Protection Act violation. The only \"gaming\" reference is to vapes with built-in video games, which the findings illustrate with pac-man and tetris.",
+  "mechanics": [
+   "Sec. 2(1) defines \"entertainment vapor product\" as any vapor product with \"interactive gaming or entertainment features,\" such as playing music, showing photos or video, playing virtual games or displaying animations on the device.",
+   "Sec. 2(2) defines \"flavored tobacco or nicotine product\" as any product imparting a non-tobacco taste or smell (including mint, menthol and wintergreen) or a cooling or numbing sensation.",
+   "Sec. 3(2) creates a rebuttable presumption that a product is flavored if manufacturer or retailer communications use terms like \"cool,\" \"ice\" or \"arctic.\"",
+   "Sec. 3 imposes a sale, display, marketing and advertising ban on retailers effective January 1, 2026. That date has now passed, since the bill was reintroduced in 2026 and the date would need amendment.",
+   "Sec. 9 sets Liquor and Cannabis Board penalties for licensed tobacco retailers: $1,000, $2,500, $5,000 plus a 6-month suspension, $10,000 plus a 12-month suspension, then 5-year revocation, all within a 3-year window.",
+   "Sec. 11 applies a parallel $200 to $3,000 penalty scale with suspensions and revocation to vapor licensees. Sec. 6 makes violations a per se unfair or deceptive practice under RCW 19.86. Sec. 7 authorizes tribal compact consultations, and Sec. 8 and Sec. 10 add point-of-sale signage requirements."
+  ],
+  "issue_tags": [],
+  "relevance": "incidental",
+  "comparison": "None of the listed bills is comparable. SB 5183 appears to have been flagged only because Sec. 2(1) uses the phrase \"interactive gaming\" to describe video-game features built into vape devices. It shares nothing substantive with the iGaming authorization bills (IL HB3080/HB4797, MD HB1343/SB885, MA H332/S235), the advertising bills (MI SB0713/SB0714), or CT SB00240 on Internet gaming disorder. Its only structural point of interest for gaming counsel is the enforcement model: a product ban backed by a per se state consumer protection act violation and a rebuttable presumption triggered by marketing vocabulary. Washington could reuse that model in other consumer-product contexts.",
+  "watch": "There is no direct exposure for sports-betting, iGaming or collectibles clients, but the \"interactive gaming or entertainment features\" definition and the marketing-language presumption are drafting templates worth noting if Washington later targets gamified consumer products.",
+  "model": "claude-opus-5-5",
+  "version": "Introduced",
+  "text_chars": 38228,
+  "generated": "2026-11-03T22:19:08.824Z"
  }
 }

@@ -5,7 +5,7 @@
 // Usage:  LEGISCAN_KEY=xxxx node scripts/fetch_legiscan.mjs
 // Bills are keyed "ST-NUMBER" (e.g. NY-A8361) so analysis and texts survive refreshes.
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 
 const KEY = process.env.LEGISCAN_KEY;
 if (!KEY) { console.error("Set LEGISCAN_KEY."); process.exit(1); }
@@ -13,7 +13,11 @@ if (!KEY) { console.error("Set LEGISCAN_KEY."); process.exit(1); }
 export const TOPICS = {
   sports: { label: "Sports betting", queries: ['"sports betting"', '"sports wagering"', '"prediction market"', '"sweepstakes" AND casino', '"event contract"', '"daily fantasy"'] },
   ai: { label: "AI regulation", queries: ['"artificial intelligence"', '"automated decision"', '"frontier model"', '"algorithmic discrimination"', '"generative artificial intelligence"', '"deepfake"'] },
+  igaming: { label: "iGaming", queries: ['"internet gaming"', '"online casino"', '"igaming"', '"interactive gaming"', '"internet casino"'] },
+  cards: { label: "Card breaks", queries: ['"trading card"', '"mystery pack"', '"loot box"', '"card break"', '"collectible" AND gambling', '"blind box"'] },
 };
+// ONLY_TOPICS=igaming,cards merges just those topics into the existing snapshot instead of re-pulling everything.
+const ONLY = process.env.ONLY_TOPICS ? process.env.ONLY_TOPICS.split(",") : null;
 const CONCURRENCY = 5;
 const STATUS_TEXT = { 0: "Prefiled", 1: "Introduced", 2: "Passed one chamber", 3: "Passed both chambers", 4: "Signed into law", 5: "Vetoed", 6: "Failed / Dead" };
 export const billKey = (state, number) => `${state}-${String(number).replace(/\s+/g, "").toUpperCase().replace(/^([A-Z]+)0+(\d)/, "$1$2")}`;
@@ -47,7 +51,11 @@ const chamberOf = (body) => ({ H: "H", A: "H", S: "S" }[body] ?? "O");
 
 async function main() {
   const hits = new Map(); // bill_id -> { topics:Set, relevance }
+  let existing = [];
+  if (ONLY) { try { existing = JSON.parse(await readFile("data/bills.json", "utf8")).bills; } catch {} }
+  const existingByLid = new Map(existing.map((b) => [b.legiscan_id, b]));
   for (const [tkey, t] of Object.entries(TOPICS)) {
+    if (ONLY && !ONLY.includes(tkey)) continue;
     for (const q of t.queries) {
       const f = await search(q);
       for (const [id, v] of f) {
@@ -57,7 +65,10 @@ async function main() {
       console.error(`  ${tkey} ${q}: ${f.size} (${hits.size} total)`);
     }
   }
-  const ids = [...hits.keys()], bills = []; let i = 0;
+  // In merge mode, bills we already hold just gain the new topic tag; only unknown bills are fetched.
+  const bills = ONLY ? existing.map((b) => { const h = hits.get(b.legiscan_id); if (h) { b.topics = [...new Set([...b.topics, ...h.topics])]; b.relevance = Math.max(b.relevance, h.relevance); } return b; }) : [];
+  const ids = [...hits.keys()].filter((id) => !existingByLid.has(id)); let i = 0;
+  console.error(`${ids.length} bills to fetch${ONLY ? ` (${existing.length} kept)` : ""}`);
   async function worker() {
     while (i < ids.length) {
       const id = ids[i++];
@@ -88,7 +99,7 @@ async function main() {
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
   bills.sort((a, b) => a.state.localeCompare(b.state) || a.number.localeCompare(b.number));
-  const out = { generated: new Date().toISOString(), source: "State legislatures via LegiScan API", topics: Object.fromEntries(Object.entries(TOPICS).map(([k, t]) => [k, t.label])), bills };
+  const out = { generated: ONLY && existing.length ? JSON.parse(await readFile("data/bills.json", "utf8")).generated : new Date().toISOString(), source: "State legislatures via LegiScan API", topics: Object.fromEntries(Object.entries(TOPICS).map(([k, t]) => [k, t.label])), bills };
   await mkdir("data", { recursive: true });
   await writeFile("data/bills.js", `window.STATECRAFT_DATA = ${JSON.stringify(out)};\n`);
   await writeFile("data/bills.json", JSON.stringify(out, null, 1));

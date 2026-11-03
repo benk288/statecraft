@@ -5,4 +5,4 @@ const DEAD_RE = /died|lost|failed|withdrawn|tabled indefinitely|postponed indefi
 export const moved = (b) => b.status >= 2 && b.status <= 4 || (b.calendar?.length > 0) || (!DEAD_RE.test(b.last_action) && MOVED_RE.test(b.last_action));
 // What gets full text, AI analysis and sponsor research: every moved sports-betting
 // bill, and AI bills that have passed at least one chamber (the AI set is ~3x larger).
-export const inScope = (b) => moved(b) && (b.topics.includes("sports") || (b.status >= 2 && b.status <= 4));
+export const inScope = (b) => moved(b) && (b.topics.some((t) => ["sports", "igaming", "cards"].includes(t)) || (b.status >= 2 && b.status <= 4));

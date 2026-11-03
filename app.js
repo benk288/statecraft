@@ -35,8 +35,26 @@ const LENSES = {
     { key: "tax", label: "Fees", re: /\bfee\b|\btax/i },
   ],
 };
+LENSES.igaming = [
+  { key: "legalize", label: "Legalization", re: /authoriz|legaliz|establish|internet gaming act|online casino/i },
+  { key: "tax", label: "Tax rate", re: /\btax|gross gaming revenue|privilege fee|excise/i },
+  { key: "licensing", label: "Licensing", re: /licens|permit|operator|platform|vendor|supplier/i },
+  { key: "advertising", label: "Advertising", re: /advertis|marketing|promotion|bonus|inducement/i },
+  { key: "sweeps", label: "Sweepstakes / social", re: /sweepstake|social casino|dual[- ]currency|skill game|gray market/i },
+  { key: "integrity", label: "Consumer", re: /self[- ]exclusion|problem gambling|responsible|addiction|minor|age verification|deposit limit/i },
+  { key: "prop", label: "Tribal / compact", re: /tribal|tribe|compact|nation/i },
+];
+LENSES.cards = [
+  { key: "sweeps", label: "Gambling definition", re: /gambl|lottery|game of chance|consideration|prize|wager/i },
+  { key: "integrity", label: "Minors / age gating", re: /minor|under (18|21)|age|child|youth/i },
+  { key: "legalize", label: "Loot boxes / mystery packs", re: /loot box|mystery|blind box|randomi[sz]ed|chance-based/i },
+  { key: "advertising", label: "Livestream / breaks", re: /livestream|live stream|stream|break|auction|marketplace/i },
+  { key: "licensing", label: "Licensing / vending", re: /licens|vending|retail|machine|permit/i },
+  { key: "tax", label: "Tax", re: /\btax|sales tax|excise/i },
+  { key: "prop", label: "Consumer disclosure", re: /disclos|odds|label|notice|refund/i },
+];
 const lensLabel = (t, key) => (LENSES[t].find((l) => l.key === key) || {}).label || key;
-const issuesOf = (b) => ANALYSIS[b.id]?.issue_tags?.length ? ANALYSIS[b.id].issue_tags : LENSES[b.topics[0]].filter((l) => l.re.test(`${b.title} ${b.description || ""}`)).map((l) => l.key);
+const issuesOf = (b) => ANALYSIS[b.id]?.issue_tags?.length ? ANALYSIS[b.id].issue_tags : (LENSES[b.topics[0]] || []).filter((l) => l.re.test(`${b.title} ${b.description || ""}`)).map((l) => l.key);
 
 const fmtDate = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
 const fmtShort = (iso) => iso ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "";
@@ -62,7 +80,9 @@ const relevance = (b) => ({ core: 0, partial: 1, incidental: 2 })[ANALYSIS[b.id]
 const byDateDesc = (a, b) => (b.last_action_date || "").localeCompare(a.last_action_date || "");
 const byMovement = (a, b) => movement(b).level - movement(a).level || relevance(a) - relevance(b) || byDateDesc(a, b);
 // Editorial one-liner: the official title when it is short, else the first sentence of the AI summary, clipped.
+const HEADLINES = window.STATECRAFT_HEADLINES || {};
 const headline = (b) => {
+  if (HEADLINES[b.id]) return HEADLINES[b.id];
   const t = (b.title || "").replace(/\.$/, ""), s = ANALYSIS[b.id]?.summary ? ANALYSIS[b.id].summary.split(/(?<=\.)\s/)[0].replace(/\.$/, "") : "";
   const pick = t.length <= 110 ? t : (s && s.length < t.length ? s : t);
   return pick.length > 130 ? pick.slice(0, 127).replace(/\s+\S*$/, "") + "…" : pick;
@@ -92,9 +112,36 @@ const docsOf = (b) => ws.docs[b.id] || [];
 const PUBLIC_STAKEHOLDERS = ["FanDuel", "DraftKings", "Sports Betting Alliance", "American Innovators Network"];
 document.getElementById("stakeholders").innerHTML = PUBLIC_STAKEHOLDERS.map((s) => `<option value="${s}">`).join("");
 
+// ---- document files: stored in this browser's IndexedDB; the workspace keeps only their metadata ----
+const idb = { db: null,
+  open() { return this.db ? Promise.resolve(this.db) : new Promise((res, rej) => { const r = indexedDB.open("statecraft-docs", 1); r.onupgradeneeded = () => r.result.createObjectStore("files"); r.onsuccess = () => res(this.db = r.result); r.onerror = () => rej(r.error); }); },
+  async put(id, blob) { const db = await this.open(); return new Promise((res, rej) => { const t = db.transaction("files", "readwrite"); t.objectStore("files").put(blob, id); t.oncomplete = res; t.onerror = () => rej(t.error); }); },
+  async get(id) { const db = await this.open(); return new Promise((res, rej) => { const r = db.transaction("files").objectStore("files").get(id); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); },
+  async del(id) { const db = await this.open(); return new Promise((res) => { const t = db.transaction("files", "readwrite"); t.objectStore("files").delete(id); t.oncomplete = res; }); },
+};
+async function addFiles(billId, files, meta) {
+  for (const f of files) {
+    if (f.size > 25 * 1024 * 1024) { alert(`${f.name} is over 25 MB.`); continue; }
+    const id = uid(); await idb.put(id, f);
+    (ws.docs[billId] ||= []).push({ id, kind: "file", name: f.name.replace(/\.[^.]+$/, ""), ext: (f.name.split(".").pop() || "file").toUpperCase().slice(0, 5), size: f.size, meta: meta || `Uploaded ${fmtShort(TODAY)}` });
+  }
+  persist(); render();
+}
+async function openDoc(d) {
+  if (d.kind !== "file") { window.open(d.url, "_blank", "noopener"); return; }
+  const blob = await idb.get(d.id); if (!blob) { alert("This file is not in this browser. Files stay on the computer where they were uploaded."); return; }
+  const url = URL.createObjectURL(blob); window.open(url, "_blank", "noopener"); setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+const fmtSize = (n) => n > 1e6 ? (n / 1e6).toFixed(1) + " MB" : Math.max(1, Math.round(n / 1024)) + " KB";
+
 // ---- app state ----
 const billById = Object.fromEntries(ALL_BILLS.map((b) => [b.id, b]));
-let topic = store("statecraft.topic", "sports"); if (!DATA.topics[topic]) topic = "sports";
+let topic = store("statecraft.topic", "sports"); if (topic !== "all" && !DATA.topics[topic]) topic = "sports";
+// Sessions: LegiScan names them per state; bucket into the two bienniums the practice works in.
+const SESSIONS = [["2025-2026", "2025–2026"], ["2026-2027", "2026–2027"]];
+const sessionOf = (b) => /2027/.test(b.session || "") ? "2026-2027" : "2025-2026";
+let session = store("statecraft.session", "2025-2026");
+const topicOf = (b) => b.topics[0];
 // "New since your last visit": the last snapshot date this browser saw. Anything that moved after it is marked.
 // The marker stays for the whole day; the reference point is the previous day this browser opened the app.
 let visitDay = store("statecraft.visitDay", null), prevVisit = store("statecraft.prevVisit", null);
@@ -105,7 +152,7 @@ let selected = new Set(), showFolderPicker = false, showPositionPicker = false;
 let shareOpen = false;
 let compareSet = store("statecraft.compare", []), compareDiff = true, compareModel = true, showAddBill = false;
 let billTab = "summary";
-const topicBills = () => ALL_BILLS.filter((b) => b.topics.includes(topic));
+const topicBills = () => ALL_BILLS.filter((b) => (topic === "all" || b.topics.includes(topic)) && sessionOf(b) === session);
 const matches = (b) => (issue === "ALL" || issuesOf(b).includes(issue)) && (!stateFilter || b.state === stateFilter) &&
   (!q || `${b.number} ${b.title} ${b.description} ${b.last_action} ${b.committee || ""} ${(b.sponsors || []).map((s) => s.name).join(" ")} ${posOf(b).map((p) => clientById(p.clientId)?.name).join(" ")} ${ANALYSIS[b.id]?.summary || ""}`.toLowerCase().includes(q));
 const moved = () => topicBills().filter((b) => b.status !== 5 && b.status !== 6).filter((b) => movement(b).level >= 2);
@@ -124,15 +171,17 @@ function header(active, withSearch) {
     <div class="brand">Statecraft</div>
     <nav class="main" aria-label="Main">${[["map", "Map"], ["folders", "Folders"], ["compare", "Compare"], ["clients", "Clients"]].map(([k, l]) => `<a href="#/${k}" class="${active === k ? "on" : ""}">${l}</a>`).join("")}</nav>
     <div class="spacer"></div>
-    <label class="session">Session <select disabled><option>2025–2026</option></select></label>
+    <label class="session">Session <select id="session">${SESSIONS.map(([k, l]) => `<option value="${k}" ${session === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     ${withSearch ? `<label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" id="q" placeholder="Search bills, sponsors, clients" aria-label="Search" value="${esc(q)}"></label>` : ""}
     <div class="meta"><b>${bills.length}</b> bills · <b>${analysed}</b> analysed<br>Snapshot ${DATA.generated ? new Date(DATA.generated).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—"}</div>
   </header>`;
 }
 function topicsBar() {
-  return `<nav class="topics" aria-label="Topics">${Object.entries(DATA.topics).map(([k, l]) => `<a href="#/map" data-topic="${k}" class="${topic === k ? "on" : ""}">${esc(l)} <span>${ALL_BILLS.filter((b) => b.topics.includes(k)).length}</span></a>`).join("")}</nav>`;
+  const inSession = ALL_BILLS.filter((b) => sessionOf(b) === session);
+  return `<nav class="topics" aria-label="Topics"><a href="#/map" data-topic="all" class="${topic === "all" ? "on" : ""}">All topics <span>${inSession.length}</span></a>${Object.entries(DATA.topics).map(([k, l]) => `<a href="#/map" data-topic="${k}" class="${topic === k ? "on" : ""}">${esc(l)} <span>${inSession.filter((b) => b.topics.includes(k)).length}</span></a>`).join("")}</nav>`;
 }
 function wireChrome(root) {
+  root.querySelector("#session")?.addEventListener("change", (e) => { session = e.target.value; save("statecraft.session", session); selected.clear(); stateFilter = null; render(); });
   root.querySelectorAll("[data-topic]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); topic = a.dataset.topic; save("statecraft.topic", topic); issue = "ALL"; stateFilter = null; selected.clear(); go("#/map"); render(); }));
   root.querySelector("#q")?.addEventListener("input", (e) => { q = e.target.value.trim().toLowerCase(); const pos = e.target.selectionStart; render(); const nq = document.querySelector("#q"); if (nq) { nq.focus(); nq.setSelectionRange(pos, pos); } });
 }
@@ -148,7 +197,7 @@ function renderMap() {
   document.getElementById("app").innerHTML = `${header("map", true)}${topicsBar()}
   <main class="map">
     <section class="map-col" aria-label="Map">
-      <div class="issues"><span class="kicker">Issue</span><button class="chip ${issue === "ALL" ? "on" : ""}" data-issue="ALL">All</button>${LENSES[topic].map((l) => `<button class="chip ${issue === l.key ? "on" : ""}" data-issue="${l.key}">${l.label}</button>`).join("")}</div>
+      <div class="issues"><span class="kicker">${topic === "all" ? "Topic" : "Issue"}</span><button class="chip ${issue === "ALL" ? "on" : ""}" data-issue="ALL">All</button>${topic === "all" ? Object.entries(DATA.topics).map(([k, l]) => `<button class="chip" data-topic="${k}">${esc(l)}</button>`).join("") : LENSES[topic].map((l) => `<button class="chip ${issue === l.key ? "on" : ""}" data-issue="${l.key}">${l.label}</button>`).join("")}</div>
       <div id="map-wrap"><svg id="map" role="img" aria-label="Map of US states shaded by bills moved"></svg><div id="tip"></div></div>
       <div class="legend"><b>Bills moved</b>${["--map-0", "--map-1", "--map-2", "--map-3", "--map-4"].map((v) => `<span class="sw" style="background:var(${v})"></span>`).join("")}<span style="margin-left:8px">0 → 12+</span><span class="spacer"></span><label><input type="checkbox" id="outline" ${outline ? "checked" : ""}>Outline states in my folders</label></div>
       ${stateFilter ? `<p class="muted" style="margin:10px 0 0;font-size:13px">Showing ${NAMES[stateFilter]} · <a href="#" id="clearstate">show all states</a></p>` : ""}
@@ -157,7 +206,7 @@ function renderMap() {
       <div class="list-head"><h2>${stateFilter ? NAMES[stateFilter] : "Latest movement"}${list.filter(isNew).length ? ` <span class="newcount">${list.filter(isNew).length} new</span>` : ""}</h2><select id="sort" aria-label="Sort"><option value="newest" ${sort === "newest" ? "selected" : ""}>Newest first</option><option value="furthest" ${sort === "furthest" ? "selected" : ""}>Furthest along</option></select></div>
       <div class="rows">${list.slice(0, 200).map((b) => `<div class="brow ${selected.has(b.id) ? "on" : ""}">
         <input type="checkbox" data-sel="${b.id}" ${selected.has(b.id) ? "checked" : ""} aria-label="Select ${esc(b.number)}">
-        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}</b><span>${isNew(b) ? `<i class="newdot" title="Moved since your last visit"></i>` : ""}${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">Nothing is moving in this view.</div>`}</div>
+        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}${topic === "all" ? ` · ${esc(DATA.topics[topicOf(b)])}` : ""}</b><span>${isNew(b) ? `<i class="newdot" title="Moved since your last visit"></i>` : ""}${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">Nothing is moving in this view.</div>`}</div>
       ${selected.size ? `<div class="bulk"><b>${selected.size} selected</b><span class="spacer"></span><button class="btn solid" id="tofolder">Add to folder</button><button class="btn" id="setpos">Set position</button><button class="btn" id="tocompare">Compare</button></div>` : ""}
       ${showFolderPicker ? folderPicker([...selected]) : ""}${showPositionPicker ? positionPicker([...selected]) : ""}
     </aside>
@@ -212,7 +261,7 @@ function positionPicker(billIds) {
       <div class="seg">${STANCES.map((s, i) => `<button type="button" data-stance="${s}" class="${i === 0 ? "on" : ""}">${s}</button>`).join("")}</div>
       <input type="hidden" name="stance" value="Support"><input class="input" name="note" placeholder="Note (optional)"><button class="btn red">Save position</button></form></div>`;
 }
-function ensureClient(name) { let c = ws.clients.find((x) => x.name.toLowerCase() === name.toLowerCase()); if (!c) { c = { id: uid(), name, topics: [topic] }; ws.clients.push(c); } return c; }
+function ensureClient(name) { let c = ws.clients.find((x) => x.name.toLowerCase() === name.toLowerCase()); if (!c) { c = { id: uid(), name, topics: topic === "all" ? [] : [topic] }; ws.clients.push(c); } return c; }
 function wirePickers(root, billIds) {
   root.querySelectorAll("[data-folder]").forEach((cb) => cb.addEventListener("change", () => { const f = folderById(cb.dataset.folder); for (const id of billIds) { cb.checked ? (f.billIds.includes(id) || f.billIds.push(id)) : (f.billIds = f.billIds.filter((x) => x !== id)); } persist(); render(); }));
   root.querySelector("#newfolder")?.addEventListener("submit", (e) => { e.preventDefault(); const f = { id: uid(), name: e.target.name.value.trim(), clientId: e.target.client.value || null, notes: "", billIds: [...billIds] }; ws.folders.push(f); persist(); showFolderPicker = false; render(); });
@@ -248,7 +297,7 @@ function renderBill(id) {
   <main class="bill">
     <article class="bill-main">
       <div>
-        <div class="kicker">${NAMES[b.state]} · ${CHAMBER_LABEL(b.state, b.chamber)} · ${esc(DATA.topics[b.topics[0]])}${tags.length ? " · " + tags.map((t) => esc(lensLabel(b.topics[0], t))).join(" · ") : ""}</div>
+        <div class="kicker">${NAMES[b.state]} · ${CHAMBER_LABEL(b.state, b.chamber)} · ${esc(b.topics.map((t) => DATA.topics[t]).join(" · "))}${tags.length ? " · " + tags.map((t) => esc(lensLabel(b.topics[0], t))).join(" · ") : ""}</div>
         <h1>${esc(b.number)}: ${esc(headline(b))}</h1>
         <p class="lede">${esc(b.description || b.title)}</p>
         <div class="bill-links"><a href="${esc(b.url)}" target="_blank" rel="noopener">Official bill page ↗</a><a href="${esc(b.legiscan_url)}" target="_blank" rel="noopener">Full text ↗</a><span class="muted">Sponsors: ${esc((b.sponsors || []).slice(0, 3).map((s) => s.name.split(" ").slice(-1)[0]).join(", "))}${b.sponsors?.length > 3 ? ` +${b.sponsors.length - 3}` : ""}${prim[0]?.party ? ` (${esc(prim[0].party)})` : ""}</span></div>
@@ -269,10 +318,12 @@ function renderBill(id) {
           <div class="seg">${STANCES.map((s, i) => `<button type="button" data-stance="${s}" class="${i === 0 ? "on" : ""}">${s}</button>`).join("")}</div><input type="hidden" name="stance" value="Support">
           <input class="input" name="note" placeholder="Note (optional)"><button class="btn red">Save position</button></form>
       </section>
+      ${sponsorCard(b)}
       <section><h2 style="font-size:20px;margin-bottom:10px">In folders</h2><div class="pills">${foldersOf(b).map((f) => `<a class="pill" href="#/folders/${f.id}">${esc(f.name)}<button data-unfolder="${f.id}" title="Remove from folder">×</button></a>`).join("")}<button class="btn dashed sm" id="addfolder">+ Add to folder</button></div>${showFolderPicker ? `<div style="position:relative;margin-top:12px">${folderPicker([b.id]).replace('class="popover"', 'class="popover" style="position:static;width:auto"')}</div>` : ""}</section>
       <section><h2 style="font-size:20px;margin-bottom:6px">Documents</h2>
-        ${docsOf(b).map((d, i) => `<a class="doc" href="${esc(d.url)}" target="_blank" rel="noopener"><span class="ext">${esc(d.ext)}</span><span style="flex:1"><span class="nm">${esc(d.name)}</span><span class="mt">${esc(d.meta)}</span></span><button class="x" data-deldoc="${i}" style="border:0;background:none;color:var(--muted)">×</button></a>`).join("")}
-        <form class="dropzone" id="docform">Link a document · testimony, amendments, memos<div class="row"><input class="input" name="name" placeholder="Name" required><input class="input" name="url" type="url" placeholder="https://… (Drive, SharePoint, Box)" required></div><div class="row"><input class="input" name="meta" placeholder="Who / when (optional)"><button class="btn sm">Add link</button></div></form>
+        ${docsOf(b).map((d, i) => `<a class="doc" href="#" data-opendoc="${i}"><span class="ext">${esc(d.ext)}</span><span style="flex:1"><span class="nm">${esc(d.name)}</span><span class="mt">${esc(d.meta)}${d.size ? ` · ${fmtSize(d.size)}` : ""}${d.kind !== "file" ? " · link" : ""}</span></span><button class="x" data-deldoc="${i}" style="border:0;background:none;color:var(--muted)" title="Remove">×</button></a>`).join("")}
+        <div class="dropzone" id="dropzone">Drop files here or <label style="color:var(--red);font-weight:600;cursor:pointer">upload<input type="file" id="docfiles" multiple hidden></label> · testimony, amendments, memos
+          <details><summary style="cursor:pointer;color:var(--muted)">or link a document</summary><form id="docform" style="display:flex;flex-direction:column;gap:6px;margin-top:8px"><div class="row"><input class="input" name="name" placeholder="Name" required><input class="input" name="url" type="url" placeholder="https://…" required></div><div class="row"><input class="input" name="meta" placeholder="Who / when (optional)"><button class="btn sm">Add link</button></div></form></details></div>
       </section>
     </aside>
   </main>`;
@@ -285,8 +336,14 @@ function renderBill(id) {
   app.querySelectorAll("[data-delpos]").forEach((btn) => btn.addEventListener("click", () => { ws.positions[b.id].splice(Number(btn.dataset.delpos), 1); if (!ws.positions[b.id].length) delete ws.positions[b.id]; persist(); render(); }));
   app.querySelectorAll("[data-unfolder]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); const f = folderById(btn.dataset.unfolder); f.billIds = f.billIds.filter((x) => x !== b.id); persist(); render(); }));
   app.querySelector("#addfolder").addEventListener("click", () => { showFolderPicker = !showFolderPicker; render(); });
-  app.querySelectorAll("[data-deldoc]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); ws.docs[b.id].splice(Number(btn.dataset.deldoc), 1); persist(); render(); }));
-  app.querySelector("#docform").addEventListener("submit", (e) => { e.preventDefault(); const f = e.target, url = f.url.value.trim(), ext = (url.match(/\.(pdf|docx?|md|xlsx?|pptx?)(\?|$)/i)?.[1] || "LINK").toUpperCase(); (ws.docs[b.id] ||= []).push({ name: f.name.value.trim(), url, ext, meta: f.meta.value.trim() || `Added ${fmtShort(TODAY)}` }); persist(); render(); });
+  app.querySelectorAll("[data-deldoc]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); const d = ws.docs[b.id].splice(Number(btn.dataset.deldoc), 1)[0]; if (d?.kind === "file") idb.del(d.id); persist(); render(); }));
+  app.querySelectorAll("[data-opendoc]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); openDoc(docsOf(b)[Number(a.dataset.opendoc)]); }));
+  app.querySelector("#docfiles").addEventListener("change", (e) => addFiles(b.id, [...e.target.files]));
+  const dz = app.querySelector("#dropzone");
+  dz.addEventListener("dragover", (e) => { e.preventDefault(); dz.style.borderColor = "var(--red)"; });
+  dz.addEventListener("dragleave", () => { dz.style.borderColor = ""; });
+  dz.addEventListener("drop", (e) => { e.preventDefault(); dz.style.borderColor = ""; addFiles(b.id, [...e.dataTransfer.files]); });
+  app.querySelector("#docform").addEventListener("submit", (e) => { e.preventDefault(); const f = e.target, url = f.url.value.trim(), ext = (url.match(/\.(pdf|docx?|md|xlsx?|pptx?)(\?|$)/i)?.[1] || "LINK").toUpperCase(); (ws.docs[b.id] ||= []).push({ id: uid(), kind: "link", name: f.name.value.trim(), url, ext, meta: f.meta.value.trim() || `Added ${fmtShort(TODAY)}` }); persist(); render(); });
   wirePickers(app, [b.id]);
 }
 // Other states' bills on the same issues, ranked by shared issue tags and shared title words.
@@ -300,6 +357,21 @@ function relatedSection(b) {
   const rel = relatedBills(b);
   if (!rel.length) return "";
   return `<h3 style="font-size:18px;margin-top:8px">Related bills in other states</h3>${rel.map((o) => `<div class="todo-row"><a class="num" href="#/bill/${encodeURIComponent(o.id)}">${o.state} ${esc(o.number)}</a><span class="t">${esc(headline(o))}</span><span class="stage">${esc(stageOf(o))}</span><button class="btn sm" data-cmpadd="${o.id}">Compare</button></div>`).join("")}`;
+}
+const money$ = (n) => n == null ? "—" : "$" + Math.round(Number(n)).toLocaleString();
+function sponsorCard(b) {
+  const prim = (b.sponsors || []).filter((s) => s.primary).slice(0, 2);
+  if (!prim.length) return "";
+  return `<section class="card" style="padding:0;overflow:hidden">${prim.map((s) => { const r = SPONSORS[s.people_id], L = r?.links || {}, mo = r?.money;
+    return `<div style="padding:16px 18px;border-bottom:1px solid var(--rule-faint)"><div style="display:flex;gap:12px;align-items:flex-start">${L.image ? `<img src="${esc(L.image)}" alt="" style="width:56px;height:56px;object-fit:cover;border:1px solid var(--rule);flex:none">` : ""}<div style="min-width:0"><div class="kicker">Sponsor</div><div style="font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.15">${esc(s.name)}</div><div class="muted" style="font-size:12.5px;margin-top:2px">${esc([s.party, s.role, s.district].filter(Boolean).join(" · "))}</div></div></div>
+      ${r ? `<div class="tally" style="margin-top:12px"><div style="flex:1"><div class="n" style="font-size:22px">${r.bills_total}</div><div class="l">Sponsored</div></div><div style="flex:1"><div class="n" style="font-size:22px">${r.passed_chamber}</div><div class="l">Passed</div></div><div style="flex:1"><div class="n" style="font-size:22px">${r.enacted}</div><div class="l">Enacted</div></div></div>` : ""}
+      ${mo ? `<div style="margin-top:12px"><div class="kicker" style="color:var(--muted)">Money · ${esc(mo.cycle || "latest cycle")}</div><div style="font-family:var(--serif);font-size:24px;font-weight:800;margin-top:2px">${money$(mo.total_raised)} <span class="muted" style="font-family:var(--sans);font-size:12px;font-weight:400">raised</span></div>
+        ${(mo.top_contributors || []).length ? `<table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:12.5px">${mo.top_contributors.slice(0, 5).map((c) => `<tr><td style="padding:4px 0;border-top:1px solid var(--rule-faint)">${esc(c.name)}<span class="muted"> · ${esc(c.type || "")}</span></td><td style="padding:4px 0;border-top:1px solid var(--rule-faint);text-align:right;font-weight:600;white-space:nowrap">${money$(c.amount)}</td></tr>`).join("")}</table>` : ""}
+        ${(mo.industries || []).length ? `<div class="muted" style="font-size:12px;margin-top:6px">Industries: ${esc(mo.industries.slice(0, 4).map((x) => `${x.name}${x.amount ? " " + money$(x.amount) : ""}`).join(" · "))}</div>` : ""}
+        ${mo.gaming_or_tech ? `<div style="font-size:12.5px;margin-top:6px;padding:8px 10px;background:var(--wash)">${esc(mo.gaming_or_tech)}</div>` : ""}
+        <div class="muted" style="font-size:11.5px;margin-top:6px">AI-researched ${esc(mo.researched || "")} · confidence ${esc(mo.confidence || "?")}${mo.note ? ` · ${esc(mo.note)}` : ""}${(mo.sources || []).length ? ` · ${mo.sources.slice(0, 3).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">source ${i + 1}</a>`).join(" ")}` : ""}</div></div>`
+        : `<div class="muted" style="font-size:12px;margin-top:10px">Contributor research not run for this sponsor yet. <a href="https://www.opensecrets.org/search?q=${encodeURIComponent(s.name)}" target="_blank" rel="noopener">OpenSecrets ↗</a></div>`}
+      <div class="bill-links" style="margin-top:10px;font-size:12.5px">${[L.official && `<a href="${esc(L.official)}" target="_blank" rel="noopener">Official page</a>`, (L.ballotpedia || s.ballotpedia) && `<a href="${esc(L.ballotpedia || "https://ballotpedia.org/" + s.ballotpedia)}" target="_blank" rel="noopener">Ballotpedia</a>`, L.email && `<a href="mailto:${esc(L.email)}">Email</a>`, L.capitol_phone && `<span class="muted">${esc(L.capitol_phone)}</span>`].filter(Boolean).join("")}</div></div>`; }).join("")}</section>`;
 }
 function sponsorSection(b) {
   const prim = (b.sponsors || []).filter((s) => s.primary), rest = (b.sponsors || []).filter((s) => !s.primary);
@@ -328,7 +400,7 @@ function renderFolders(id) {
       <label><span class="kicker muted" style="letter-spacing:.1em">Strategy notes</span><textarea class="input" id="fnotes" placeholder="What are we trying to do across these bills?">${esc(f.notes)}</textarea></label>
       ${bills.map((b) => { const p = posOf(b), mv = movement(b); return `<section class="fstate rule-top"><div class="hd"><h2>${NAMES[b.state]}</h2><span class="muted" style="font-size:13px">${esc(b.committee ? `${b.committee} has it` : b.sine_die ? "Session adjourned" : b.status_text)}</span></div>
         <div class="frow"><a class="num" href="#/bill/${encodeURIComponent(b.id)}">${esc(b.number)}</a><a class="t" href="#/bill/${encodeURIComponent(b.id)}">${esc(headline(b))}</a><span class="muted">${esc(stageOf(b))}</span><span>${p.length ? stancePill(p[0].stance) : `<span class="muted" style="font-size:12px">No position</span>`}</span><span class="muted" style="font-size:13px">${mv.upcoming ? `Hearing ${fmtShort(mv.upcoming.date)}` : fmtShort(b.last_action_date)}</span></div>
-        <div class="docs-row">${docsOf(b).map((d) => `<a href="${esc(d.url)}" target="_blank" rel="noopener"><b>${esc(d.ext)}</b>${esc(d.name)}</a>`).join("")}<a class="btn dashed sm" href="#/bill/${encodeURIComponent(b.id)}">+ Add document</a><button class="rm" data-rm="${b.id}" style="margin-left:auto;align-self:center">Remove from folder</button></div></section>`; }).join("") || `<div class="empty">This folder is empty. Select bills on the map and add them.</div>`}`
+        <div class="docs-row">${docsOf(b).map((d, i) => `<a href="#" data-fdoc="${b.id}|${i}"><b>${esc(d.ext)}</b>${esc(d.name)}</a>`).join("")}<a class="btn dashed sm" href="#/bill/${encodeURIComponent(b.id)}">+ Add document</a><button class="rm" data-rm="${b.id}" style="margin-left:auto;align-self:center">Remove from folder</button></div></section>`; }).join("") || `<div class="empty">This folder is empty. Select bills on the map and add them.</div>`}`
       : `<div class="empty">No folders yet. Select bills on the map and choose “Add to folder”, or create one on the left.</div>`}</main></div>`;
   const app = document.getElementById("app");
   wireChrome(app);
@@ -345,6 +417,7 @@ function renderFolders(id) {
   app.querySelector("#wsexport")?.addEventListener("click", exportWorkspace);
   app.querySelector("#wsimport")?.addEventListener("change", (e) => importWorkspace(e.target.files[0]));
   app.querySelectorAll("[data-rm]").forEach((btn) => btn.addEventListener("click", () => { f.billIds = f.billIds.filter((x) => x !== btn.dataset.rm); persist(); render(); }));
+  app.querySelectorAll("[data-fdoc]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); const [id, i] = a.dataset.fdoc.split("|"); openDoc(docsOf(billById[id])[Number(i)]); }));
 }
 function exportWorkspace() {
   const blob = new Blob([JSON.stringify({ statecraft: 1, exported: new Date().toISOString(), ...ws }, null, 1)], { type: "application/json" });
@@ -395,7 +468,7 @@ const PROVISIONS = [
 ];
 function renderCompare() {
   const bills = compareSet.map((id) => billById[id]).filter(Boolean);
-  const m = ws.models[topic] || { title: "", text: "" };
+  const m = ws.models[topic === "all" ? "sports" : topic] || { title: "", text: "" };
   if (m.text && compareModel) ensureTexts();
   const NA = "Not addressed";
   const rows = [
@@ -436,8 +509,8 @@ function renderClients(id) {
   const rowsFor = (cl) => ALL_BILLS.filter((b) => posOf(b).some((p) => p.clientId === cl.id)).map((b) => ({ b, p: posOf(b).find((p) => p.clientId === cl.id) })).sort((x, y) => byMovement(x.b, y.b));
   const rows = c ? rowsFor(c) : [];
   const tally = c ? STANCES.map((s) => [s, rows.filter((r) => r.p.stance === s).length]) : [];
-  const todo = c ? moved().filter((b) => c.topics.includes(b.topics[0]) || !c.topics.length).filter((b) => !posOf(b).some((p) => p.clientId === c.id)).filter((b) => relevance(b) === 0).sort(byMovement).slice(0, 8) : [];
-  const m = ws.models[topic] || { title: "", text: "" };
+  const todo = c ? moved().filter((b) => !c.topics.length || b.topics.some((t) => c.topics.includes(t))).filter((b) => !posOf(b).some((p) => p.clientId === c.id)).filter((b) => relevance(b) === 0).sort(byMovement).slice(0, 8) : [];
+  const mkey = topic === "all" ? "sports" : topic, m = ws.models[mkey] || { title: "", text: "" };
   document.getElementById("app").innerHTML = `${header("clients")}
   <div class="split">
     <nav class="sidenav" aria-label="Clients"><form id="newclient" style="display:flex;flex-direction:column;gap:6px"><button class="btn solid" type="button" id="newbtn">+ Add client</button><div id="newfields" hidden style="display:flex;flex-direction:column;gap:6px"><input class="input" name="name" list="stakeholders" placeholder="Client name" required><button class="btn sm">Create</button></div></form>
@@ -449,14 +522,14 @@ function renderClients(id) {
         ${rows.map(({ b, p }) => `<tr><td><a class="num" href="#/bill/${encodeURIComponent(b.id)}">${b.state} ${esc(b.number)}</a><div class="t">${esc(headline(b))}</div></td><td><select class="stance ${p.stance.toLowerCase()}" data-chg="${b.id}" aria-label="Position on ${esc(b.number)}">${STANCES.map((s) => `<option ${s === p.stance ? "selected" : ""}>${s}</option>`).join("")}</select></td><td style="font-size:13.5px;color:var(--ink-2)">${esc(p.note)}</td><td style="font-size:13px">${foldersOf(b).map((f) => `<a href="#/folders/${f.id}">${esc(f.name)}</a>`).join(", ") || "—"}</td><td class="muted" style="font-size:13px">${esc(stageOf(b))}</td></tr>`).join("") || `<tr><td colspan="5" class="muted">No positions recorded yet.</td></tr>`}</tbody></table></div></section>
       <section class="card"><div class="list-head"><h2 style="font-size:22px">Moving bills with no position yet</h2><span class="muted" style="font-size:13px">Matched to this client's topics</span></div>
         ${todo.map((b) => `<div class="todo-row"><a class="num" href="#/bill/${encodeURIComponent(b.id)}">${b.state} ${esc(b.number)}</a><span class="t">${esc(headline(b))}</span><span class="stage">${esc(stageOf(b))}</span><span class="seg sm">${["Support", "Oppose", "Watch"].map((s) => `<button data-quick="${b.id}|${s}">${s}</button>`).join("")}</span></div>`).join("") || `<p class="muted" style="font-size:13px">Nothing outstanding.</p>`}</section>
-      <section class="card"><h2 style="font-size:22px;margin-bottom:6px">Model bill · ${esc(DATA.topics[topic])}</h2><p class="muted" style="font-size:13px;margin:0 0 10px">Used by Compare and by each bill's model-coverage row. Stored only in this browser.</p><form id="modelform" style="display:flex;flex-direction:column;gap:8px"><input class="input" name="title" placeholder="Name, e.g. Model Sports Wagering Act" value="${esc(m.title)}"><textarea class="input" name="text" style="font-family:var(--sans);font-size:13px;min-height:140px" placeholder="Paste model bill text…">${esc(m.text)}</textarea><div style="display:flex;gap:8px"><button class="btn solid sm">Save model bill</button>${m.text ? `<button type="button" class="btn sm" id="clearmodel">Clear</button>` : ""}</div></form></section>`
+      <section class="card"><h2 style="font-size:22px;margin-bottom:6px">Model bill · ${esc(DATA.topics[mkey])}</h2><p class="muted" style="font-size:13px;margin:0 0 10px">Used by Compare and by each bill's model-coverage row. Stored only in this browser.</p><form id="modelform" style="display:flex;flex-direction:column;gap:8px"><input class="input" name="title" placeholder="Name, e.g. Model Sports Wagering Act" value="${esc(m.title)}"><textarea class="input" name="text" style="font-family:var(--sans);font-size:13px;min-height:140px" placeholder="Paste model bill text…">${esc(m.text)}</textarea><div style="display:flex;gap:8px"><button class="btn solid sm">Save model bill</button>${m.text ? `<button type="button" class="btn sm" id="clearmodel">Clear</button>` : ""}</div></form></section>`
       : `<div class="empty">No clients yet.</div>`}</main></div>`;
   const app = document.getElementById("app");
   wireChrome(app);
   app.querySelector("#newbtn").addEventListener("click", () => { const d = app.querySelector("#newfields"); d.hidden = !d.hidden; });
   app.querySelector("#newclient").addEventListener("submit", (e) => { e.preventDefault(); const nc = ensureClient(e.target.name.value.trim()); persist(); go(`#/clients/${nc.id}`); });
-  app.querySelector("#modelform")?.addEventListener("submit", (e) => { e.preventDefault(); ws.models[topic] = { title: e.target.title.value.trim(), text: e.target.text.value }; persist(); render(); });
-  app.querySelector("#clearmodel")?.addEventListener("click", () => { ws.models[topic] = { title: "", text: "" }; persist(); render(); });
+  app.querySelector("#modelform")?.addEventListener("submit", (e) => { e.preventDefault(); ws.models[mkey] = { title: e.target.title.value.trim(), text: e.target.text.value }; persist(); render(); });
+  app.querySelector("#clearmodel")?.addEventListener("click", () => { ws.models[mkey] = { title: "", text: "" }; persist(); render(); });
   if (!c) return;
   app.querySelector("#cname").addEventListener("change", (e) => { c.name = e.target.value.trim() || c.name; persist(); render(); });
   app.querySelectorAll("[data-ctopic]").forEach((btn) => btn.addEventListener("click", () => { const k = btn.dataset.ctopic; c.topics = c.topics.includes(k) ? c.topics.filter((x) => x !== k) : [...c.topics, k]; persist(); render(); }));

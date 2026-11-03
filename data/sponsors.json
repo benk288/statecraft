@@ -610,6 +610,36 @@
    "NY-J1748"
   ]
  },
+ "1426": {
+  "people_id": 1426,
+  "name": "Andrew Lanza",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-024",
+  "state": "NY",
+  "bills_total": 578,
+  "passed_chamber": 271,
+  "enacted": 254,
+  "sample": [
+   "S00082: Relates to the number and duties of assistant principals to be assigned to schoo",
+   "S01600: Allows for distinctive plates to be issued for members of the New York city fire",
+   "S04423: Provides for the types of damages that may be awarded to the persons for whose b",
+   "S04774: Creates the crime of vehicular homicide; makes such crime a class B felony."
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Andrew_Lanza",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/44472",
+   "official": "https://www.nysenate.gov/senators/andrew-j-lanza",
+   "email": "lanza@nysenate.gov",
+   "capitol_phone": "518-455-3215",
+   "image": "https://www.nysenate.gov/sites/default/files/styles/160x160/public/%2801-23-07%29%20Lanza-HS-029-8x10.jpg",
+   "ftm_eid": 13013054,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NY-S8578"
+  ]
+ },
  "1442": {
   "people_id": 1442,
   "name": "Kevin Parker",
@@ -2855,6 +2885,36 @@
   },
   "bills_here": [
    "CT-SB296"
+  ]
+ },
+ "5769": {
+  "people_id": 5769,
+  "name": "Public Health Committee",
+  "party": "",
+  "role": "Jnt",
+  "district": "",
+  "state": "CT",
+  "bills_total": 39,
+  "passed_chamber": 11,
+  "enacted": 9,
+  "sample": [
+   "HB05165: An Act Requiring An Evaluation Of The Appointment Of A Receiver To Manage Hospit",
+   "HB05166: An Act Concerning Social Work Licensure.",
+   "HB05239: An Act Concerning The Department Of Developmental Services' Recommendations Rega",
+   "HB05240: An Act Concerning The Department Of Developmental Services' Recommendations Rega"
+  ],
+  "links": {
+   "ballotpedia": null,
+   "votesmart": null,
+   "official": null,
+   "email": null,
+   "capitol_phone": null,
+   "image": null,
+   "ftm_eid": null,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "CT-SB240"
   ]
  },
  "5862": {
@@ -5652,6 +5712,33 @@
    "NC-H552"
   ]
  },
+ "11850": {
+  "people_id": 11850,
+  "name": "Harry Warren",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-076",
+  "state": "NC",
+  "bills_total": 1,
+  "passed_chamber": 1,
+  "enacted": 1,
+  "sample": [
+   "H3: Relief at the Pump"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Harry_Warren",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/117839",
+   "official": "https://www.ncleg.gov/Members/Biography/H/630",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5784",
+   "image": null,
+   "ftm_eid": 6686889,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H999"
+  ]
+ },
  "11852": {
   "people_id": 11852,
   "name": "Kelly Hastings",
@@ -6866,6 +6953,36 @@
    "IL-HB3276"
   ]
  },
+ "13962": {
+  "people_id": 13962,
+  "name": "Ed Neilson",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-174",
+  "state": "PA",
+  "bills_total": 846,
+  "passed_chamber": 351,
+  "enacted": 217,
+  "sample": [
+   "HB17: In terms and courses of study, further providing for subjects of instruction and",
+   "HB69: Further providing for title and short title of act, for definitions, for establi",
+   "HB72: Providing for tenants' rights in cases of violence.",
+   "HB75: Further providing for definitions."
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Edward_Neilson",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/136502",
+   "official": "https://www.palegis.us/house/members/bio/1615/rep-neilson",
+   "email": null,
+   "capitol_phone": "717-772-4032",
+   "image": null,
+   "ftm_eid": 5304735,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "PA-HB257"
+  ]
+ },
  "13971": {
   "people_id": 13971,
   "name": "Committee on Economic Development and Emerging Technologies",
@@ -7868,6 +7985,34 @@
   },
   "bills_here": [
    "NC-H125"
+  ]
+ },
+ "14634": {
+  "people_id": 14634,
+  "name": "Stephen Ross",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-063",
+  "state": "NC",
+  "bills_total": 1,
+  "passed_chamber": 1,
+  "enacted": 1,
+  "sample": [
+   "H3: Relief at the Pump"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Stephen_M._Ross",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/132378",
+   "official": "https://www.ncleg.gov/Members/Biography/H/812",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5820",
+   "image": null,
+   "ftm_eid": 5887240,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H425",
+   "NC-H430"
   ]
  },
  "14653": {
@@ -9820,7 +9965,23 @@
   },
   "bills_here": [
    "ME-LD1838"
-  ]
+  ],
+  "money": {
+   "total_raised": null,
+   "cycle": "2024 (Maine State Senate District 3 general election; figures not retrieved)",
+   "top_contributors": [],
+   "industries": [],
+   "gaming_or_tech": "",
+   "sources": [
+    "https://ballotpedia.org/Bradlee_Farrin",
+    "https://themainemonitor.org/maine-state-senate-district-3/",
+    "https://www.ballotready.org/people/bradlee-t-farrin"
+   ],
+   "as_of": "unknown - exact current date not available; search results included items dated as late as 2026-11-02",
+   "confidence": "low",
+   "note": "The search tool hit its usage limit before any dollar figures were found, so total raised, contributors, industries and gaming/tech ties are unconfirmed and should be pulled from Farrin's 2024 filings with the Maine Ethics Commission (and checked for Maine Clean Election Act public funding).",
+   "researched": "2026-11-03"
+  }
  },
  "16814": {
   "people_id": 16814,
@@ -12193,6 +12354,38 @@
    "WA-SB5984"
   ]
  },
+ "18514": {
+  "people_id": 18514,
+  "name": "Kristine Reeves",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-030B",
+  "state": "WA",
+  "bills_total": 298,
+  "passed_chamber": 102,
+  "enacted": 88,
+  "sample": [
+   "HB1006: Regulating service contracts and protection product guarantees.",
+   "HB1012: Authorizing the women's commission to solicit gifts, grants, and endowments from",
+   "HB1013: Concerning exemption of certain personnel of the department of social and health",
+   "HB1023: Adopting the cosmetology licensure compact."
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Kristine_Reeves",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/171114",
+   "official": "https://leg.wa.gov/legislators/member/kristine-reeves",
+   "email": null,
+   "capitol_phone": "360-786-7830",
+   "image": "https://app.leg.wa.gov/ContentParts/MemberDirectory/LargePhoto?m=27182",
+   "ftm_eid": 40587794,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "WA-HB1203",
+   "WA-HB2068",
+   "WA-HB2439"
+  ]
+ },
  "18534": {
   "people_id": 18534,
   "name": "Vandana Slatter",
@@ -13054,6 +13247,36 @@
    "OK-SB1627"
   ]
  },
+ "19043": {
+  "people_id": 19043,
+  "name": "Scott Fetgatter",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-016",
+  "state": "OK",
+  "bills_total": 74,
+  "passed_chamber": 38,
+  "enacted": 23,
+  "sample": [
+   "HB1076: Public health and safety; creating the Food Truck Freedom Act; State Commissione",
+   "HB1200: Revenue; taxation rates; income; exemptions; deductions; effective date.",
+   "HB2110: Revenue and taxation; Bringing Sitcoms Home from Hollywood Pilot Program Act; sh",
+   "HB2298: Practice of nursing; providing for independent prescriptive authority of Advance"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Scott_Fetgatter",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/170762",
+   "official": "https://www.okhouse.gov/representatives/scott-fetgatter",
+   "email": null,
+   "capitol_phone": "405-557-7373",
+   "image": "https://dgbf0g52sf9l0.cloudfront.net/medium_Fetgatter_Scott_32620c24ee.jpg",
+   "ftm_eid": 39827919,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OK-HB4130"
+  ]
+ },
  "19048": {
   "people_id": 19048,
   "name": "Jeff Bridges",
@@ -13302,6 +13525,36 @@
   },
   "bills_here": [
    "IL-HB2513"
+  ]
+ },
+ "19140": {
+  "people_id": 19140,
+  "name": "Steve Wilson",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-007",
+  "state": "OH",
+  "bills_total": 145,
+  "passed_chamber": 127,
+  "enacted": 97,
+  "sample": [
+   "HB15: Amend competitive retail electric service law",
+   "HB20: Prohibit harassing or impeding an emergency service responder",
+   "HB23: Create the escaped convict alert program",
+   "HB31: Require electronic recordings of all parole board hearings"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Steven_Wilson",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/176515",
+   "official": "https://ohiosenate.gov/members/steve-wilson",
+   "email": null,
+   "capitol_phone": "614-466-9737",
+   "image": "https://www.legislature.ohio.gov/assets/people/steve-wilson/headshots/thumbnails/medium/steve-wilson-march-2025-headshot_medium.jpg",
+   "ftm_eid": 43466576,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OH-SB56"
   ]
  },
  "19160": {
@@ -15164,6 +15417,36 @@
    "CO-SB189"
   ]
  },
+ "20032": {
+  "people_id": 20032,
+  "name": "Tammy Story",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-025",
+  "state": "CO",
+  "bills_total": 204,
+  "passed_chamber": 184,
+  "enacted": 180,
+  "sample": [
+   "HB1001: Housing Developments on Qualifying Properties",
+   "HB1002: Provider Participation in Health Insurance",
+   "HB1004: Continuation of Child Care Contribution Tax Credit",
+   "HB1005: Worker Protection Collective Bargaining"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Tammy_Story",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/169987",
+   "official": "https://leg.colorado.gov/legislators/tammy-story",
+   "email": "tammy.story.house@coleg.gov",
+   "capitol_phone": "303-866-2582",
+   "image": null,
+   "ftm_eid": 40461570,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "CO-HB1255"
+  ]
+ },
  "20037": {
   "people_id": 20037,
   "name": "Bill Tveit",
@@ -15465,6 +15748,37 @@
    "NY-S10049"
   ]
  },
+ "20173": {
+  "people_id": 20173,
+  "name": "Jared Patterson",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-106",
+  "state": "TX",
+  "bills_total": 263,
+  "passed_chamber": 136,
+  "enacted": 104,
+  "sample": [
+   "HB2: Relating to public education and public school finance.",
+   "HB4: Relating to the assessment of public school students, public school accountabili",
+   "HB6: Relating to discipline management and access to telehealth mental health service",
+   "HB9: Relating to an exemption from ad valorem taxation of a portion of the appraised "
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Jared_Patterson",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/147699",
+   "official": "https://house.texas.gov/members/3655",
+   "email": null,
+   "capitol_phone": "512-463-0694",
+   "image": "https://house.texas.gov/members/images/members/3655.jpg?v=1",
+   "ftm_eid": 22214365,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "TX-HB186",
+   "TX-HB499"
+  ]
+ },
  "20174": {
   "people_id": 20174,
   "name": "Lauriebeth Hager",
@@ -15523,6 +15837,36 @@
   },
   "bills_here": [
    "WI-AB456"
+  ]
+ },
+ "20192": {
+  "people_id": 20192,
+  "name": "London Lamar",
+  "party": "D",
+  "role": "Rep",
+  "district": "SD-033",
+  "state": "TN",
+  "bills_total": 245,
+  "passed_chamber": 166,
+  "enacted": 152,
+  "sample": [
+   "SB0043: AN ACT to amend Tennessee Code Annotated, Title 39, Chapter 17, Part 13, relativ",
+   "SB0044: AN ACT to amend Tennessee Code Annotated, Title 63 and Title 71, relative to dou",
+   "SB0171: AN ACT to amend Tennessee Code Annotated, Title 62, Chapter 38, relative to The ",
+   "SB0172: AN ACT to amend Tennessee Code Annotated, Title 49, relative to a hunger-free ca"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/London_Lamar",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/182530",
+   "official": "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S33&ga=114",
+   "email": "sen.london.lamar@capitol.tn.gov",
+   "capitol_phone": "615-741-2509",
+   "image": null,
+   "ftm_eid": 44187848,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "TN-SB1799"
   ]
  },
  "20194": {
@@ -15704,6 +16048,36 @@
   },
   "bills_here": [
    "NC-S316"
+  ]
+ },
+ "20228": {
+  "people_id": 20228,
+  "name": "Keith Bell",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-004",
+  "state": "TX",
+  "bills_total": 214,
+  "passed_chamber": 132,
+  "enacted": 103,
+  "sample": [
+   "HB2: Relating to public education and public school finance.",
+   "HB4: Relating to the assessment of public school students, public school accountabili",
+   "HB6: Relating to discipline management and access to telehealth mental health service",
+   "HB9: Relating to an exemption from ad valorem taxation of a portion of the appraised "
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Keith_Bell",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/177380",
+   "official": "https://house.texas.gov/members/3695",
+   "email": null,
+   "capitol_phone": "512-463-0458",
+   "image": "https://house.texas.gov/members/images/members/3695.jpg?v=1",
+   "ftm_eid": 11229375,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "TX-HB186"
   ]
  },
  "20243": {
@@ -16009,6 +16383,36 @@
   "bills_here": [
    "OH-SB315",
    "OH-SB326"
+  ]
+ },
+ "20316": {
+  "people_id": 20316,
+  "name": "Jamie Callender",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-057",
+  "state": "OH",
+  "bills_total": 66,
+  "passed_chamber": 55,
+  "enacted": 35,
+  "sample": [
+   "HB3: Enact the School Bus Safety Act",
+   "HB13: Designate Roy Rogers Day",
+   "HB25: Establish the Foster-to-College Scholarship Program",
+   "HB27: Designate Specialist Jacob A. Ashton Memorial Bridge"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Jamie_Callender",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/10051",
+   "official": "https://ohiohouse.gov/members/jamie-callender",
+   "email": null,
+   "capitol_phone": "614-644-6074",
+   "image": "https://www.legislature.ohio.gov/assets/people/jamie-callender/headshots/thumbnails/medium/jamie-callender-july-2024-headshot_medium.jpg",
+   "ftm_eid": 13004770,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OH-SB56"
   ]
  },
  "20320": {
@@ -20453,7 +20857,21 @@
   "bills_here": [
    "ME-LD1304",
    "ME-LD1862"
-  ]
+  ],
+  "money": {
+   "total_raised": null,
+   "cycle": "",
+   "top_contributors": [],
+   "industries": [],
+   "gaming_or_tech": "",
+   "sources": [
+    "https://www.mainecleanelections.org/sites/default/files/testimony/2022/LD%201658%20final.pdf"
+   ],
+   "as_of": "unknown",
+   "confidence": "low",
+   "note": "The search tool hit its limit after one query that returned no finance data, so no figures are reported; check the Maine Ethics Commission portal (mainecampaignfinance.com), OpenSecrets state data, and Ballotpedia, and note that Baldacci may have been a Maine Clean Election Act publicly funded candidate.",
+   "researched": "2026-11-03"
+  }
  },
  "22246": {
   "people_id": 22246,
@@ -21640,6 +22058,66 @@
    "CO-HB1332"
   ]
  },
+ "22480": {
+  "people_id": 22480,
+  "name": "Mark Tisdel",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-055",
+  "state": "MI",
+  "bills_total": 227,
+  "passed_chamber": 100,
+  "enacted": 26,
+  "sample": [
+   "HB4027: Land use: zoning and growth management; provision subjecting zoning authority to",
+   "HB4028: Energy: alternative sources; zoning exemptions for large-scale solar, wind, and ",
+   "HB4048: Criminal procedure: sentencing guidelines; guidelines for dissemination of deep ",
+   "HB4062: Public employees and officers: ethics; former members of the legislature; prohib"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Mark_Tisdel",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/146854",
+   "official": "http://reptisdel.com",
+   "email": null,
+   "capitol_phone": "517-373-1792",
+   "image": "https://www.legislature.mi.gov/Images/LEG2025/H55.webp",
+   "ftm_eid": 48875933,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "MI-HB4388"
+  ]
+ },
+ "22504": {
+  "people_id": 22504,
+  "name": "Michael Rohl",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-001",
+  "state": "SD",
+  "bills_total": 40,
+  "passed_chamber": 29,
+  "enacted": 19,
+  "sample": [
+   "HB1007: Amend the definition of law enforcement officer to include tribal law enforcemen",
+   "HB1034: Increase fees for decals and license plates mailed to vehicle owners.",
+   "HB1056: Require that the Department of Social Services submit a federal waiver request t",
+   "HB1066: Revise a provision related to theft by a contractor, subcontractor, or supplier."
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Michael_Rohl",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/191452",
+   "official": "https://sdlegislature.gov/Legislators/Profile/4814",
+   "email": "Michael.Rohl@sdlegislature.gov",
+   "capitol_phone": "605-773-3821",
+   "image": "https://lawmakerdocuments.blob.core.usgovcloudapi.net/photos/rohl,%20michael%20sen-1867%20rt%20from%202023.jpg",
+   "ftm_eid": 49610491,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "SD-SB111"
+  ]
+ },
  "22518": {
   "people_id": 22518,
   "name": "Janet Yang Rohr",
@@ -21920,6 +22398,31 @@
    "OK-SB410"
   ]
  },
+ "22600": {
+  "people_id": 22600,
+  "name": "Terry Brown",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-092",
+  "state": "NC",
+  "bills_total": 0,
+  "passed_chamber": 0,
+  "enacted": 0,
+  "sample": [],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Terry_Brown_Jr._%28North_Carolina%29",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/189188",
+   "official": "https://www.ncleg.gov/Members/Biography/H/783",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5654",
+   "image": null,
+   "ftm_eid": 48626938,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H462"
+  ]
+ },
  "22607": {
   "people_id": 22607,
   "name": "Steve Tyson",
@@ -22000,6 +22503,33 @@
   "bills_here": [
    "NC-H301",
    "NC-H56"
+  ]
+ },
+ "22612": {
+  "people_id": 22612,
+  "name": "Charles Miller",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-019",
+  "state": "NC",
+  "bills_total": 1,
+  "passed_chamber": 1,
+  "enacted": 1,
+  "sample": [
+   "H3: Relief at the Pump"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Charles_Miller_%28North_Carolina%29",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/188953",
+   "official": "https://www.ncleg.gov/Members/Biography/H/778",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5830",
+   "image": null,
+   "ftm_eid": 48626827,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H198"
   ]
  },
  "22614": {
@@ -23170,6 +23700,33 @@
    "WI-AB456"
   ]
  },
+ "22946": {
+  "people_id": 22946,
+  "name": "Reece Pyrtle",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-065",
+  "state": "NC",
+  "bills_total": 1,
+  "passed_chamber": 1,
+  "enacted": 1,
+  "sample": [
+   "H3: Relief at the Pump"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/A._Reece_Pyrtle%2C_Jr.",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/198983",
+   "official": "https://www.ncleg.gov/Members/Biography/H/787",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5779",
+   "image": null,
+   "ftm_eid": null,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H198"
+  ]
+ },
  "22948": {
   "people_id": 22948,
   "name": "Mia Bonta",
@@ -23199,6 +23756,36 @@
   "bills_here": [
    "CA-AB1979",
    "CA-AB489"
+  ]
+ },
+ "22958": {
+  "people_id": 22958,
+  "name": "Latyna Humphrey",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-002",
+  "state": "OH",
+  "bills_total": 78,
+  "passed_chamber": 53,
+  "enacted": 33,
+  "sample": [
+   "HB3: Enact the School Bus Safety Act",
+   "HB4: Designate Ohio Stillbirth Prevention Day",
+   "HB29: Regards inmates' access to feminine hygiene products and showers",
+   "HB31: Require electronic recordings of all parole board hearings"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Latyna_Humphrey",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/200127",
+   "official": "https://ohiohouse.gov/members/latyna-m-humphrey",
+   "email": null,
+   "capitol_phone": "614-466-8010",
+   "image": "https://www.legislature.ohio.gov/assets/people/latyna-m-humphrey/headshots/thumbnails/medium/latyna-m-humphrey-january-2023-headshot_medium.jpg",
+   "ftm_eid": null,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OH-SB56"
   ]
  },
  "22965": {
@@ -24385,7 +24972,55 @@
   },
   "bills_here": [
    "FL-S1580"
-  ]
+  ],
+  "money": {
+   "total_raised": 175087,
+   "cycle": "2024 (Florida State Senate District 33, Ballotpedia); top contributors are from Transparency USA and cover more than one year (candidate accounts plus the Friends of Jonathan Martin committee, $197,277 total)",
+   "top_contributors": [
+    {
+     "name": "Ashlye Cox",
+     "amount": 20000,
+     "type": "individual"
+    },
+    {
+     "name": "Steinger Greene and Feiner",
+     "amount": 20000,
+     "type": "business (law firm)"
+    },
+    {
+     "name": "Associated Industries of Florida Political Action Committee",
+     "amount": 10000,
+     "type": "PAC"
+    },
+    {
+     "name": "Jimenez Hart & Mazzitelli LLP",
+     "amount": 10000,
+     "type": "business (law firm)"
+    },
+    {
+     "name": "Taxpayers Against Insurance Bad Faith",
+     "amount": 10000,
+     "type": "PAC"
+    },
+    {
+     "name": "United States Sugar Corporation",
+     "amount": 10000,
+     "type": "business"
+    }
+   ],
+   "industries": [],
+   "gaming_or_tech": "No gaming, casino, lottery, sports-betting, or technology/AI contributors appear among the top 10 donors listed by Transparency USA; smaller donations were not checked.",
+   "sources": [
+    "https://ballotpedia.org/Jonathan_Allen_Martin",
+    "https://www.transparencyusa.org/fl/candidate/jonathan-martin",
+    "https://floridapolitics.com/archives/570135-jonathan-martin-cruises-to-win-in-sd-33/",
+    "https://dos.elections.myflorida.com/candidates/CanDetail.asp?account=82067"
+   ],
+   "as_of": "2025 (exact retrieval date not available in this environment)",
+   "confidence": "medium",
+   "note": "The search tool hit its usage limit after one search, so the 2024 total is from Ballotpedia, the top-contributor list mixes years and accounts, no industry breakdown or itemized 2024 contributions were found, and OpenSecrets/FollowTheMoney could not be checked.",
+   "researched": "2026-11-03"
+  }
  },
  "23342": {
   "people_id": 23342,
@@ -24603,6 +25238,37 @@
   },
   "bills_here": [
    "ND-HB1064"
+  ]
+ },
+ "23559": {
+  "people_id": 23559,
+  "name": "Todd Gollihare",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-012",
+  "state": "OK",
+  "bills_total": 135,
+  "passed_chamber": 99,
+  "enacted": 67,
+  "sample": [
+   "HB1082: Marriage and family; child custody agreements; terminating agreements; effective",
+   "HB1091: Retirement; Oklahoma Firefighters Pension and Retirement System; term; death ben",
+   "HB1092: Revenue and taxation; Oklahoma Trade School Tuition Tax Credit; income tax credi",
+   "HB1170: Public finance; Public Finance Protection Act; terms; standard of care; nonpecun"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Todd_Gollihare",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/206331",
+   "official": "https://oksenate.gov/senators/todd-gollihare",
+   "email": null,
+   "capitol_phone": "405-521-5528",
+   "image": "https://oksenate.gov/sites/default/files/styles/senator_preview/public/Gollihare%2C%20Todd%20Flags%202022.jpg?itok=Vx-HII59",
+   "ftm_eid": 55466391,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OK-HB4130",
+   "OK-SB1589"
   ]
  },
  "23582": {
@@ -25001,6 +25667,36 @@
   },
   "bills_here": [
    "RI-H8186"
+  ]
+ },
+ "23776": {
+  "people_id": 23776,
+  "name": "Kadyn Wittman",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-015",
+  "state": "SD",
+  "bills_total": 57,
+  "passed_chamber": 24,
+  "enacted": 19,
+  "sample": [
+   "HB1030: Amend provisions pertaining to the timing of municipal elections.",
+   "HB1082: Establish parameters for the reimbursement of school districts that provide free",
+   "HB1099: Reschedule the pharmaceutical composition of crystalline polymorph psilocybin in",
+   "HB1101: Prohibit an insurer from declining or limiting life, disability, or long-term ca"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Kadyn_Wittman",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/0",
+   "official": "https://sdlegislature.gov/Legislators/Profile/4834",
+   "email": "Kadyn.Wittman@sdlegislature.gov",
+   "capitol_phone": "605-773-3851",
+   "image": "https://lawmakerdocuments.blob.core.usgovcloudapi.net/photos/wittman,%20kadyn%20rep-5006%20rtjs.jpg",
+   "ftm_eid": 55430442,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "SD-SB111"
   ]
  },
  "23789": {
@@ -26143,6 +26839,34 @@
    "NY-K1093"
   ]
  },
+ "24203": {
+  "people_id": 24203,
+  "name": "Allen Chesser",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-025",
+  "state": "NC",
+  "bills_total": 1,
+  "passed_chamber": 1,
+  "enacted": 1,
+  "sample": [
+   "H3: Relief at the Pump"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Allen_Chesser_II",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/178273",
+   "official": "https://www.ncleg.gov/Members/Biography/H/799",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5802",
+   "image": null,
+   "ftm_eid": 55294443,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H462",
+   "NC-H680"
+  ]
+ },
  "24207": {
   "people_id": 24207,
   "name": "Neal Jackson",
@@ -26195,6 +26919,31 @@
   },
   "bills_here": [
    "NC-H552"
+  ]
+ },
+ "24210": {
+  "people_id": 24210,
+  "name": "Tim Longest",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-034",
+  "state": "NC",
+  "bills_total": 0,
+  "passed_chamber": 0,
+  "enacted": 0,
+  "sample": [],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Tim_Longest",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/210332",
+   "official": "https://www.ncleg.gov/Members/Biography/H/818",
+   "email": "[email protected]",
+   "capitol_phone": "919-733-5773",
+   "image": null,
+   "ftm_eid": 58308727,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "NC-H462"
   ]
  },
  "24215": {
@@ -26429,6 +27178,66 @@
   },
   "bills_here": [
    "MI-SB95"
+  ]
+ },
+ "24348": {
+  "people_id": 24348,
+  "name": "Joseph Aragona",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-060",
+  "state": "MI",
+  "bills_total": 349,
+  "passed_chamber": 166,
+  "enacted": 46,
+  "sample": [
+   "HB4001: Labor: hours and wages; minimum hourly wage rate; modify. Amends secs. 4 & 4b of",
+   "HB4002: Labor: benefits; requirements for an employer to provide earned sick time, modif",
+   "HB4010: State: symbol; Harrison Township; designate as Boat Town USA. Creates new act.",
+   "HB4012: Health: emergency services; emergency medical transport and treatment for retire"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Joseph_Aragona",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/206706",
+   "official": "http://repjoearagona.com/",
+   "email": null,
+   "capitol_phone": "517-373-1785",
+   "image": "https://www.legislature.mi.gov/Images/LEG2025/H60.webp",
+   "ftm_eid": 53476723,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "MI-HB5834"
+  ]
+ },
+ "24359": {
+  "people_id": 24359,
+  "name": "Tom Kunse",
+  "party": "R",
+  "role": "Rep",
+  "district": "HD-100",
+  "state": "MI",
+  "bills_total": 462,
+  "passed_chamber": 220,
+  "enacted": 79,
+  "sample": [
+   "HB4001: Labor: hours and wages; minimum hourly wage rate; modify. Amends secs. 4 & 4b of",
+   "HB4002: Labor: benefits; requirements for an employer to provide earned sick time, modif",
+   "HB4003: Highways: memorial; portion of US-131; designate as the \"Sgt. Matthew Webber Mem",
+   "HB4013: Recreation: other; recreational trespass act; modify posting requirements. Amend"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Tom_Kunse",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/206580",
+   "official": "http://repkunse.com/",
+   "email": null,
+   "capitol_phone": "517-373-7317",
+   "image": "https://www.legislature.mi.gov/Images/LEG2025/H100.webp",
+   "ftm_eid": 55492766,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "MI-HB4347"
   ]
  },
  "24380": {
@@ -27789,6 +28598,36 @@
   },
   "bills_here": [
    "MD-HB898"
+  ]
+ },
+ "24534": {
+  "people_id": 24534,
+  "name": "Kevin Harris",
+  "party": "D",
+  "role": "Sen",
+  "district": "SD-027",
+  "state": "MD",
+  "bills_total": 61,
+  "passed_chamber": 41,
+  "enacted": 27,
+  "sample": [
+   "SB7: Higher Education - Douglas J. J. Peters Veterans of the Afghanistan and Iraq Con",
+   "SB114: 3-1-1 Systems - Expansion Program and Oversight Board - Establishment",
+   "SB141: Election Law - Election Misinformation, Election Disinformation, and Deepfakes",
+   "SB161: Natural Resources - State Park Entry Fee - Exemptions"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Kevin_Harris_%28Maryland%29",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/207011",
+   "official": "https://mgaleg.maryland.gov/mgawebsite/Members/Details/harris03",
+   "email": "kevin.harris@senate.maryland.gov",
+   "capitol_phone": "410-841-3700",
+   "image": "https://mgaleg.maryland.gov/2026RS/images/harris03.jpg",
+   "ftm_eid": 55465733,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "MD-SB932"
   ]
  },
  "24543": {
@@ -30334,6 +31173,36 @@
    "FL-H1279"
   ]
  },
+ "25478": {
+  "people_id": 25478,
+  "name": "Aaron Reinhardt",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-037",
+  "state": "OK",
+  "bills_total": 110,
+  "passed_chamber": 75,
+  "enacted": 54,
+  "sample": [
+   "HB1082: Marriage and family; child custody agreements; terminating agreements; effective",
+   "HB1084: Insurance; assignment of benefits; prohibited activity; effective date.",
+   "HB1160: Insurance; Oklahoma Property and Casualty Insurance Guaranty Association; powers",
+   "HB1170: Public finance; Public Finance Protection Act; terms; standard of care; nonpecun"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Aaron_Reinhardt",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/216446",
+   "official": "https://oksenate.gov/senators/aaron-reinhardt",
+   "email": null,
+   "capitol_phone": "405-521-5600",
+   "image": "https://oksenate.gov/sites/default/files/styles/senator_preview/public/Reinhardt%2C%20Aaron%20A241120-305%20S.jpg?itok=je5MNFrj",
+   "ftm_eid": 59853515,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OK-HB1388"
+  ]
+ },
  "25497": {
   "people_id": 25497,
   "name": "Matt Commons",
@@ -31736,6 +32605,36 @@
    "WI-AB456"
   ]
  },
+ "26107": {
+  "people_id": 26107,
+  "name": "Karen Brownlee",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-028",
+  "state": "OH",
+  "bills_total": 273,
+  "passed_chamber": 132,
+  "enacted": 77,
+  "sample": [
+   "HB3: Enact the School Bus Safety Act",
+   "HB4: Designate Ohio Stillbirth Prevention Day",
+   "HB13: Designate Roy Rogers Day",
+   "HB15: Amend competitive retail electric service law"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Karen_Brownlee",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/218860",
+   "official": "https://ohiohouse.gov/members/karen-brownlee",
+   "email": null,
+   "capitol_phone": "614-466-8120",
+   "image": "https://www.legislature.ohio.gov/assets/people/karen-brownlee/headshots/thumbnails/medium/karen-brownlee-march-2025-headshot_medium.jpg",
+   "ftm_eid": 60738791,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OH-SB56"
+  ]
+ },
  "26109": {
   "people_id": 26109,
   "name": "Meredith Craig",
@@ -32107,6 +33006,36 @@
   "bills_here": [
    "OH-HB455",
    "OH-HB650"
+  ]
+ },
+ "26125": {
+  "people_id": 26125,
+  "name": "Eric Synenberg",
+  "party": "D",
+  "role": "Rep",
+  "district": "HD-021",
+  "state": "OH",
+  "bills_total": 289,
+  "passed_chamber": 121,
+  "enacted": 65,
+  "sample": [
+   "HB3: Enact the School Bus Safety Act",
+   "HB4: Designate Ohio Stillbirth Prevention Day",
+   "HB13: Designate Roy Rogers Day",
+   "HB15: Amend competitive retail electric service law"
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Eric_Synenberg",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/213936",
+   "official": "https://ohiohouse.gov/members/eric-synenberg",
+   "email": null,
+   "capitol_phone": "614-644-5079",
+   "image": "https://www.legislature.ohio.gov/assets/people/eric-synenberg/headshots/thumbnails/medium/eric-synenberg-march-2025-headshot_medium.jpg",
+   "ftm_eid": 59515478,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "OH-SB56"
   ]
  },
  "26127": {
@@ -32947,6 +33876,36 @@
   },
   "bills_here": [
    "TX-SB20"
+  ]
+ },
+ "26345": {
+  "people_id": 26345,
+  "name": "Adam Hinojosa",
+  "party": "R",
+  "role": "Sen",
+  "district": "SD-027",
+  "state": "TX",
+  "bills_total": 360,
+  "passed_chamber": 272,
+  "enacted": 198,
+  "sample": [
+   "HB2: Relating to public education and public school finance.",
+   "HB4: Relating to the assessment of public school students, public school accountabili",
+   "HB9: Relating to an exemption from ad valorem taxation of a portion of the appraised ",
+   "HB14: Relating to support for the development of the nuclear energy industry."
+  ],
+  "links": {
+   "ballotpedia": "https://ballotpedia.org/Adam_Hinojosa",
+   "votesmart": "https://justfacts.votesmart.org/candidate/biography/201052",
+   "official": "https://senate.texas.gov/member.php?d=27",
+   "email": null,
+   "capitol_phone": "512-463-0127",
+   "image": "https://senate.texas.gov/members/d27/img/Hinojosa_Adam-88-0913D-005-web.jpg",
+   "ftm_eid": 54451975,
+   "opensecrets_id": null
+  },
+  "bills_here": [
+   "TX-HB186"
   ]
  },
  "26397": {
