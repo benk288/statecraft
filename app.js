@@ -95,8 +95,14 @@ document.getElementById("stakeholders").innerHTML = PUBLIC_STAKEHOLDERS.map((s) 
 // ---- app state ----
 const billById = Object.fromEntries(ALL_BILLS.map((b) => [b.id, b]));
 let topic = store("statecraft.topic", "sports"); if (!DATA.topics[topic]) topic = "sports";
+// "New since your last visit": the last snapshot date this browser saw. Anything that moved after it is marked.
+// The marker stays for the whole day; the reference point is the previous day this browser opened the app.
+let visitDay = store("statecraft.visitDay", null), prevVisit = store("statecraft.prevVisit", null);
+if (visitDay !== TODAY) { prevVisit = visitDay; save("statecraft.prevVisit", prevVisit); save("statecraft.visitDay", TODAY); }
+const isNew = (b) => !!prevVisit && b.last_action_date > prevVisit && movement(b).level >= 2;
 let issue = "ALL", stateFilter = null, q = "", sort = "newest", outline = true;
 let selected = new Set(), showFolderPicker = false, showPositionPicker = false;
+let shareOpen = false;
 let compareSet = store("statecraft.compare", []), compareDiff = true, compareModel = true, showAddBill = false;
 let billTab = "summary";
 const topicBills = () => ALL_BILLS.filter((b) => b.topics.includes(topic));
@@ -148,10 +154,10 @@ function renderMap() {
       ${stateFilter ? `<p class="muted" style="margin:10px 0 0;font-size:13px">Showing ${NAMES[stateFilter]} · <a href="#" id="clearstate">show all states</a></p>` : ""}
     </section>
     <aside class="list-col" aria-label="Bills">
-      <div class="list-head"><h2>${stateFilter ? NAMES[stateFilter] : "Latest movement"}</h2><select id="sort" aria-label="Sort"><option value="newest" ${sort === "newest" ? "selected" : ""}>Newest first</option><option value="furthest" ${sort === "furthest" ? "selected" : ""}>Furthest along</option></select></div>
+      <div class="list-head"><h2>${stateFilter ? NAMES[stateFilter] : "Latest movement"}${list.filter(isNew).length ? ` <span class="newcount">${list.filter(isNew).length} new</span>` : ""}</h2><select id="sort" aria-label="Sort"><option value="newest" ${sort === "newest" ? "selected" : ""}>Newest first</option><option value="furthest" ${sort === "furthest" ? "selected" : ""}>Furthest along</option></select></div>
       <div class="rows">${list.slice(0, 200).map((b) => `<div class="brow ${selected.has(b.id) ? "on" : ""}">
         <input type="checkbox" data-sel="${b.id}" ${selected.has(b.id) ? "checked" : ""} aria-label="Select ${esc(b.number)}">
-        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}</b><span>${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">Nothing is moving in this view.</div>`}</div>
+        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}</b><span>${isNew(b) ? `<i class="newdot" title="Moved since your last visit"></i>` : ""}${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">Nothing is moving in this view.</div>`}</div>
       ${selected.size ? `<div class="bulk"><b>${selected.size} selected</b><span class="spacer"></span><button class="btn solid" id="tofolder">Add to folder</button><button class="btn" id="setpos">Set position</button><button class="btn" id="tocompare">Compare</button></div>` : ""}
       ${showFolderPicker ? folderPicker([...selected]) : ""}${showPositionPicker ? positionPicker([...selected]) : ""}
     </aside>
@@ -249,7 +255,7 @@ function renderBill(id) {
       </div>
       ${progressSteps(b)}
       <div class="tabs" role="tablist">${[["summary", "Summary"], ["text", "Bill text"], ["history", "History"], ["sponsor", "Sponsor"]].map(([k, l]) => `<button role="tab" data-tab="${k}" class="${billTab === k ? "on" : ""}">${l}</button>`).join("")}<a href="#/compare" id="cmp-with">Compare with…</a></div>
-      <section class="prose">${billTab === "summary" ? (ai ? `<div class="note">AI summary of the bill text. Check it against the official page.</div><p class="big">${esc(ai.summary)}</p><ul>${ai.mechanics.map((m) => `<li>${esc(m)}</li>`).join("")}</ul><h3 style="font-size:18px;margin-top:8px">Versus other states</h3><p>${esc(ai.comparison)}</p><h3 style="font-size:18px">Watch</h3><p>${esc(ai.watch)}</p>` : `<p class="big">${esc(b.description || b.title)}</p><div class="note">No AI summary for this bill yet; summaries cover moved sports-betting bills.</div>`)
+      <section class="prose">${billTab === "summary" ? (ai ? `<div class="note">AI summary of the bill text. Check it against the official page.</div><p class="big">${esc(ai.summary)}</p><ul>${ai.mechanics.map((m) => `<li>${esc(m)}</li>`).join("")}</ul><h3 style="font-size:18px;margin-top:8px">Versus other states</h3><p>${esc(ai.comparison)}</p><h3 style="font-size:18px">Watch</h3><p>${esc(ai.watch)}</p>` : `<p class="big">${esc(b.description || b.title)}</p><div class="note">No AI summary for this bill yet; summaries cover moved sports-betting bills.</div>`) + relatedSection(b)
         : billTab === "text" ? (text ? `<div class="note">Latest text on file (${esc(b.text?.type || "current")}, ${fmtDate(b.text?.date)}). Truncated to 30,000 characters; use the official link for the full document.</div><pre>${esc(text)}</pre>` : `<div class="note">${window.STATECRAFT_TEXTS ? "Text not in the snapshot for this bill." : "Loading bill text…"}</div>`)
         : billTab === "history" ? `${movement(b).upcoming ? `<p class="big">Scheduled: ${fmtDate(movement(b).upcoming.date)} — ${esc(movement(b).upcoming.description || movement(b).upcoming.type)}</p>` : ""}<ol class="hist">${(b.history || []).slice().reverse().map((h) => `<li><b>${fmtDate(h.date)}</b> ${esc(h.action)}</li>`).join("")}</ol>${b.calendar?.length ? `<h3 style="font-size:18px;margin-top:12px">Hearings &amp; calendar</h3><ol class="hist">${b.calendar.slice().sort((x, y) => y.date.localeCompare(x.date)).map((c) => `<li><b>${fmtDate(c.date)}</b> ${esc(c.description || c.type)}${c.location ? ` — ${esc(c.location)}` : ""}</li>`).join("")}</ol>` : ""}`
         : sponsorSection(b)}</section>
@@ -274,6 +280,7 @@ function renderBill(id) {
   wireChrome(app);
   app.querySelector("#crumb-state").addEventListener("click", () => { stateFilter = b.state; });
   app.querySelectorAll("[data-tab]").forEach((btn) => btn.addEventListener("click", () => { billTab = btn.dataset.tab; render(); }));
+  app.querySelectorAll("[data-cmpadd]").forEach((btn) => btn.addEventListener("click", () => { compareSet = [...new Set([...compareSet, b.id, btn.dataset.cmpadd])].slice(-4); save("statecraft.compare", compareSet); go("#/compare"); }));
   app.querySelector("#cmp-with").addEventListener("click", () => { if (!compareSet.includes(b.id)) compareSet = [...compareSet, b.id].slice(-4); save("statecraft.compare", compareSet); });
   app.querySelectorAll("[data-delpos]").forEach((btn) => btn.addEventListener("click", () => { ws.positions[b.id].splice(Number(btn.dataset.delpos), 1); if (!ws.positions[b.id].length) delete ws.positions[b.id]; persist(); render(); }));
   app.querySelectorAll("[data-unfolder]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); const f = folderById(btn.dataset.unfolder); f.billIds = f.billIds.filter((x) => x !== b.id); persist(); render(); }));
@@ -281,6 +288,18 @@ function renderBill(id) {
   app.querySelectorAll("[data-deldoc]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); ws.docs[b.id].splice(Number(btn.dataset.deldoc), 1); persist(); render(); }));
   app.querySelector("#docform").addEventListener("submit", (e) => { e.preventDefault(); const f = e.target, url = f.url.value.trim(), ext = (url.match(/\.(pdf|docx?|md|xlsx?|pptx?)(\?|$)/i)?.[1] || "LINK").toUpperCase(); (ws.docs[b.id] ||= []).push({ name: f.name.value.trim(), url, ext, meta: f.meta.value.trim() || `Added ${fmtShort(TODAY)}` }); persist(); render(); });
   wirePickers(app, [b.id]);
+}
+// Other states' bills on the same issues, ranked by shared issue tags and shared title words.
+function relatedBills(b, n = 5) {
+  const mine = new Set(issuesOf(b)), words = new Set(tokens(b.title));
+  return ALL_BILLS.filter((o) => o.id !== b.id && o.state !== b.state && o.topics[0] === b.topics[0] && movement(o).level >= 2)
+    .map((o) => { const tags = issuesOf(o).filter((t) => mine.has(t)).length, tw = tokens(o.title).filter((w) => words.has(w)).length; return { o, score: tags * 2 + tw - relevance(o) }; })
+    .filter((x) => x.score > 0).sort((x, y) => y.score - x.score || byDateDesc(x.o, y.o)).slice(0, n).map((x) => x.o);
+}
+function relatedSection(b) {
+  const rel = relatedBills(b);
+  if (!rel.length) return "";
+  return `<h3 style="font-size:18px;margin-top:8px">Related bills in other states</h3>${rel.map((o) => `<div class="todo-row"><a class="num" href="#/bill/${encodeURIComponent(o.id)}">${o.state} ${esc(o.number)}</a><span class="t">${esc(headline(o))}</span><span class="stage">${esc(stageOf(o))}</span><button class="btn sm" data-cmpadd="${o.id}">Compare</button></div>`).join("")}`;
 }
 function sponsorSection(b) {
   const prim = (b.sponsors || []).filter((s) => s.primary), rest = (b.sponsors || []).filter((s) => !s.primary);
@@ -304,7 +323,8 @@ function renderFolders(id) {
       ${groups.map(([name, list]) => `<div class="group"><div class="kicker">${esc(name)}</div>${list.map((x) => `<a class="item ${f && x.id === f.id ? "on" : ""}" href="#/folders/${x.id}"><span>${esc(x.name)}</span><span>${x.billIds.length || "—"}</span></a>`).join("")}</div>`).join("") || `<p class="muted" style="font-size:13px">Select bills on the map and choose “Add to folder”.</p>`}</nav>
     <main class="content">${f ? `
       <div class="titlebar double"><div><div class="kicker">${esc(clientById(f.clientId)?.name || "Firm-wide")} · Strategy folder</div><h1><input id="fname" value="${esc(f.name)}" aria-label="Folder name"></h1><div class="muted" style="font-size:13.5px">${bills.length} bills · ${new Set(bills.map((b) => b.state)).size} states · ${docs.length} documents</div></div>
-        <div class="actions"><a class="btn" href="#/compare" id="cmpall">Compare all ${Math.min(bills.length, 4)}</a><button class="btn" id="brief">Export brief</button><button class="btn" id="delfolder" style="color:var(--red)">Delete</button></div></div>
+        <div class="actions"><a class="btn" href="#/compare" id="cmpall">Compare all ${Math.min(bills.length, 4)}</a><button class="btn" id="brief">Export brief</button><button class="btn" id="print">Print</button><button class="btn" id="share">Share</button><button class="btn" id="delfolder" style="color:var(--red)">Delete</button></div></div>
+      ${shareOpen ? `<div class="card" id="sharebox"><h2 style="font-size:20px;margin-bottom:6px">Share this workspace</h2><p class="muted" style="font-size:13px;margin:0 0 10px">There is no server yet, so sharing is a file: export your clients, folders, positions and document links, send the file, and the other person imports it. Imports merge; nothing is overwritten.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid sm" id="wsexport">Export workspace</button><label class="btn sm" style="cursor:pointer">Import workspace<input type="file" id="wsimport" accept="application/json" hidden></label></div></div>` : ""}
       <label><span class="kicker muted" style="letter-spacing:.1em">Strategy notes</span><textarea class="input" id="fnotes" placeholder="What are we trying to do across these bills?">${esc(f.notes)}</textarea></label>
       ${bills.map((b) => { const p = posOf(b), mv = movement(b); return `<section class="fstate rule-top"><div class="hd"><h2>${NAMES[b.state]}</h2><span class="muted" style="font-size:13px">${esc(b.committee ? `${b.committee} has it` : b.sine_die ? "Session adjourned" : b.status_text)}</span></div>
         <div class="frow"><a class="num" href="#/bill/${encodeURIComponent(b.id)}">${esc(b.number)}</a><a class="t" href="#/bill/${encodeURIComponent(b.id)}">${esc(headline(b))}</a><span class="muted">${esc(stageOf(b))}</span><span>${p.length ? stancePill(p[0].stance) : `<span class="muted" style="font-size:12px">No position</span>`}</span><span class="muted" style="font-size:13px">${mv.upcoming ? `Hearing ${fmtShort(mv.upcoming.date)}` : fmtShort(b.last_action_date)}</span></div>
@@ -320,7 +340,28 @@ function renderFolders(id) {
   app.querySelector("#cmpall").addEventListener("click", () => { compareSet = f.billIds.slice(0, 4); save("statecraft.compare", compareSet); });
   app.querySelector("#delfolder").addEventListener("click", () => { if (confirm(`Delete folder “${f.name}”? Bills and positions are kept.`)) { ws.folders = ws.folders.filter((x) => x.id !== f.id); persist(); go("#/folders"); } });
   app.querySelector("#brief").addEventListener("click", () => exportBrief(f, bills));
+  app.querySelector("#print").addEventListener("click", () => window.print());
+  app.querySelector("#share").addEventListener("click", () => { shareOpen = !shareOpen; render(); });
+  app.querySelector("#wsexport")?.addEventListener("click", exportWorkspace);
+  app.querySelector("#wsimport")?.addEventListener("change", (e) => importWorkspace(e.target.files[0]));
   app.querySelectorAll("[data-rm]").forEach((btn) => btn.addEventListener("click", () => { f.billIds = f.billIds.filter((x) => x !== btn.dataset.rm); persist(); render(); }));
+}
+function exportWorkspace() {
+  const blob = new Blob([JSON.stringify({ statecraft: 1, exported: new Date().toISOString(), ...ws }, null, 1)], { type: "application/json" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `statecraft-workspace-${TODAY}.json`; a.click();
+}
+async function importWorkspace(file) {
+  if (!file) return;
+  try {
+    const inc = JSON.parse(await file.text());
+    if (inc.statecraft !== 1) throw new Error("not a Statecraft workspace file");
+    const nameToId = {};
+    for (const c of inc.clients || []) { const mine = ensureClient(c.name); mine.topics = [...new Set([...(mine.topics || []), ...(c.topics || [])])]; nameToId[c.id] = mine.id; }
+    for (const f of inc.folders || []) { const key = `${f.name}|${f.clientId ? nameToId[f.clientId] : ""}`; let mine = ws.folders.find((x) => `${x.name}|${x.clientId || ""}` === key); if (!mine) { mine = { id: uid(), name: f.name, clientId: f.clientId ? nameToId[f.clientId] : null, notes: "", billIds: [] }; ws.folders.push(mine); } mine.billIds = [...new Set([...mine.billIds, ...(f.billIds || []).filter((id) => billById[id])])]; if (f.notes && !mine.notes) mine.notes = f.notes; }
+    for (const [billId, list] of Object.entries(inc.positions || {})) for (const p of list) { const cid = nameToId[p.clientId]; if (!cid || !billById[billId]) continue; const cur = (ws.positions[billId] ||= []); const ex = cur.find((x) => x.clientId === cid); if (!ex) cur.push({ ...p, clientId: cid }); else if ((p.updated || "") > (ex.updated || "")) Object.assign(ex, p, { clientId: cid }); }
+    for (const [billId, list] of Object.entries(inc.docs || {})) { if (!billById[billId]) continue; const cur = (ws.docs[billId] ||= []); for (const d of list) if (!cur.some((x) => x.url === d.url)) cur.push(d); }
+    persist(); shareOpen = false; render(); alert("Workspace imported and merged.");
+  } catch (e) { alert(`Could not import: ${e.message}`); }
 }
 function exportBrief(f, bills) {
   const lines = [`# ${f.name}`, `${clientById(f.clientId)?.name || "Firm-wide"} · ${new Date().toLocaleDateString("en-US", { dateStyle: "long" })}`, "", f.notes ? `## Strategy\n${f.notes}\n` : ""];
@@ -339,6 +380,19 @@ function modelCoverage(modelText, bill) {
   for (const s of ms) { const set = new Set(tokens(s)); let best = 0; bsets.forEach((o) => { best = Math.max(best, scoreOf(set, o)); }); (best >= 0.6 ? covered : missing).push(s); }
   return { covered, missing, coverage: ms.length ? covered.length / ms.length : 0 };
 }
+// Provision rows for the compare table: each bill's AI key provisions sorted into the practice's topics.
+const PROVISIONS = [
+  ["Tax rate", /\btax|gross (gaming|wagering) revenue|privilege fee|excise|rate of/i],
+  ["Licensing & fees", /licens|permit|fee\b|operator|vendor|supplier|registration/i],
+  ["Prediction markets", /prediction market|event contract|futures|cftc/i],
+  ["Advertising", /advertis|marketing|promotion|inducement|bonus|push notification/i],
+  ["Prop / college bets", /\bprop\b|proposition|college|collegiate|student[- ]athlete|ncaa/i],
+  ["Account limits & deposits", /limit|deposit|withdraw|credit card|account/i],
+  ["Consumer protection", /self[- ]exclusion|problem gambling|responsible|addiction|minor|age|notice|disclos/i],
+  ["Reporting", /report|audit|record|data/i],
+  ["Penalties & enforcement", /penalt|fine|violation|enforce|revok|suspend/i],
+  ["Effective date", /effective|takes effect|sunset|expire|chapter/i],
+];
 function renderCompare() {
   const bills = compareSet.map((id) => billById[id]).filter(Boolean);
   const m = ws.models[topic] || { title: "", text: "" };
@@ -347,7 +401,7 @@ function renderCompare() {
   const rows = [
     ["Stage", (b) => `${stageOf(b)}${b.last_action_date ? ` · ${fmtShort(b.last_action_date)}` : ""}${b.status === 4 ? " · signed into law" : ""}`, "—"],
     ["What it does", (b) => ANALYSIS[b.id]?.summary || b.description || NA, m.text ? m.title || "Your model bill" : "[Paste a model bill in Clients → Model bill]"],
-    ["Key provisions", (b) => ANALYSIS[b.id]?.mechanics?.length ? `<ul>${ANALYSIS[b.id].mechanics.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : NA, "[Your provisions]", true],
+    ...PROVISIONS.map(([label, re]) => [label, (b) => { const hits = (ANALYSIS[b.id]?.mechanics || []).filter((x) => re.test(x)); return hits.length ? `<ul>${hits.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : NA; }, m.text ? (sentences(m.text).filter((x) => re.test(x)).slice(0, 2).join(" ") || NA) : "[Your provision]", true]),
     ["Issues", (b) => issuesOf(b).map((t) => lensLabel(b.topics[0], t)).join(", ") || NA, "—"],
     ["Versus other states", (b) => ANALYSIS[b.id]?.comparison || NA, "—"],
     ["Watch", (b) => ANALYSIS[b.id]?.watch || NA, "—"],
@@ -423,3 +477,8 @@ function render() {
 }
 render();
 window.addEventListener("resize", () => { if (route().page === "map") drawMap(); });
+document.addEventListener("keydown", (e) => {
+  const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
+  if (e.key === "/" && !typing) { const s = document.querySelector("#q"); if (s) { e.preventDefault(); s.focus(); } }
+  if (e.key === "Escape" && (showFolderPicker || showPositionPicker || showAddBill || shareOpen)) { showFolderPicker = showPositionPicker = showAddBill = shareOpen = false; render(); }
+});

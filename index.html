@@ -107,6 +107,8 @@
   .popover label input { accent-color: var(--red); }
   .popover label span small { display: block; font-size: 12px; color: var(--muted); }
   .empty { padding: 28px 0; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+  .newcount { font-family: var(--sans); font-size: 12px; font-weight: 600; color: var(--red); margin-left: 8px; vertical-align: middle; }
+  .newdot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); margin-right: 6px; vertical-align: middle; }
 
   /* bill screen */
   .crumbs { padding: 14px 32px; font-size: 13px; color: var(--muted); display: flex; gap: 8px; }
@@ -204,6 +206,11 @@
   .picker .menu { position: absolute; top: 100%; left: 0; z-index: 7; width: 360px; max-height: 320px; overflow: auto; background: var(--paper); border: 1px solid var(--rule); box-shadow: 6px 6px 0 var(--ink); }
   .picker .menu button { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 8px 12px; border-bottom: 1px solid var(--rule-faint); }
   .picker .menu button:hover { background: var(--select); }
+  @media print {
+    header.top, nav.topics, .sidenav, .titlebar .actions, .docs-row .btn, .docs-row .rm, #sharebox, .search { display: none !important; }
+    body { background: #fff; } .content { padding: 0; } textarea.input { border: 0; padding: 0; background: none; }
+    .frow { grid-template-columns: 90px 1fr 140px 100px 130px; }
+  }
   @media (max-width: 900px) { .frow { grid-template-columns: 1fr; gap: 4px; } .list-col { border-left: 0; padding-left: 0; } .rows { max-height: none; } }
 </style>
 </head>
