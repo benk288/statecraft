@@ -23,7 +23,7 @@ async function worker() {
     const b = todo[i++];
     try {
       const res = await client.messages.parse({
-        model: "claude-opus-5-5", max_tokens: 200, output_config: { effort: "low", format: zodOutputFormat(Headline) },
+        model: process.env.MODEL || "claude-sonnet-5-5", max_tokens: 200, output_config: { effort: "low", format: zodOutputFormat(Headline) },
         system: "You write one-line editorial headlines for a legislative tracker used by regulatory lawyers. Be specific and concrete; prefer the substantive effect over procedure.",
         messages: [{ role: "user", content: `Bill ${b.state} ${b.number}: ${b.title}\nAbstract: ${(b.description || "").slice(0, 600)}\n${analysis[b.id] ? `Summary: ${analysis[b.id].summary}` : ""}` }],
       });

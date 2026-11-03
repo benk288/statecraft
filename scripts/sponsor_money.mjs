@@ -17,7 +17,7 @@ const data = JSON.parse(await readFile("data/bills.json", "utf8"));
 const sponsors = JSON.parse(await readFile("data/sponsors.json", "utf8"));
 // Primary sponsors of moved bills in the chosen topics, furthest-along bills first.
 const order = [];
-for (const b of data.bills.filter((b) => moved(b) && b.topics.some((t) => TOPICS.includes(t))).sort((a, b) => b.status - a.status)) for (const s of b.sponsors.filter((s) => s.primary && (s.party || s.district))) if (sponsors[s.people_id] && !order.includes(s.people_id)) order.push(s.people_id); // committees have no party/district
+for (const b of data.bills.filter((b) => moved(b) && b.topics.some((t) => TOPICS.includes(t)) && b.status >= (Number(process.env.MIN_STATUS) || 0)).sort((a, b) => b.status - a.status)) for (const s of b.sponsors.filter((s) => s.primary && (s.party || s.district))) if (sponsors[s.people_id] && !order.includes(s.people_id)) order.push(s.people_id); // committees have no party/district
 const todo = order.filter((id) => !sponsors[id].money).slice(0, LIMIT || undefined);
 console.error(`${todo.length} sponsors to research (${order.filter((id) => sponsors[id].money).length} done)`);
 
@@ -27,7 +27,7 @@ async function worker() {
     const id = todo[i++], s = sponsors[id];
     try {
       const res = await client.messages.create({
-        model: "claude-opus-5-5", max_tokens: 4000, output_config: { effort: "medium" },
+        model: process.env.MODEL || "claude-sonnet-5-5", max_tokens: 4000, output_config: { effort: "medium" },
         tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 5 }],
         system: "You research campaign finance for state legislators for a regulatory law practice. Use OpenSecrets (which now hosts the former FollowTheMoney state data), the state's campaign-finance disclosure portal, Ballotpedia, and reputable press. Report only figures you actually found, with the source URL for each; never estimate or invent amounts. Finish with one JSON object in a ```json code block.",
         messages: [{ role: "user", content: `Legislator: ${s.name}, ${s.party || "party unknown"}, ${s.role || ""} ${s.district || ""}, ${NAMES[s.state] || s.state}.\nFind: total raised in the most recent election cycle you can document; the top contributors by amount (up to 6, name, amount, and whether individual, PAC, party, or self-funding); top contributing industries if available; and whether gaming, sports betting, casino, lottery, or technology/AI interests appear among contributors.\nReturn JSON with keys: total_raised (number or null), cycle (string), top_contributors (array of {name, amount, type}), industries (array of {name, amount}), gaming_or_tech (string, one sentence or empty), sources (array of URLs), as_of (today's date), confidence ("high"|"medium"|"low"), note (one sentence on data limits).` }],
