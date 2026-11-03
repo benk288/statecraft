@@ -11,7 +11,7 @@ const KEY = process.env.LEGISCAN_KEY;
 if (!KEY) { console.error("Set LEGISCAN_KEY."); process.exit(1); }
 
 export const TOPICS = {
-  sports: { label: "Sports betting", queries: ['"sports betting"', '"sports wagering"', '"prediction market"', '"sweepstakes" AND casino', '"event contract"', '"daily fantasy"'] },
+  sports: { label: "Sports betting", queries: ['"sports betting"', '"sports wagering"', '"prediction market"', '"sweepstakes" AND casino', '"event contract"', '"daily fantasy"', '"event wagering"', '"sportsbook"', '"sports pool"', '"sports book"', '"fantasy contest"', '"mobile wagering"'] },
   ai: { label: "AI regulation", queries: ['"artificial intelligence"', '"automated decision"', '"frontier model"', '"algorithmic discrimination"', '"generative artificial intelligence"', '"deepfake"'] },
   igaming: { label: "iGaming", queries: ['"internet gaming"', '"online casino"', '"igaming"', '"interactive gaming"', '"internet casino"'] },
   cards: { label: "Card breaks", queries: ['"trading card"', '"mystery pack"', '"loot box"', '"card break"', '"collectible" AND gambling', '"blind box"'] },
@@ -39,7 +39,7 @@ async function api(op, params = {}) {
 async function search(query) {
   const found = new Map(); let page = 1, total = 1;
   do {
-    const sr = (await api("getSearch", { state: "ALL", query, year: 2, page })).searchresult;
+    const sr = (await api("getSearch", { state: "ALL", query, year: Number(process.env.YEAR || 2), page })).searchresult; // YEAR=3 adds each state's prior (e.g. 2025) session
     total = sr.summary?.page_total ?? 1;
     for (const [k, v] of Object.entries(sr)) if (k !== "summary") found.set(v.bill_id, v);
     page++;

@@ -10,7 +10,7 @@ import { z } from "zod";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { readFile, readdir, writeFile } from "node:fs/promises";
 
-const MODEL = "claude-opus-5-5";
+const MODEL = process.env.MODEL || "claude-sonnet-5-5";
 const CONCURRENCY = 4;
 const MAX_TEXT = 50000; // chars of bill text per request
 

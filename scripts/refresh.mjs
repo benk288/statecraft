@@ -66,6 +66,7 @@ async function main() {
   await writeFile("data/bills.js", `window.STATECRAFT_DATA = ${JSON.stringify(data)};\n`);
   await writeFile("data/bills.json", JSON.stringify(data, null, 1));
   console.error(`Snapshot updated: ${data.bills.length} bills, ${requests} LegiScan requests so far.`);
+  spawnSync("node", ["scripts/fix_ids.mjs"], { stdio: "inherit" }); // keep ids unique across sessions
   // 4. Texts, sponsor stats, text bundle, and sports summaries for anything new that moved (each script skips what it already has).
   const run = (script, env = {}) => { const r = spawnSync("node", [script], { stdio: "inherit", env: { ...process.env, ...env } }); if (r.status) console.error(`${script} exited ${r.status}`); };
   run("scripts/fetch_legiscan_texts.mjs");
