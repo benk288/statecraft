@@ -206,6 +206,13 @@
   .picker .menu { position: absolute; top: 100%; left: 0; z-index: 7; width: 360px; max-height: 320px; overflow: auto; background: var(--paper); border: 1px solid var(--rule); box-shadow: 6px 6px 0 var(--ink); }
   .picker .menu button { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 8px 12px; border-bottom: 1px solid var(--rule-faint); }
   .picker .menu button:hover { background: var(--select); }
+  .hdr-icons { display: flex; gap: 6px; }
+  .icon { width: 34px; height: 34px; border: 1px solid var(--rule); background: var(--paper); font-size: 15px; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
+  .icon:hover { background: var(--ink); color: var(--ground); }
+  .sheet { position: fixed; inset: 0; background: rgba(17,17,17,.35); z-index: 20; display: flex; justify-content: flex-end; }
+  .sheet-in { width: min(460px, 100%); background: var(--ground); border-left: 1px solid var(--rule); padding: 24px 28px; overflow-y: auto; }
+  .sheet-in .list-head h2 { font-size: 24px; }
+  .sheet-in label { display: flex; flex-direction: column; gap: 4px; }
   @media print {
     header.top, nav.topics, .sidenav, .titlebar .actions, .docs-row .btn, .docs-row .rm, #sharebox, .search { display: none !important; }
     body { background: #fff; } .content { padding: 0; } textarea.input { border: 0; padding: 0; background: none; }

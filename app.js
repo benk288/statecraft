@@ -134,6 +134,24 @@ async function openDoc(d) {
 }
 const fmtSize = (n) => n > 1e6 ? (n / 1e6).toFixed(1) + " MB" : Math.max(1, Math.round(n / 1024)) + " KB";
 
+// ---- settings (this browser only): the user's own Anthropic key for drafting, their name and firm for letters
+let settings = store("statecraft.settings", { apiKey: "", author: "", firm: "", model: "claude-sonnet-5-5" });
+let settingsOpen = false, helpOpen = false;
+const saveSettings = () => save("statecraft.settings", settings);
+
+// Direct browser call to the Anthropic API with the user's own key. Nothing is proxied; the key never leaves this browser except to Anthropic.
+async function askClaude(system, user, maxTokens = 2500) {
+  if (!settings.apiKey) throw new Error("NO_KEY");
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "content-type": "application/json", "x-api-key": settings.apiKey, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
+    body: JSON.stringify({ model: settings.model || "claude-sonnet-5-5", max_tokens: maxTokens, system, messages: [{ role: "user", content: user }] }),
+  });
+  const json = await res.json();
+  if (!res.ok) throw new Error(json.error?.message || `HTTP ${res.status}`);
+  return (json.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
+}
+
 // ---- app state ----
 const billById = Object.fromEntries(ALL_BILLS.map((b) => [b.id, b]));
 let topic = store("statecraft.topic", "sports"); if (topic !== "all" && !DATA.topics[topic]) topic = "sports";
@@ -152,6 +170,7 @@ let selected = new Set(), showFolderPicker = false, showPositionPicker = false;
 let shareOpen = false;
 let compareSet = store("statecraft.compare", []), compareDiff = true, compareModel = true, showAddBill = false;
 let billTab = "summary";
+let draft = null; // { billId, posIndex, text, busy, error }
 const topicBills = () => ALL_BILLS.filter((b) => (topic === "all" || b.topics.includes(topic)) && sessionOf(b) === session);
 const matches = (b) => (issue === "ALL" || issuesOf(b).includes(issue)) && (!stateFilter || b.state === stateFilter) &&
   (!q || `${b.number} ${b.title} ${b.description} ${b.last_action} ${b.committee || ""} ${(b.sponsors || []).map((s) => s.name).join(" ")} ${posOf(b).map((p) => clientById(p.clientId)?.name).join(" ")} ${ANALYSIS[b.id]?.summary || ""}`.toLowerCase().includes(q));
@@ -161,7 +180,7 @@ const movedByState = () => { const m = {}; for (const b of moved().filter((b) =>
 
 // ---- routing ----
 const route = () => { const h = location.hash.replace(/^#\/?/, ""); const [page, id] = h.split("/"); return { page: page || "map", id: id ? decodeURIComponent(id) : null }; };
-window.addEventListener("hashchange", () => { showFolderPicker = showPositionPicker = showAddBill = false; render(); });
+window.addEventListener("hashchange", () => { showFolderPicker = showPositionPicker = showAddBill = false; if (draft && route().id !== draft.billId) draft = null; render(); });
 const go = (h) => { location.hash = h; };
 
 // ---- shared chrome ----
@@ -174,13 +193,46 @@ function header(active, withSearch) {
     <label class="session">Session <select id="session">${SESSIONS.map(([k, l]) => `<option value="${k}" ${session === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     ${withSearch ? `<label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" id="q" placeholder="Search bills, sponsors, clients" aria-label="Search" value="${esc(q)}"></label>` : ""}
     <div class="meta"><b>${bills.length}</b> bills · <b>${analysed}</b> analysed<br>Snapshot ${DATA.generated ? new Date(DATA.generated).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—"}</div>
-  </header>`;
+    <div class="hdr-icons"><button class="icon" id="helpbtn" aria-label="Help" title="How to use Statecraft">?</button><button class="icon" id="gearbtn" aria-label="Settings" title="Settings">⚙</button></div>
+  </header>${settingsOpen ? settingsPanel() : ""}${helpOpen ? helpPanel() : ""}`;
 }
 function topicsBar() {
   const inSession = ALL_BILLS.filter((b) => sessionOf(b) === session);
   return `<nav class="topics" aria-label="Topics"><a href="#/map" data-topic="all" class="${topic === "all" ? "on" : ""}">All topics <span>${inSession.length}</span></a>${Object.entries(DATA.topics).map(([k, l]) => `<a href="#/map" data-topic="${k}" class="${topic === k ? "on" : ""}">${esc(l)} <span>${inSession.filter((b) => b.topics.includes(k)).length}</span></a>`).join("")}</nav>`;
 }
+function settingsPanel() {
+  return `<div class="sheet" role="dialog" aria-label="Settings"><div class="sheet-in">
+    <div class="list-head"><h2>Settings</h2><button class="icon" id="closesheet" aria-label="Close">×</button></div>
+    <p class="muted" style="font-size:13px;margin:4px 0 14px">Everything here stays in this browser. The Anthropic key is used only for drafting letters and is sent only to Anthropic.</p>
+    <form id="settingsform" style="display:flex;flex-direction:column;gap:10px">
+      <label><span class="kicker muted" style="letter-spacing:.1em">Your name</span><input class="input" name="author" value="${esc(settings.author)}" placeholder="e.g. Jane Doe"></label>
+      <label><span class="kicker muted" style="letter-spacing:.1em">Firm or organization</span><input class="input" name="firm" value="${esc(settings.firm)}" placeholder="e.g. Doe Public Policy LLP"></label>
+      <label><span class="kicker muted" style="letter-spacing:.1em">Anthropic API key</span><input class="input" name="apiKey" type="password" value="${esc(settings.apiKey)}" placeholder="sk-ant-…" autocomplete="off"><span class="muted" style="font-size:12px">Get one at console.anthropic.com → API keys. Drafting a letter costs about a cent.</span></label>
+      <label><span class="kicker muted" style="letter-spacing:.1em">Model for drafting</span><select class="input" name="model"><option value="claude-sonnet-5-5" ${settings.model === "claude-sonnet-5-5" ? "selected" : ""}>Claude Sonnet 5.5 (fast, inexpensive)</option><option value="claude-opus-5-5" ${settings.model === "claude-opus-5-5" ? "selected" : ""}>Claude Opus 5.5 (strongest)</option></select></label>
+      <div style="display:flex;gap:8px;align-items:center"><button class="btn solid">Save</button><span class="spacer"></span><button type="button" class="btn sm" id="wsexport2">Export workspace</button><label class="btn sm" style="cursor:pointer">Import<input type="file" id="wsimport2" accept="application/json" hidden></label></div>
+    </form></div></div>`;
+}
+function helpPanel() {
+  return `<div class="sheet" role="dialog" aria-label="Help"><div class="sheet-in">
+    <div class="list-head"><h2>How to use Statecraft</h2><button class="icon" id="closesheet" aria-label="Close">×</button></div>
+    <ol class="hist" style="font-size:13.5px;color:var(--ink)">
+      <li><b>Map.</b> States are shaded by bills that moved out of committee or onto the floor. Hover for counts, click to filter the list. Topic tabs and issue chips narrow it; the session menu switches biennium.</li>
+      <li><b>Bills.</b> Click any bill for its AI summary, how it differs from other states, the sponsor's record and contact, and its history. Everything links to the official page.</li>
+      <li><b>Positions.</b> On a bill, record where a client or stakeholder stands, then <b>Draft letter</b> writes a letter of support, opposition or amendment you can edit, save and email to the sponsor.</li>
+      <li><b>Folders.</b> Tick bills on the map and add them to a strategy folder; attach documents, write notes, export a brief, or compare the whole folder.</li>
+      <li><b>Compare.</b> Bills side by side by provision, plus your own model bill once you paste it under Clients.</li>
+      <li><b>Keyboard.</b> <span class="kbd">/</span> search · <span class="kbd">Esc</span> close.</li>
+    </ol>
+    <p class="muted" style="font-size:12px;margin-top:12px">Data: state legislatures via LegiScan, snapshot dated top right. AI text can be wrong; the official bill page is the authority. Not legal advice.</p>
+  </div></div>`;
+}
 function wireChrome(root) {
+  root.querySelector("#gearbtn")?.addEventListener("click", () => { settingsOpen = !settingsOpen; helpOpen = false; render(); });
+  root.querySelector("#helpbtn")?.addEventListener("click", () => { helpOpen = !helpOpen; settingsOpen = false; render(); });
+  root.querySelector("#closesheet")?.addEventListener("click", () => { settingsOpen = helpOpen = false; render(); });
+  root.querySelector("#settingsform")?.addEventListener("submit", (e) => { e.preventDefault(); const f = e.target; settings = { apiKey: f.apiKey.value.trim(), author: f.author.value.trim(), firm: f.firm.value.trim(), model: f.model.value }; saveSettings(); settingsOpen = false; render(); });
+  root.querySelector("#wsexport2")?.addEventListener("click", exportWorkspace);
+  root.querySelector("#wsimport2")?.addEventListener("change", (e) => importWorkspace(e.target.files[0]));
   root.querySelector("#session")?.addEventListener("change", (e) => { session = e.target.value; save("statecraft.session", session); selected.clear(); stateFilter = null; render(); });
   root.querySelectorAll("[data-topic]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); topic = a.dataset.topic; save("statecraft.topic", topic); issue = "ALL"; stateFilter = null; selected.clear(); go("#/map"); render(); }));
   root.querySelector("#q")?.addEventListener("input", (e) => { q = e.target.value.trim().toLowerCase(); const pos = e.target.selectionStart; render(); const nq = document.querySelector("#q"); if (nq) { nq.focus(); nq.setSelectionRange(pos, pos); } });
@@ -312,12 +364,13 @@ function renderBill(id) {
     <aside class="bill-side">
       <section class="card">
         <h2>Client positions</h2>
-        ${posOf(b).map((p, i) => `<div class="posrow"><div class="hd"><a href="#/clients/${p.clientId}">${esc(clientById(p.clientId)?.name || "?")}</a><span>${stancePill(p.stance)}<button class="x" data-delpos="${i}" title="Remove">×</button></span></div>${p.note ? `<div class="note">${esc(p.note)}</div>` : ""}<div class="by">Updated ${fmtShort(p.updated)}</div></div>`).join("") || `<p class="muted" style="font-size:13px;margin:8px 0 0">No positions yet.</p>`}
+        ${posOf(b).map((p, i) => `<div class="posrow"><div class="hd"><a href="#/clients/${p.clientId}">${esc(clientById(p.clientId)?.name || "?")}</a><span>${stancePill(p.stance)}<button class="x" data-delpos="${i}" title="Remove">×</button></span></div>${p.note ? `<div class="note">${esc(p.note)}</div>` : ""}<div class="by" style="display:flex;justify-content:space-between;align-items:center">Updated ${fmtShort(p.updated)}${p.stance !== "Watch" ? `<button class="btn sm" data-draft="${i}">${draft && draft.billId === b.id && draft.posIndex === i ? "Redraft" : "Draft letter"}</button>` : ""}</div></div>`).join("") || `<p class="muted" style="font-size:13px;margin:8px 0 0">No positions yet.</p>`}
         <form class="addpos" id="posform"><div class="kicker">Add a position</div>
           <input class="input" name="client" list="clients-dl" placeholder="Client or stakeholder" required><datalist id="clients-dl">${[...new Set([...ws.clients.map((c) => c.name), ...PUBLIC_STAKEHOLDERS])].map((n) => `<option value="${esc(n)}">`).join("")}</datalist>
           <div class="seg">${STANCES.map((s, i) => `<button type="button" data-stance="${s}" class="${i === 0 ? "on" : ""}">${s}</button>`).join("")}</div><input type="hidden" name="stance" value="Support">
           <input class="input" name="note" placeholder="Note (optional)"><button class="btn red">Save position</button></form>
       </section>
+      ${draft && draft.billId === b.id ? letterCard(b) : ""}
       ${sponsorCard(b)}
       <section><h2 style="font-size:20px;margin-bottom:10px">In folders</h2><div class="pills">${foldersOf(b).map((f) => `<a class="pill" href="#/folders/${f.id}">${esc(f.name)}<button data-unfolder="${f.id}" title="Remove from folder">×</button></a>`).join("")}<button class="btn dashed sm" id="addfolder">+ Add to folder</button></div>${showFolderPicker ? `<div style="position:relative;margin-top:12px">${folderPicker([b.id]).replace('class="popover"', 'class="popover" style="position:static;width:auto"')}</div>` : ""}</section>
       <section><h2 style="font-size:20px;margin-bottom:6px">Documents</h2>
@@ -333,7 +386,15 @@ function renderBill(id) {
   app.querySelectorAll("[data-tab]").forEach((btn) => btn.addEventListener("click", () => { billTab = btn.dataset.tab; render(); }));
   app.querySelectorAll("[data-cmpadd]").forEach((btn) => btn.addEventListener("click", () => { compareSet = [...new Set([...compareSet, b.id, btn.dataset.cmpadd])].slice(-4); save("statecraft.compare", compareSet); go("#/compare"); }));
   app.querySelector("#cmp-with").addEventListener("click", () => { if (!compareSet.includes(b.id)) compareSet = [...compareSet, b.id].slice(-4); save("statecraft.compare", compareSet); });
-  app.querySelectorAll("[data-delpos]").forEach((btn) => btn.addEventListener("click", () => { ws.positions[b.id].splice(Number(btn.dataset.delpos), 1); if (!ws.positions[b.id].length) delete ws.positions[b.id]; persist(); render(); }));
+  app.querySelectorAll("[data-delpos]").forEach((btn) => btn.addEventListener("click", () => { ws.positions[b.id].splice(Number(btn.dataset.delpos), 1); if (!ws.positions[b.id].length) delete ws.positions[b.id]; if (draft?.billId === b.id) draft = null; persist(); render(); }));
+  app.querySelectorAll("[data-draft]").forEach((btn) => btn.addEventListener("click", () => draftLetter(b, Number(btn.dataset.draft))));
+  app.querySelector("#closeletter")?.addEventListener("click", () => { draft = null; render(); });
+  app.querySelector("#openset")?.addEventListener("click", () => { settingsOpen = true; render(); });
+  const lt = app.querySelector("#lettertext"); lt?.addEventListener("input", () => { draft.text = lt.value; });
+  app.querySelector("#saveletter")?.addEventListener("click", async () => { const p = posOf(b)[draft.posIndex]; const name = `${LETTER_KIND[p.stance]} — ${clientById(p.clientId)?.name || "client"}`; const f = new File([draft.text], name + ".md", { type: "text/markdown" }); await addFiles(b.id, [f], `${settings.author || "You"} · ${fmtShort(TODAY)}`); });
+  app.querySelector("#copyletter")?.addEventListener("click", async (e) => { await navigator.clipboard.writeText(draft.text); e.target.textContent = "Copied"; setTimeout(() => (e.target.textContent = "Copy"), 1500); });
+  app.querySelector("#dlletter")?.addEventListener("click", () => { const p = posOf(b)[draft.posIndex]; const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([draft.text], { type: "text/plain" })); a.download = `${b.state}-${b.number}-${p.stance.toLowerCase()}-letter.txt`; a.click(); });
+  app.querySelector("#mailletter")?.addEventListener("click", (e) => { e.preventDefault(); const sp = (b.sponsors || []).find((s) => s.primary) || b.sponsors?.[0], email = SPONSORS[sp?.people_id]?.links?.email, p = posOf(b)[draft.posIndex]; const subject = `${b.state} ${b.number}: ${LETTER_KIND[p.stance]} from ${clientById(p.clientId)?.name || "client"}`; const body = draft.text.length > 1800 ? draft.text.slice(0, 1800) + "\n\n[Letter continues — full text attached]" : draft.text; window.location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; });
   app.querySelectorAll("[data-unfolder]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); const f = folderById(btn.dataset.unfolder); f.billIds = f.billIds.filter((x) => x !== b.id); persist(); render(); }));
   app.querySelector("#addfolder").addEventListener("click", () => { showFolderPicker = !showFolderPicker; render(); });
   app.querySelectorAll("[data-deldoc]").forEach((btn) => btn.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); const d = ws.docs[b.id].splice(Number(btn.dataset.deldoc), 1)[0]; if (d?.kind === "file") idb.del(d.id); persist(); render(); }));
@@ -357,6 +418,39 @@ function relatedSection(b) {
   const rel = relatedBills(b);
   if (!rel.length) return "";
   return `<h3 style="font-size:18px;margin-top:8px">Related bills in other states</h3>${rel.map((o) => `<div class="todo-row"><a class="num" href="#/bill/${encodeURIComponent(o.id)}">${o.state} ${esc(o.number)}</a><span class="t">${esc(headline(o))}</span><span class="stage">${esc(stageOf(o))}</span><button class="btn sm" data-cmpadd="${o.id}">Compare</button></div>`).join("")}`;
+}
+// ---- letter drafting ----
+const LETTER_KIND = { Support: "letter of support", Oppose: "letter of opposition", Amend: "letter requesting amendments" };
+function letterPrompt(b, p) {
+  const ai = ANALYSIS[b.id], client = clientById(p.clientId)?.name || "our client", sp = (b.sponsors || []).find((s) => s.primary) || b.sponsors?.[0];
+  const m = ws.models[b.topics[0]] || ws.models.sports || {}, t = textOf(b), cmp = m.text && t ? modelCoverage(m.text, t) : null;
+  const next = movement(b).upcoming;
+  const system = `You draft advocacy correspondence for a state government-relations practice. Write a ${LETTER_KIND[p.stance]} on behalf of a client, addressed to the bill's sponsor or the committee as appropriate. Formal, concise, specific to the bill's actual provisions; cite section numbers or figures from the summary when useful; never invent provisions, facts or statistics; no placeholders except [DATE] if a date is unknown. Plain text with paragraph breaks, 250–450 words, ready to send. Sign as the author given.`;
+  const user = [
+    `Bill: ${b.state} ${b.number} — ${b.title}`, `Status: ${stageOf(b)}; last action ${fmtDate(b.last_action_date)}: ${b.last_action}`,
+    b.committee ? `Committee: ${b.committee}` : "", next ? `Hearing: ${fmtDate(next.date)} ${next.description || ""}` : "",
+    sp ? `Sponsor: ${sp.name}${sp.party ? ` (${sp.party})` : ""}${sp.role ? `, ${sp.role}` : ""}${sp.district ? ` ${sp.district}` : ""}` : "",
+    ai ? `Summary: ${ai.summary}\nKey provisions:\n- ${ai.mechanics.join("\n- ")}\nVersus other states: ${ai.comparison}\nWatch: ${ai.watch}` : `Official description: ${b.description || b.title}`,
+    `Client: ${client}. Position: ${p.stance}.${p.note ? ` Client's note: ${p.note}` : ""}`,
+    cmp && cmp.missing.length ? `Provisions in the client's model legislation that this bill lacks (use for an amendments or support-with-changes argument):\n- ${cmp.missing.slice(0, 5).join("\n- ")}` : "",
+    `Author: ${settings.author || "[Your name]"}${settings.firm ? `, ${settings.firm}` : ""}, on behalf of ${client}.`,
+  ].filter(Boolean).join("\n");
+  return { system, user };
+}
+async function draftLetter(b, i) {
+  const p = posOf(b)[i]; if (!p) return;
+  draft = { billId: b.id, posIndex: i, text: "", busy: true, error: null }; render();
+  try { const { system, user } = letterPrompt(b, p); draft.text = await askClaude(system, user); }
+  catch (e) { draft.error = e.message === "NO_KEY" ? "Add your Anthropic API key in Settings (⚙) to draft letters." : e.message; }
+  draft.busy = false; render();
+}
+function letterCard(b) {
+  const p = posOf(b)[draft.posIndex], client = p ? clientById(p.clientId)?.name : "", sp = (b.sponsors || []).find((s) => s.primary) || b.sponsors?.[0], email = SPONSORS[sp?.people_id]?.links?.email;
+  return `<section class="card" id="lettercard"><div class="list-head"><h2>${p ? LETTER_KIND[p.stance].replace(/^./, (c) => c.toUpperCase()) : "Letter"}</h2><button class="icon" id="closeletter" aria-label="Close">×</button></div>
+    <div class="muted" style="font-size:12.5px;margin:2px 0 10px">For ${esc(client)} · ${sp ? `to ${esc(sp.name)}` : ""}${b.committee ? ` · ${esc(b.committee)}` : ""}. Drafted by Claude from the bill summary and your position; edit before sending.</div>
+    ${draft.busy ? `<div class="muted" style="padding:20px 0;font-style:italic">Drafting…</div>` : draft.error ? `<div style="color:var(--red);font-size:13.5px;padding:8px 0">${esc(draft.error)}${/Settings/.test(draft.error) ? ` <button class="btn sm" id="openset">Open Settings</button>` : ""}</div>`
+      : `<textarea class="input" id="lettertext" style="font-family:var(--serif);font-size:15px;line-height:1.55;min-height:360px;background:#fff">${esc(draft.text)}</textarea>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn solid sm" id="saveletter">Save to documents</button><button class="btn sm" id="copyletter">Copy</button><button class="btn sm" id="dlletter">Download</button>${email ? `<a class="btn sm" id="mailletter" href="#">Email ${esc(sp.name.split(" ").slice(-1)[0])}</a>` : `<span class="muted" style="font-size:12px;align-self:center">No sponsor email on record</span>`}</div>`}</section>`;
 }
 const money$ = (n) => n == null ? "—" : "$" + Math.round(Number(n)).toLocaleString();
 function sponsorCard(b) {
@@ -553,5 +647,5 @@ window.addEventListener("resize", () => { if (route().page === "map") drawMap();
 document.addEventListener("keydown", (e) => {
   const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
   if (e.key === "/" && !typing) { const s = document.querySelector("#q"); if (s) { e.preventDefault(); s.focus(); } }
-  if (e.key === "Escape" && (showFolderPicker || showPositionPicker || showAddBill || shareOpen)) { showFolderPicker = showPositionPicker = showAddBill = shareOpen = false; render(); }
+  if (e.key === "Escape" && (showFolderPicker || showPositionPicker || showAddBill || shareOpen || settingsOpen || helpOpen)) { showFolderPicker = showPositionPicker = showAddBill = shareOpen = settingsOpen = helpOpen = false; render(); }
 });
