@@ -37,18 +37,29 @@ async function main() {
   const byLid = new Map(data.bills.map((b) => [b.legiscan_id, b]));
   // 1. Changed bills, via per-state master lists of change hashes (one request per state).
   const changed = new Set();
+  // STATES=CA,NJ,... limits the refresh to those states (e.g. only sessions that are alive); YEARS adds exact-year searches such as 2027 prefiles.
+  const ONLY_STATES = process.env.STATES ? new Set(process.env.STATES.split(",")) : null;
+  const YEARS = (process.env.YEARS || "2").split(",").map(Number);
   for (const st of new Set(data.bills.map((b) => b.state))) {
+    if (ONLY_STATES && !ONLY_STATES.has(st)) continue;
     const m = (await api("getMasterListRaw", { state: st })).masterlist;
     for (const [k, v] of Object.entries(m)) { if (k === "session") continue; const mine = byLid.get(v.bill_id); if (mine && mine.change_hash !== v.change_hash) changed.add(v.bill_id); }
   }
   console.error(`${changed.size} tracked bills changed`);
   // 2. New bills matching the topic searches (relevance from search), limited to the first page of each query.
   const fresh = new Map();
-  for (const [tkey, t] of Object.entries(TOPICS)) for (const q of t.queries) {
-    const sr = (await api("getSearch", { state: "ALL", query: q, year: 2, page: 1 })).searchresult;
-    for (const [k, v] of Object.entries(sr)) if (k !== "summary" && !byLid.has(v.bill_id)) { const f = fresh.get(v.bill_id) || { topics: new Set(), relevance: 0 }; f.topics.add(tkey); f.relevance = Math.max(f.relevance, v.relevance); fresh.set(v.bill_id, f); }
-  }
-  console.error(`${fresh.size} new bills`);
+  const onlyTopics = process.env.ONLY_TOPICS ? process.env.ONLY_TOPICS.split(",") : null;
+  for (const [tkey, t] of Object.entries(TOPICS)) { if (onlyTopics && !onlyTopics.includes(tkey)) continue; for (const q of t.queries) for (const year of YEARS) {
+    let page = 1, total = 1;
+    do { // "current" (2) only needs its first page; an exact year such as 2027 is read in full
+      const sr = (await api("getSearch", { state: "ALL", query: q, year, page })).searchresult;
+      total = year > 1900 ? (sr.summary?.page_total ?? 1) : 1;
+      for (const [k, v] of Object.entries(sr)) if (k !== "summary" && !byLid.has(v.bill_id) && (!ONLY_STATES || ONLY_STATES.has(v.state))) { const f = fresh.get(v.bill_id) || { topics: new Set(), relevance: 0 }; f.topics.add(tkey); f.relevance = Math.max(f.relevance, v.relevance); fresh.set(v.bill_id, f); }
+      page++;
+    } while (page <= total);
+  } }
+  console.error(`${fresh.size} new bills (${requests} requests so far)`);
+  if (process.env.DRY) { const by = {}; for (const id of fresh.keys()) by[id] = 1; console.error("Dry run: stopping before fetching bills."); return; }
   // 3. Re-fetch those bills.
   const ids = [...changed, ...fresh.keys()];
   for (const id of ids) {
@@ -67,6 +78,8 @@ async function main() {
   await writeFile("data/bills.json", JSON.stringify(data, null, 1));
   console.error(`Snapshot updated: ${data.bills.length} bills, ${requests} LegiScan requests so far.`);
   spawnSync("node", ["scripts/fix_ids.mjs"], { stdio: "inherit" }); // keep ids unique across sessions
+  spawnSync("node", ["scripts/fetch_sessions.mjs"], { stdio: "inherit" }); // which sessions are still alive
+  if (process.env.SKIP_ENRICH) return;
   // 4. Texts, sponsor stats, text bundle, and sports summaries for anything new that moved (each script skips what it already has).
   const run = (script, env = {}) => { const r = spawnSync("node", [script], { stdio: "inherit", env: { ...process.env, ...env } }); if (r.status) console.error(`${script} exited ${r.status}`); };
   run("scripts/fetch_legiscan_texts.mjs");

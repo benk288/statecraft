@@ -75,7 +75,7 @@ function movement(b) {
   if (/hearing|scheduled|heard/.test(a) || b.calendar?.length) return { level: 1, label: "Heard in committee" };
   return { level: 0, label: "Introduced" };
 }
-const stageOf = (b) => movement(b).label || b.status_text;
+const stageOf = (b) => { const m = movement(b); return m.level === 0 && sessionStatus(b) === "prefile" ? `Prefiled for ${prefileYear(b)}` : m.label || b.status_text; };
 const relevance = (b) => ({ core: 0, partial: 1, incidental: 2 })[ANALYSIS[b.id]?.relevance] ?? (b.relevance >= 90 ? 0 : b.relevance >= 60 ? 1 : 2);
 const byDateDesc = (a, b) => (b.last_action_date || "").localeCompare(a.last_action_date || "");
 const byMovement = (a, b) => movement(b).level - movement(a).level || relevance(a) - relevance(b) || byDateDesc(a, b);
@@ -156,9 +156,14 @@ async function askClaude(system, user, maxTokens = 2500) {
 const billById = Object.fromEntries(ALL_BILLS.map((b) => [b.id, b]));
 let topic = store("statecraft.topic", "sports"); if (topic !== "all" && !DATA.topics[topic]) topic = "sports";
 // Sessions: LegiScan names them per state; bucket into the two bienniums the practice works in.
-const SESSIONS = [["2025-2026", "2025–2026"], ["2026-2027", "2026–2027"]];
-const sessionOf = (b) => /2027/.test(b.session || "") ? "2026-2027" : "2025-2026";
-let session = store("statecraft.session", "2025-2026");
+// A bill is only worth watching while its session is alive. LegiScan and Open States tell us which are.
+const SESS = window.STATECRAFT_SESSIONS || { bySession: {}, states: {} }, HAVE_SESS = Object.keys(SESS.bySession).length > 0;
+const sessionStatus = (b) => SESS.bySession[b.session_id] || "adjourned"; // live | prefile | adjourned
+const stateStatus = (st) => SESS.states[st]?.status || "adjourned";
+const prefileYear = (b) => SESS.prefileYear?.[b.session_id] || ((b.session || "").match(/20\d\d/) || ["next"])[0];
+const SCOPES = [["active", "In session or prefiled"], ["adjourned", "Adjourned sessions"], ["all", "Everything"]];
+let scope = HAVE_SESS ? store("statecraft.scope", "active") : "all";
+const inScope = (b) => !!q || scope === "all" || (scope === "active") === (sessionStatus(b) !== "adjourned"); // a search looks everywhere
 const topicOf = (b) => b.topics[0];
 // "New since your last visit": the last snapshot date this browser saw. Anything that moved after it is marked.
 // The marker stays for the whole day; the reference point is the previous day this browser opened the app.
@@ -171,10 +176,10 @@ let shareOpen = false;
 let compareSet = store("statecraft.compare", []), compareDiff = true, compareModel = true, showAddBill = false;
 let billTab = "summary";
 let draft = null; // { billId, posIndex, text, busy, error }
-const topicBills = () => ALL_BILLS.filter((b) => (topic === "all" || b.topics.includes(topic)) && sessionOf(b) === session);
+const topicBills = () => ALL_BILLS.filter((b) => (topic === "all" || b.topics.includes(topic)) && inScope(b));
 const matches = (b) => (issue === "ALL" || issuesOf(b).includes(issue)) && (!stateFilter || b.state === stateFilter) &&
   (!q || `${b.number} ${b.title} ${b.description} ${b.last_action} ${b.committee || ""} ${(b.sponsors || []).map((s) => s.name).join(" ")} ${posOf(b).map((p) => clientById(p.clientId)?.name).join(" ")} ${ANALYSIS[b.id]?.summary || ""}`.toLowerCase().includes(q));
-const moved = () => topicBills().filter((b) => b.status !== 5 && b.status !== 6).filter((b) => movement(b).level >= 2);
+const moved = () => topicBills().filter((b) => b.status !== 5 && b.status !== 6).filter((b) => movement(b).level >= 2 || sessionStatus(b) === "prefile"); // prefiled bills cannot have moved yet; they are the new session's agenda
 const listBills = () => { const l = moved().filter(matches); return sort === "newest" ? l.sort(byDateDesc) : l.sort(byMovement); };
 const movedByState = () => { const m = {}; for (const b of moved().filter((b) => issue === "ALL" || issuesOf(b).includes(issue))) m[b.state] = (m[b.state] || 0) + 1; return m; };
 
@@ -190,14 +195,14 @@ function header(active, withSearch) {
     <div class="brand">Statecraft</div>
     <nav class="main" aria-label="Main">${[["map", "Map"], ["folders", "Folders"], ["compare", "Compare"], ["clients", "Clients"]].map(([k, l]) => `<a href="#/${k}" class="${active === k ? "on" : ""}">${l}</a>`).join("")}</nav>
     <div class="spacer"></div>
-    <label class="session">Session <select id="session">${SESSIONS.map(([k, l]) => `<option value="${k}" ${session === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+    ${HAVE_SESS ? `<label class="session">Showing <select id="scope">${SCOPES.map(([k, l]) => `<option value="${k}" ${scope === k ? "selected" : ""}>${l}</option>`).join("")}</select></label>` : ""}
     ${withSearch ? `<label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><input type="search" id="q" placeholder="Search bills, sponsors, clients" aria-label="Search" value="${esc(q)}"></label>` : ""}
     <div class="meta"><b>${bills.length}</b> bills · <b>${analysed}</b> analysed<br>Snapshot ${DATA.generated ? new Date(DATA.generated).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—"}</div>
     <div class="hdr-icons"><button class="icon" id="helpbtn" aria-label="Help" title="How to use Statecraft">?</button><button class="icon" id="gearbtn" aria-label="Settings" title="Settings">⚙</button></div>
   </header>${settingsOpen ? settingsPanel() : ""}${helpOpen ? helpPanel() : ""}`;
 }
 function topicsBar() {
-  const inSession = ALL_BILLS.filter((b) => sessionOf(b) === session);
+  const inSession = ALL_BILLS.filter(inScope);
   return `<nav class="topics" aria-label="Topics"><a href="#/map" data-topic="all" class="${topic === "all" ? "on" : ""}">All topics <span>${inSession.length}</span></a>${Object.entries(DATA.topics).map(([k, l]) => `<a href="#/map" data-topic="${k}" class="${topic === k ? "on" : ""}">${esc(l)} <span>${inSession.filter((b) => b.topics.includes(k)).length}</span></a>`).join("")}</nav>`;
 }
 function settingsPanel() {
@@ -216,7 +221,7 @@ function helpPanel() {
   return `<div class="sheet" role="dialog" aria-label="Help"><div class="sheet-in">
     <div class="list-head"><h2>How to use Statecraft</h2><button class="icon" id="closesheet" aria-label="Close">×</button></div>
     <ol class="hist" style="font-size:13.5px;color:var(--ink)">
-      <li><b>Map.</b> States are shaded by bills that moved out of committee or onto the floor. Hover for counts, click to filter the list. Topic tabs and issue chips narrow it; the session menu switches biennium.</li>
+      <li><b>Map.</b> By default you see only what can still happen: bills that have moved in a legislature that is in session, and bills prefiled for the next session. States that have adjourned are greyed out because their bills are dead. The <b>Showing</b> menu brings adjourned sessions back; a search always looks everywhere.</li>
       <li><b>Bills.</b> Click any bill for its AI summary, how it differs from other states, the sponsor's record and contact, and its history. Everything links to the official page.</li>
       <li><b>Positions.</b> On a bill, record where a client or stakeholder stands, then <b>Draft letter</b> writes a letter of support, opposition or amendment you can edit, save and email to the sponsor.</li>
       <li><b>Folders.</b> Tick bills on the map and add them to a strategy folder; attach documents, write notes, export a brief, or compare the whole folder.</li>
@@ -233,7 +238,7 @@ function wireChrome(root) {
   root.querySelector("#settingsform")?.addEventListener("submit", (e) => { e.preventDefault(); const f = e.target; settings = { apiKey: f.apiKey.value.trim(), author: f.author.value.trim(), firm: f.firm.value.trim(), model: f.model.value }; saveSettings(); settingsOpen = false; render(); });
   root.querySelector("#wsexport2")?.addEventListener("click", exportWorkspace);
   root.querySelector("#wsimport2")?.addEventListener("change", (e) => importWorkspace(e.target.files[0]));
-  root.querySelector("#session")?.addEventListener("change", (e) => { session = e.target.value; save("statecraft.session", session); selected.clear(); stateFilter = null; render(); });
+  root.querySelector("#scope")?.addEventListener("change", (e) => { scope = e.target.value; save("statecraft.scope", scope); selected.clear(); stateFilter = null; render(); });
   root.querySelectorAll("[data-topic]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); topic = a.dataset.topic; save("statecraft.topic", topic); issue = "ALL"; stateFilter = null; selected.clear(); go("#/map"); render(); }));
   root.querySelector("#q")?.addEventListener("input", (e) => { q = e.target.value.trim().toLowerCase(); const pos = e.target.selectionStart; render(); const nq = document.querySelector("#q"); if (nq) { nq.focus(); nq.setSelectionRange(pos, pos); } });
 }
@@ -251,14 +256,15 @@ function renderMap() {
     <section class="map-col" aria-label="Map">
       <div class="issues"><span class="kicker">${topic === "all" ? "Topic" : "Issue"}</span><button class="chip ${issue === "ALL" ? "on" : ""}" data-issue="ALL">All</button>${topic === "all" ? Object.entries(DATA.topics).map(([k, l]) => `<button class="chip" data-topic="${k}">${esc(l)}</button>`).join("") : LENSES[topic].map((l) => `<button class="chip ${issue === l.key ? "on" : ""}" data-issue="${l.key}">${l.label}</button>`).join("")}</div>
       <div id="map-wrap"><svg id="map" role="img" aria-label="Map of US states shaded by bills moved"></svg><div id="tip"></div></div>
-      <div class="legend"><b>Bills moved</b>${["--map-0", "--map-1", "--map-2", "--map-3", "--map-4"].map((v) => `<span class="sw" style="background:var(${v})"></span>`).join("")}<span style="margin-left:8px">0 → 12+</span><span class="spacer"></span><label><input type="checkbox" id="outline" ${outline ? "checked" : ""}>Outline states in my folders</label></div>
+      <div class="legend"><b>${scope === "active" && !q ? "Live bills" : "Bills moved"}</b>${["--map-0", "--map-1", "--map-2", "--map-3", "--map-4"].map((v) => `<span class="sw" style="background:var(${v})"></span>`).join("")}<span style="margin-left:8px">0 → 12+</span>${scope === "active" && !q ? `<span class="sw off" style="margin-left:14px"></span><span>Adjourned</span>` : ""}<span class="spacer"></span><label><input type="checkbox" id="outline" ${outline ? "checked" : ""}>Outline states in my folders</label></div>
+      ${scope === "active" && !q && HAVE_SESS ? sessionStrip() : ""}
       ${stateFilter ? `<p class="muted" style="margin:10px 0 0;font-size:13px">Showing ${NAMES[stateFilter]} · <a href="#" id="clearstate">show all states</a></p>` : ""}
     </section>
     <aside class="list-col" aria-label="Bills">
       <div class="list-head"><h2>${stateFilter ? NAMES[stateFilter] : "Latest movement"}${list.filter(isNew).length ? ` <span class="newcount">${list.filter(isNew).length} new</span>` : ""}</h2><select id="sort" aria-label="Sort"><option value="newest" ${sort === "newest" ? "selected" : ""}>Newest first</option><option value="furthest" ${sort === "furthest" ? "selected" : ""}>Furthest along</option></select></div>
       <div class="rows">${list.slice(0, 200).map((b) => `<div class="brow ${selected.has(b.id) ? "on" : ""}">
         <input type="checkbox" data-sel="${b.id}" ${selected.has(b.id) ? "checked" : ""} aria-label="Select ${esc(b.number)}">
-        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}${topic === "all" ? ` · ${esc(DATA.topics[topicOf(b)])}` : ""}</b><span>${isNew(b) ? `<i class="newdot" title="Moved since your last visit"></i>` : ""}${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">Nothing is moving in this view.</div>`}</div>
+        <a class="body" href="#/bill/${encodeURIComponent(b.id)}"><div class="where"><b>${NAMES[b.state]} · ${esc(b.number)}${topic === "all" ? ` · ${esc(DATA.topics[topicOf(b)])}` : ""}</b><span>${isNew(b) ? `<i class="newdot" title="Moved since your last visit"></i>` : ""}${fmtShort(b.last_action_date)}</span></div><div class="t">${esc(headline(b))}</div><div class="stage">${esc(stageOf(b))}${posOf(b).length ? ` · <i>${esc(posSummary(b))}</i>` : ""}</div></a></div>`).join("") || `<div class="empty">${scope === "active" && !q && stateFilter && stateStatus(stateFilter) === "adjourned" ? `${NAMES[stateFilter]} has adjourned, so nothing there can move until the next session. <a href="#" id="showadj">See its adjourned bills</a>` : "Nothing is moving in this view."}</div>`}</div>
       ${selected.size ? `<div class="bulk"><b>${selected.size} selected</b><span class="spacer"></span><button class="btn solid" id="tofolder">Add to folder</button><button class="btn" id="setpos">Set position</button><button class="btn" id="tocompare">Compare</button></div>` : ""}
       ${showFolderPicker ? folderPicker([...selected]) : ""}${showPositionPicker ? positionPicker([...selected]) : ""}
     </aside>
@@ -269,12 +275,21 @@ function renderMap() {
   app.querySelector("#sort").addEventListener("change", (e) => { sort = e.target.value; render(); });
   app.querySelector("#outline").addEventListener("change", (e) => { outline = e.target.checked; drawMap(); });
   app.querySelector("#clearstate")?.addEventListener("click", (e) => { e.preventDefault(); stateFilter = null; render(); });
+  app.querySelector("#showadj")?.addEventListener("click", (e) => { e.preventDefault(); scope = "adjourned"; save("statecraft.scope", scope); render(); });
+  app.querySelectorAll("[data-st]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); stateFilter = stateFilter === a.dataset.st ? null : a.dataset.st; render(); }));
   app.querySelectorAll("[data-sel]").forEach((cb) => cb.addEventListener("change", () => { cb.checked ? selected.add(cb.dataset.sel) : selected.delete(cb.dataset.sel); render(); }));
   app.querySelector("#tofolder")?.addEventListener("click", () => { showFolderPicker = !showFolderPicker; showPositionPicker = false; render(); });
   app.querySelector("#setpos")?.addEventListener("click", () => { showPositionPicker = !showPositionPicker; showFolderPicker = false; render(); });
   app.querySelector("#tocompare")?.addEventListener("click", () => { compareSet = [...new Set([...compareSet, ...selected])].slice(0, 4); save("statecraft.compare", compareSet); go("#/compare"); });
   wirePickers(app, [...selected]);
   drawMap(folderStates);
+}
+// One line under the map: which legislatures are alive, so the grey states need no explanation.
+function sessionStrip() {
+  const of = (k) => Object.entries(SESS.states).filter(([st, v]) => v.status === k && NAMES[st]).sort(([a], [b]) => NAMES[a].localeCompare(NAMES[b]));
+  const link = ([st, v]) => `<a href="#" data-st="${st}" class="${stateFilter === st ? "on" : ""}">${NAMES[st]}</a>${v.status === "live" && v.ends ? ` <span class="muted">(ends ${fmtShort(v.ends)})</span>` : ""}`;
+  const live = of("live"), pre = of("prefile");
+  return `<div class="sess-strip"><div><b>In session</b> ${live.map(link).join(" · ") || "none"}</div>${pre.length ? `<div><b>Prefiling for next session</b> ${pre.map(link).join(" · ")}</div>` : ""}<div class="muted">Every other legislature has adjourned; its bills are dead unless reintroduced. Checked ${fmtShort(SESS.today)}.</div></div>`;
 }
 function drawMap(folderStates) {
   const svg = d3.select("#map"), wrap = document.getElementById("map-wrap"), tip = document.getElementById("tip");
@@ -285,14 +300,14 @@ function drawMap(folderStates) {
   const projection = d3.geoAlbersUsa().fitExtent([[8, 8], [width - 8, height - 8]], { type: "FeatureCollection", features: states });
   const path = d3.geoPath(projection);
   svg.selectAll("path.state").data(states, (f) => f.id).join("path")
-    .attr("class", (f) => "state" + (FIPS[f.id] === stateFilter ? " selected" : "") + (outline && folderStates.has(FIPS[f.id]) ? " infolder" : ""))
+    .attr("class", (f) => "state" + (FIPS[f.id] === stateFilter ? " selected" : "") + (outline && folderStates.has(FIPS[f.id]) ? " infolder" : "") + (scope === "active" && !q && stateStatus(FIPS[f.id]) === "adjourned" ? " off" : ""))
     .attr("d", path).attr("fill", (f) => color(counts[FIPS[f.id]] || 0))
     .on("mousemove", (ev, f) => {
       const st = FIPS[f.id], bills = topicBills().filter((b) => b.state === st), inF = bills.filter((b) => foldersOf(b).length).length;
       const pos = bills.flatMap(posOf), tally = STANCES.map((s) => [s, pos.filter((p) => p.stance === s).length]).filter(([, n]) => n);
       const r = wrap.getBoundingClientRect();
       tip.style.display = "block";
-      tip.innerHTML = `<div class="name">${NAMES[st]}</div><div>${counts[st] || 0} moved${inF ? ` · ${inF} in your folders` : ""}</div>${tally.length ? `<div class="soft">Positions: ${tally.map(([s, n]) => `${n} ${s.toLowerCase()}`).join(", ")}</div>` : ""}<div class="hint">Click to filter the list →</div>`;
+      tip.innerHTML = `<div class="name">${NAMES[st]}</div>${HAVE_SESS ? `<div class="soft">${{ live: `In session${SESS.states[st]?.ends ? `, ends ${fmtShort(SESS.states[st].ends)}` : ""}`, prefile: "Prefiling for next session", adjourned: "Adjourned" }[stateStatus(st)]}</div>` : ""}<div>${counts[st] || 0} ${scope === "active" && !q ? "live" : "moved"}${inF ? ` · ${inF} in your folders` : ""}</div>${tally.length ? `<div class="soft">Positions: ${tally.map(([s, n]) => `${n} ${s.toLowerCase()}`).join(", ")}</div>` : ""}<div class="hint">Click to filter the list →</div>`;
       tip.style.left = Math.min(ev.clientX - r.left + 14, r.width - 240) + "px"; tip.style.top = Math.min(ev.clientY - r.top + 14, r.height - tip.offsetHeight - 10) + "px";
     })
     .on("mouseleave", () => (tip.style.display = "none"))
@@ -351,6 +366,7 @@ function renderBill(id) {
       <div>
         <div class="kicker">${NAMES[b.state]} · ${CHAMBER_LABEL(b.state, b.chamber)} · ${esc(b.topics.map((t) => DATA.topics[t]).join(" · "))}${tags.length ? " · " + tags.map((t) => esc(lensLabel(b.topics[0], t))).join(" · ") : ""}</div>
         <h1>${esc(b.number)}: ${esc(headline(b))}</h1>
+        ${HAVE_SESS ? { live: `<div class="sess-line live">In session${SESS.states[b.state]?.ends ? ` · ${esc(b.session)} ends ${fmtShort(SESS.states[b.state].ends)}` : ` · ${esc(b.session)}`}</div>`, prefile: `<div class="sess-line pre">Prefiled for the ${esc(String(prefileYear(b)))} session, which has not convened yet</div>`, adjourned: b.status >= 4 ? "" : `<div class="sess-line dead">Session adjourned · this bill is dead unless it is reintroduced</div>` }[sessionStatus(b)] : ""}
         <p class="lede">${esc(b.description || b.title)}</p>
         <div class="bill-links"><a href="${esc(b.url)}" target="_blank" rel="noopener">Official bill page ↗</a><a href="${esc(b.legiscan_url)}" target="_blank" rel="noopener">Full text ↗</a><span class="muted">Sponsors: ${esc((b.sponsors || []).slice(0, 3).map((s) => s.name.split(" ").slice(-1)[0]).join(", "))}${b.sponsors?.length > 3 ? ` +${b.sponsors.length - 3}` : ""}${prim[0]?.party ? ` (${esc(prim[0].party)})` : ""}</span></div>
       </div>

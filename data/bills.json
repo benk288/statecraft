@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T18:37:32.703Z",
+ "generated": "2026-11-22T01:13:14.678Z",
  "source": "State legislatures via LegiScan API",
  "topics": {
   "sports": "Sports betting",
@@ -62216,7 +62216,7 @@
   {
    "id": "DC-B26-0524",
    "legiscan_id": 2055242,
-   "change_hash": "0a5b16a2eb373b6ba076fe2390a22988",
+   "change_hash": "2e36c40140689205f8f44f5586734134",
    "topics": [
     "ai"
    ],
@@ -62230,7 +62230,7 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2025-12-01",
-   "last_action": "Public Hearing",
+   "last_action": "Public Hearing Held",
    "last_action_date": "2026-11-09",
    "history": [
     {
@@ -62260,7 +62260,7 @@
     },
     {
      "date": "2026-11-09",
-     "action": "Public Hearing",
+     "action": "Public Hearing Held",
      "chamber": "C"
     }
    ],
@@ -62472,7 +62472,7 @@
   {
    "id": "DC-B26-0656",
    "legiscan_id": 2142289,
-   "change_hash": "de3abe1a9d338b8cf0688a8b03c490e2",
+   "change_hash": "6be428344d8317d4a135b4087f6aed83",
    "topics": [
     "sports",
     "ai",
@@ -62484,12 +62484,12 @@
    "chamber": "O",
    "current_body": "C",
    "title": "Internet Gaming and Consumer Protection Act of 2026",
-   "description": "As introduced, Bill 26-656 would authorizing and regulate internet gaming in the District of Columbia. It would establish a comprehensive licensing, consumer protection, responsible gaming, taxation, reporting, and enforcement framework administered by the Office of Lottery and Gaming. It would require Certified Business Enterprise participation plans for internet gaming operators and establish a Community Reinvestment Fund.",
+   "description": "As introduced, Bill 26-656 would authorizing and regulate internet gaming in the District of Columbia. It would establish a comprehensive licensing, consumer protection, responsible gaming, taxation, reporting, and enforcement framework administered by the Office of Lottery and Gaming. It would require Certified Business Enterprise participation plans for internet gaming operators and establish a Community Reinvestment Fund. \n\nRACIAL EQUITY ANALYSIS - The bill includes several provisions with negative racial equity impacts. Please see the Racial Equity Impact Assessment (REIA) for more information.\n\nFISCAL NOTE - This bill is passed Subject to Appropriations. Please see the Fiscal Impact Statement for more information.",
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-04-09",
-   "last_action": "Public Hearing Held",
-   "last_action_date": "2026-05-04",
+   "last_action": "Committee Mark-up of B26-0656",
+   "last_action_date": "2026-11-18",
    "history": [
     {
      "date": "2026-04-09",
@@ -62519,6 +62519,11 @@
     {
      "date": "2026-05-04",
      "action": "Public Hearing Held",
+     "chamber": "C"
+    },
+    {
+     "date": "2026-11-18",
+     "action": "Committee Mark-up of B26-0656",
      "chamber": "C"
     }
    ],
@@ -62897,7 +62902,7 @@
   {
    "id": "DC-B26-0724",
    "legiscan_id": 2155516,
-   "change_hash": "a57b87a96d132afc6c5968640fc57e99",
+   "change_hash": "b56badad61c314c9934a1b7d084b3321",
    "topics": [
     "ai",
     "igaming"
@@ -62912,8 +62917,8 @@
    "status": 4,
    "status_text": "Signed into law",
    "status_date": "2026-08-13",
-   "last_action": "Act A26-0416 Published in DC Register Vol 73 and Page 011509, Expires on Nov 11, 2026",
-   "last_action_date": "2026-08-21",
+   "last_action": "Transmitted to Congress, Projected Law Date is Dec 11, 2026",
+   "last_action_date": "2026-10-22",
    "history": [
     {
      "date": "2026-07-06",
@@ -62948,6 +62953,11 @@
     {
      "date": "2026-08-21",
      "action": "Act A26-0416 Published in DC Register Vol 73 and Page 011509, Expires on Nov 11, 2026",
+     "chamber": "C"
+    },
+    {
+     "date": "2026-10-22",
+     "action": "Transmitted to Congress, Projected Law Date is Dec 11, 2026",
      "chamber": "C"
     }
    ],
@@ -250711,6 +250721,194 @@
    "legiscan_url": "https://legiscan.com/MS/bill/SB3053/2026"
   },
   {
+   "id": "MT-SB24",
+   "legiscan_id": 2163729,
+   "change_hash": "e1409682dd1a1ce691114d22da5dc2ba",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "MT",
+   "number": "SB24",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Revise infrastructure controlled by critical artificial intelligence system laws",
+   "description": "Revise infrastructure controlled by critical artificial intelligence system laws",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-16",
+   "last_action": "(S) Introduced",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-10-01",
+     "action": "(LC) Draft in Legal Review",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-01",
+     "action": "(LC) Draft in Edit",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-06",
+     "action": "(LC) Draft in Input/Proofing",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-08",
+     "action": "(LC) Draft in Final Drafter Review",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-16",
+     "action": "(LC) Draft in Assembly",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-29",
+     "action": "(LC) Draft Ready for Delivery",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "(LC) Draft Delivered to Requester",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "(S) Introduced",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-16",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14351,
+     "name": "Daniel Zolnikov",
+     "party": "R",
+     "role": "Sen",
+     "district": "SD-022",
+     "primary": true,
+     "ballotpedia": "Daniel_Zolnikov",
+     "opensecrets_id": null,
+     "votesmart_id": 136897
+    }
+   ],
+   "text": {
+    "doc_id": 3466482,
+    "date": "0000-00-00",
+    "type": "Introduced",
+    "mime": "application/pdf"
+   },
+   "session": "2027 Regular Session",
+   "session_id": 2285,
+   "sine_die": false,
+   "url": "https://bills.legmt.gov/#/laws/bill/3/LC0503",
+   "legiscan_url": "https://legiscan.com/MT/bill/SB24/2027"
+  },
+  {
+   "id": "MT-SB5",
+   "legiscan_id": 2163720,
+   "change_hash": "c829d7ce38f517187744a3e6ecbc1640",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 97,
+   "state": "MT",
+   "number": "SB5",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Generally revise public utility laws related to large load retail customers",
+   "description": "Generally revise public utility laws related to large load retail customers",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-16",
+   "last_action": "(S) Introduced",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-10-06",
+     "action": "(LC) Draft in Legal Review",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-06",
+     "action": "(LC) Draft in Edit",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-15",
+     "action": "(LC) Draft in Input/Proofing",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-21",
+     "action": "(LC) Draft in Final Drafter Review",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-21",
+     "action": "(LC) Draft in Assembly",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-10-29",
+     "action": "(LC) Draft Ready for Delivery",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-04",
+     "action": "(LC) Draft Delivered to Requester",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "(S) Introduced",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-16",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14351,
+     "name": "Daniel Zolnikov",
+     "party": "R",
+     "role": "Sen",
+     "district": "SD-022",
+     "primary": true,
+     "ballotpedia": "Daniel_Zolnikov",
+     "opensecrets_id": null,
+     "votesmart_id": 136897
+    }
+   ],
+   "text": {
+    "doc_id": 3466473,
+    "date": "0000-00-00",
+    "type": "Introduced",
+    "mime": "application/pdf"
+   },
+   "session": "2027 Regular Session",
+   "session_id": 2285,
+   "sine_die": false,
+   "url": "https://bills.legmt.gov/#/laws/bill/3/LC0508",
+   "legiscan_url": "https://legiscan.com/MT/bill/SB5/2027"
+  },
+  {
    "id": "NC-H1004",
    "legiscan_id": 2022881,
    "change_hash": "8637eae885fde75fa8d16e7ab355e7e0",
@@ -284017,6 +284215,119 @@
    "legiscan_url": "https://legiscan.com/NJ/bill/A2742/2026"
   },
   {
+   "id": "NJ-A2774",
+   "legiscan_id": 2099920,
+   "change_hash": "2c5dd4a4c1141519995ba8a1a8269e48",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 89,
+   "state": "NJ",
+   "number": "A2774",
+   "chamber": "H",
+   "current_body": "A",
+   "title": "Establishes certain notice requirements and prohibits agreements intended to conceal certain information concerning development of large-scale data centers under MLUL.",
+   "description": "Establishes certain notice requirements and prohibits agreements intended to conceal certain information concerning development of large-scale data centers under MLUL.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-01-13",
+   "last_action": "Reported from Assembly Comm. as a Substitute, 2nd Reading",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-01-13",
+     "action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "Reported from Assembly Comm. as a Substitute, 2nd Reading",
+     "chamber": "A"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-01-13",
+     "event": 1
+    },
+    {
+     "date": "2026-01-13",
+     "event": 9
+    },
+    {
+     "date": "2026-11-16",
+     "event": 10
+    }
+   ],
+   "calendar": [
+    {
+     "type": "Hearing",
+     "date": "2026-11-16",
+     "time": "13:00",
+     "location": "Committee Room 15, 4th Floor, State House Annex, Trenton, NJ",
+     "description": "Assembly Science, Innovation and Technology Hearing"
+    }
+   ],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 19654,
+     "name": "Christopher Tully",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-038",
+     "primary": true,
+     "ballotpedia": "Chris_Tully",
+     "opensecrets_id": null,
+     "votesmart_id": 181776
+    },
+    {
+     "people_id": 25150,
+     "name": "Andrea Katz",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-008",
+     "primary": true,
+     "ballotpedia": "Andrea_Katz",
+     "opensecrets_id": null,
+     "votesmart_id": 211630
+    },
+    {
+     "people_id": 25141,
+     "name": "Rosy Bagolie",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-027",
+     "primary": true,
+     "ballotpedia": "Rosy_Bagolie",
+     "opensecrets_id": null,
+     "votesmart_id": 212857
+    },
+    {
+     "people_id": 26583,
+     "name": "Katie Brennan",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-032",
+     "primary": false,
+     "ballotpedia": "Katie_Brennan",
+     "opensecrets_id": null,
+     "votesmart_id": 222357
+    }
+   ],
+   "text": {
+    "doc_id": 3466402,
+    "date": "2026-11-17",
+    "type": "Comm Sub",
+    "mime": "text/html"
+   },
+   "session": "2026-2027 Regular Session",
+   "session_id": 2250,
+   "sine_die": false,
+   "url": "https://www.njleg.state.nj.us/bill-search/2026/A2774",
+   "legiscan_url": "https://legiscan.com/NJ/bill/A2774/2026"
+  },
+  {
    "id": "NJ-A2966",
    "legiscan_id": 2099548,
    "change_hash": "25a2c6acd8a90e9274c23549955843a5",
@@ -291501,7 +291812,7 @@
   {
    "id": "NJ-A5224",
    "legiscan_id": 2153021,
-   "change_hash": "d1a11e31b4e0001e74d0ba0e4d8144bb",
+   "change_hash": "66d4254b9fa9956daba06283cf26b760",
    "topics": [
     "ai"
    ],
@@ -291515,12 +291826,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-06-08",
-   "last_action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
-   "last_action_date": "2026-06-08",
+   "last_action": "Combined with A2774 (ACS)",
+   "last_action_date": "2026-11-16",
    "history": [
     {
      "date": "2026-06-08",
      "action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "Combined with A2774 (ACS)",
      "chamber": "A"
     }
    ],
@@ -291534,8 +291850,16 @@
      "event": 9
     }
    ],
-   "calendar": [],
-   "committee": "Science, Innovation and Technology",
+   "calendar": [
+    {
+     "type": "Hearing",
+     "date": "2026-11-16",
+     "time": "13:00",
+     "location": "Committee Room 15, 4th Floor, State House Annex, Trenton, NJ",
+     "description": "Assembly Science, Innovation and Technology Hearing"
+    }
+   ],
+   "committee": null,
    "sponsors": [
     {
      "people_id": 19654,
@@ -291627,7 +291951,7 @@
   {
    "id": "NJ-A5272",
    "legiscan_id": 2153662,
-   "change_hash": "8d9ba232bf7da45a1c6c83815be3aff7",
+   "change_hash": "0fcc9247141a6422381069ea3686e668",
    "topics": [
     "ai"
    ],
@@ -291673,6 +291997,17 @@
      "ballotpedia": "Cody_Miller",
      "opensecrets_id": null,
      "votesmart_id": 211624
+    },
+    {
+     "people_id": 19578,
+     "name": "Clinton Calabrese",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-036",
+     "primary": true,
+     "ballotpedia": "Clinton_Calabrese",
+     "opensecrets_id": null,
+     "votesmart_id": 178198
     }
    ],
    "text": {
@@ -293208,7 +293543,7 @@
   {
    "id": "NJ-A5494",
    "legiscan_id": 2158072,
-   "change_hash": "662b59ac1d1ae0b859d7fb75f4b89fe0",
+   "change_hash": "4ae97bc1ff74a32854457cc218b457b9",
    "topics": [
     "ai"
    ],
@@ -293222,12 +293557,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-09-14",
-   "last_action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
-   "last_action_date": "2026-09-14",
+   "last_action": "Reported and Referred to Assembly Financial Institutions and Insurance Committee",
+   "last_action_date": "2026-11-16",
    "history": [
     {
      "date": "2026-09-14",
      "action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "Reported and Referred to Assembly Financial Institutions and Insurance Committee",
      "chamber": "A"
     }
    ],
@@ -293239,10 +293579,22 @@
     {
      "date": "2026-09-14",
      "event": 9
+    },
+    {
+     "date": "2026-11-16",
+     "event": 9
     }
    ],
-   "calendar": [],
-   "committee": "Science, Innovation and Technology",
+   "calendar": [
+    {
+     "type": "Hearing",
+     "date": "2026-11-16",
+     "time": "13:00",
+     "location": "Committee Room 15, 4th Floor, State House Annex, Trenton, NJ",
+     "description": "Assembly Science, Innovation and Technology Hearing"
+    }
+   ],
+   "committee": "Financial Institutions and Insurance",
    "sponsors": [
     {
      "people_id": 19654,
@@ -293271,7 +293623,7 @@
   {
    "id": "NJ-A5496",
    "legiscan_id": 2158059,
-   "change_hash": "3023cd71b126f95c145ea615fda6d7fd",
+   "change_hash": "1facd3763e2a89a93f5eab2c28555d04",
    "topics": [
     "ai"
    ],
@@ -293280,17 +293632,22 @@
    "number": "A5496",
    "chamber": "H",
    "current_body": "A",
-   "title": "Regulates use of artificial intelligence in certain mortgage lending tools to minimize discrimination in lending.",
-   "description": "Regulates use of artificial intelligence in certain mortgage lending tools to minimize discrimination in lending.",
+   "title": "Regulates use of artificial intelligence in certain mortgage lending decision tools to minimize discrimination in lending.",
+   "description": "Regulates use of artificial intelligence in certain mortgage lending decision tools to minimize discrimination in lending.",
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-09-14",
-   "last_action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
-   "last_action_date": "2026-09-14",
+   "last_action": "Reported and Referred to Assembly Housing Committee",
+   "last_action_date": "2026-11-16",
    "history": [
     {
      "date": "2026-09-14",
      "action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "Reported and Referred to Assembly Housing Committee",
      "chamber": "A"
     }
    ],
@@ -293302,10 +293659,22 @@
     {
      "date": "2026-09-14",
      "event": 9
+    },
+    {
+     "date": "2026-11-16",
+     "event": 9
     }
    ],
-   "calendar": [],
-   "committee": "Science, Innovation and Technology",
+   "calendar": [
+    {
+     "type": "Hearing",
+     "date": "2026-11-16",
+     "time": "13:00",
+     "location": "Committee Room 15, 4th Floor, State House Annex, Trenton, NJ",
+     "description": "Assembly Science, Innovation and Technology Hearing"
+    }
+   ],
+   "committee": "Housing",
    "sponsors": [
     {
      "people_id": 26588,
@@ -294101,7 +294470,7 @@
   {
    "id": "NJ-A5800",
    "legiscan_id": 2161478,
-   "change_hash": "41fa3ce4e577ffe0ab5697d23862c7d8",
+   "change_hash": "4850191eb2fbe932f7603a4e0ae9fa0a",
    "topics": [
     "ai"
    ],
@@ -294112,15 +294481,30 @@
    "current_body": "A",
    "title": "Establishes public-private partnerships to develop artificial intelligence job training.",
    "description": "Establishes public-private partnerships to develop artificial intelligence job training.",
-   "status": 0,
-   "status_text": "Prefiled",
-   "status_date": null,
-   "last_action": "",
-   "last_action_date": "",
-   "history": [],
-   "progress": [],
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-16",
+   "last_action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-11-16",
+     "action": "Introduced, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-16",
+     "event": 1
+    },
+    {
+     "date": "2026-11-16",
+     "event": 9
+    }
+   ],
    "calendar": [],
-   "committee": null,
+   "committee": "Science, Innovation and Technology",
    "sponsors": [
     {
      "people_id": 25153,
@@ -294145,7 +294529,12 @@
      "votesmart_id": 181776
     }
    ],
-   "text": null,
+   "text": {
+    "doc_id": 3466289,
+    "date": "2026-11-17",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
    "session": "2026-2027 Regular Session",
    "session_id": 2250,
    "sine_die": false,
@@ -294450,6 +294839,49 @@
    "sine_die": true,
    "url": "https://www.njleg.state.nj.us/bill-search/2024/A5821",
    "legiscan_url": "https://legiscan.com/NJ/bill/A5821/2024"
+  },
+  {
+   "id": "NJ-A5864",
+   "legiscan_id": 2163579,
+   "change_hash": "17f1c27352fc4d1744a2c36ffab56769",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 84,
+   "state": "NJ",
+   "number": "A5864",
+   "chamber": "H",
+   "current_body": "A",
+   "title": "\"Frontier AI Safety Act\"; requires certain artificial intelligence developers to follow certain safety standards.",
+   "description": "\"Frontier AI Safety Act\"; requires certain artificial intelligence developers to follow certain safety standards.",
+   "status": 0,
+   "status_text": "Prefiled",
+   "status_date": null,
+   "last_action": "",
+   "last_action_date": "",
+   "history": [],
+   "progress": [],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 19654,
+     "name": "Christopher Tully",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-038",
+     "primary": true,
+     "ballotpedia": "Chris_Tully",
+     "opensecrets_id": null,
+     "votesmart_id": 181776
+    }
+   ],
+   "text": null,
+   "session": "2026-2027 Regular Session",
+   "session_id": 2250,
+   "sine_die": false,
+   "url": "https://www.njleg.state.nj.us/bill-search/2026/A5864",
+   "legiscan_url": "https://legiscan.com/NJ/bill/A5864/2026"
   },
   {
    "id": "NJ-A5971",
@@ -302588,6 +303020,197 @@
    "legiscan_url": "https://legiscan.com/NJ/bill/S4282/2024"
   },
   {
+   "id": "NJ-S4304",
+   "legiscan_id": 2149949,
+   "change_hash": "c0fa482cb64ba0cd95b185a7f9f5147a",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 90,
+   "state": "NJ",
+   "number": "S4304",
+   "chamber": "S",
+   "current_body": "A",
+   "title": "Establishes certain notice requirements and prohibits agreements intended to conceal certain information concerning development of large-scale data centers under MLUL.",
+   "description": "Establishes certain notice requirements and prohibits agreements intended to conceal certain information concerning development of large-scale data centers under MLUL.",
+   "status": 2,
+   "status_text": "Passed one chamber",
+   "status_date": "2026-10-22",
+   "last_action": "Reported out of Assembly Comm. with Amendments, 2nd Reading",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-05-18",
+     "action": "Introduced in the Senate, Referred to Senate Community and Urban Affairs Committee",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-10-01",
+     "action": "Reported from Senate Committee, 2nd Reading",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-10-22",
+     "action": "Passed by the Senate (38-0)",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-10-29",
+     "action": "Received in the Assembly, Referred to Assembly Science, Innovation and Technology Committee",
+     "chamber": "A"
+    },
+    {
+     "date": "2026-11-16",
+     "action": "Reported out of Assembly Comm. with Amendments, 2nd Reading",
+     "chamber": "A"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-05-18",
+     "event": 1
+    },
+    {
+     "date": "2026-05-18",
+     "event": 9
+    },
+    {
+     "date": "2026-10-01",
+     "event": 10
+    },
+    {
+     "date": "2026-10-22",
+     "event": 2
+    },
+    {
+     "date": "2026-10-29",
+     "event": 9
+    },
+    {
+     "date": "2026-11-16",
+     "event": 10
+    }
+   ],
+   "calendar": [
+    {
+     "type": "Hearing",
+     "date": "2026-10-01",
+     "time": "10:00",
+     "location": "Committee Room 1, 1st Floor, State House Annex, Trenton, NJ",
+     "description": "Senate Community and Urban Affairs Hearing"
+    },
+    {
+     "type": "Hearing",
+     "date": "2026-11-16",
+     "time": "13:00",
+     "location": "Committee Room 15, 4th Floor, State House Annex, Trenton, NJ",
+     "description": "Assembly Science, Innovation and Technology Hearing"
+    }
+   ],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 3079,
+     "name": "Linda Greenstein",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-014",
+     "primary": true,
+     "ballotpedia": "Linda_Greenstein",
+     "opensecrets_id": null,
+     "votesmart_id": 22544
+    },
+    {
+     "people_id": 3169,
+     "name": "Brian Stack",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-033",
+     "primary": true,
+     "ballotpedia": "Brian_Stack",
+     "opensecrets_id": null,
+     "votesmart_id": 43373
+    },
+    {
+     "people_id": 17873,
+     "name": "Angela Mcknight",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-031",
+     "primary": false,
+     "ballotpedia": "Angela_McKnight",
+     "opensecrets_id": null,
+     "votesmart_id": 156554
+    },
+    {
+     "people_id": 25118,
+     "name": "Carmen Amato",
+     "party": "R",
+     "role": "Sen",
+     "district": "SD-009",
+     "primary": false,
+     "ballotpedia": "Carmen_Amato_Jr.",
+     "opensecrets_id": null,
+     "votesmart_id": 81264
+    },
+    {
+     "people_id": 3069,
+     "name": "Patrick Diegnan",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-018",
+     "primary": false,
+     "ballotpedia": "Patrick_Diegnan_Jr.",
+     "opensecrets_id": null,
+     "votesmart_id": 55104
+    },
+    {
+     "people_id": 3129,
+     "name": "Joseph Cryan",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-020",
+     "primary": false,
+     "ballotpedia": "Joseph_Cryan",
+     "opensecrets_id": null,
+     "votesmart_id": 55122
+    },
+    {
+     "people_id": 3174,
+     "name": "Teresa Ruiz",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-029",
+     "primary": false,
+     "ballotpedia": "Teresa_Ruiz_(New_Jersey)",
+     "opensecrets_id": null,
+     "votesmart_id": 69688
+    },
+    {
+     "people_id": 3209,
+     "name": "Shirley Turner",
+     "party": "D",
+     "role": "Rep",
+     "district": "SD-015",
+     "primary": false,
+     "ballotpedia": "Shirley_Turner",
+     "opensecrets_id": null,
+     "votesmart_id": 4452
+    }
+   ],
+   "text": {
+    "doc_id": 3466394,
+    "date": "2026-11-17",
+    "type": "Amended",
+    "mime": "text/html"
+   },
+   "session": "2026-2027 Regular Session",
+   "session_id": 2250,
+   "sine_die": false,
+   "url": "https://www.njleg.state.nj.us/bill-search/2026/S4304",
+   "legiscan_url": "https://legiscan.com/NJ/bill/S4304/2026"
+  },
+  {
    "id": "NJ-S4332",
    "legiscan_id": 2013233,
    "change_hash": "0c8e06c2e44b6aaa409fe4183b8c5009",
@@ -308214,6 +308837,65 @@
    "legiscan_url": "https://legiscan.com/NV/bill/AB279/2025"
   },
   {
+   "id": "NV-AB43",
+   "legiscan_id": 2161692,
+   "change_hash": "22330492c6dd85ea42cff82a6aa6098b",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 87,
+   "state": "NV",
+   "number": "AB43",
+   "chamber": "H",
+   "current_body": "A",
+   "title": "Revises provisions relating to gaming. (BDR 41-115)",
+   "description": "AN ACT relating to gaming; revising provisions relating to gaming employees; revising provisions relating to certain disputes involving gaming; revising provisions governing the acquisition or disposition of certain interests in certain corporations, limited-liability companies and limited partnerships; prohibiting a licensee from engaging in certain conduct in a foreign gaming operation; revising provisions relating to horse racing; and providing other matters properly relating thereto.",
+   "status": 0,
+   "status_text": "Prefiled",
+   "status_date": null,
+   "last_action": "Prefiled. Referred to Committee on Judiciary. To printer.",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Prefiled. Referred to Committee on Judiciary. To printer.",
+     "chamber": "A"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 9
+    }
+   ],
+   "calendar": [],
+   "committee": "Judiciary",
+   "sponsors": [
+    {
+     "people_id": 8484,
+     "name": "Judiciary",
+     "party": "",
+     "role": "Rep",
+     "district": "",
+     "primary": true,
+     "ballotpedia": null,
+     "opensecrets_id": null,
+     "votesmart_id": null
+    }
+   ],
+   "text": {
+    "doc_id": 3465736,
+    "date": "0000-00-00",
+    "type": "Introduced",
+    "mime": "application/pdf"
+   },
+   "session": "84th Legislature (2027)",
+   "session_id": 2265,
+   "sine_die": false,
+   "url": "https://www.leg.state.nv.us/App/NELIS/REL/84th2027/Bill/13095/Overview",
+   "legiscan_url": "https://legiscan.com/NV/bill/AB43/2027"
+  },
+  {
    "id": "NV-AB5",
    "legiscan_id": 2052403,
    "change_hash": "a24b180a2881de1f10bd679881bb2cea",
@@ -308507,6 +309189,65 @@
    "legiscan_url": "https://legiscan.com/NV/bill/AB58/2025"
   },
   {
+   "id": "NV-AB67",
+   "legiscan_id": 2163637,
+   "change_hash": "b4bed31fb6192bfc429aad768a380853",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 95,
+   "state": "NV",
+   "number": "AB67",
+   "chamber": "H",
+   "current_body": "A",
+   "title": "Revises provisions relating to gaming. (BDR 41-114)",
+   "description": "AN ACT relating to gaming; establishing provisions relating to the administrative approval of certain applications for a restricted license; prohibiting a licensee from using a device, software or hardware for certain purposes relating to tracking cards; revising certain definitions relating to gaming; establishing provisions relating to the administrative approval of an order of registration of a publicly traded corporation and certain other business organizations owned or controlled by a publicly traded corporation; and providing other matters properly relating thereto.",
+   "status": 0,
+   "status_text": "Prefiled",
+   "status_date": null,
+   "last_action": "Prefiled. Referred to Committee on Judiciary. To printer.",
+   "last_action_date": "2026-11-16",
+   "history": [
+    {
+     "date": "2026-11-16",
+     "action": "Prefiled. Referred to Committee on Judiciary. To printer.",
+     "chamber": "A"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-16",
+     "event": 9
+    }
+   ],
+   "calendar": [],
+   "committee": "Judiciary",
+   "sponsors": [
+    {
+     "people_id": 8484,
+     "name": "Judiciary",
+     "party": "",
+     "role": "Rep",
+     "district": "",
+     "primary": true,
+     "ballotpedia": null,
+     "opensecrets_id": null,
+     "votesmart_id": null
+    }
+   ],
+   "text": {
+    "doc_id": 3466639,
+    "date": "0000-00-00",
+    "type": "Introduced",
+    "mime": "application/pdf"
+   },
+   "session": "84th Legislature (2027)",
+   "session_id": 2265,
+   "sine_die": false,
+   "url": "https://www.leg.state.nv.us/App/NELIS/REL/84th2027/Bill/13192/Overview",
+   "legiscan_url": "https://legiscan.com/NV/bill/AB67/2027"
+  },
+  {
    "id": "NV-SB203",
    "legiscan_id": 1967561,
    "change_hash": "2d09f0128cd957d4f25c75bf928b2241",
@@ -308668,6 +309409,65 @@
    "sine_die": true,
    "url": "https://www.leg.state.nv.us/App/NELIS/REL/83rd2025/Bill/12255/Overview",
    "legiscan_url": "https://legiscan.com/NV/bill/SB203/2025"
+  },
+  {
+   "id": "NV-SB31",
+   "legiscan_id": 2161592,
+   "change_hash": "66228af7e2289716a0dfeccb93e3f80a",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 99,
+   "state": "NV",
+   "number": "SB31",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Revises provisions relating to trade practices. (BDR 52-548)",
+   "description": "AN ACT relating to trade practices; imposing certain requirements and restrictions on the use of artificial intelligence companions; prohibiting the use of protected class data by a grocery establishment for certain purposes; prohibiting the use of surge pricing and surveillance pricing by a grocery establishment to establish or modify the price of goods; making it a deceptive trade practice to violate those requirements, restrictions and prohibitions; revising the list of activities that constitute an unlawful contract, combination or conspiracy in restraint of trade; revising the maximum amount of a civil penalty for which a person who violates the provisions of existing law governing unfair trade practices is liable; and providing other matters properly relating thereto.",
+   "status": 0,
+   "status_text": "Prefiled",
+   "status_date": null,
+   "last_action": "Prefiled. Referred to Committee on Commerce and Labor. To printer.",
+   "last_action_date": "2026-11-04",
+   "history": [
+    {
+     "date": "2026-11-04",
+     "action": "Prefiled. Referred to Committee on Commerce and Labor. To printer.",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-04",
+     "event": 9
+    }
+   ],
+   "calendar": [],
+   "committee": "Commerce and Labor",
+   "sponsors": [
+    {
+     "people_id": 8548,
+     "name": "Commerce and Labor",
+     "party": "",
+     "role": "Sen",
+     "district": "",
+     "primary": true,
+     "ballotpedia": null,
+     "opensecrets_id": null,
+     "votesmart_id": null
+    }
+   ],
+   "text": {
+    "doc_id": 3464248,
+    "date": "0000-00-00",
+    "type": "Introduced",
+    "mime": "application/pdf"
+   },
+   "session": "84th Legislature (2027)",
+   "session_id": 2265,
+   "sine_die": false,
+   "url": "https://www.leg.state.nv.us/App/NELIS/REL/84th2027/Bill/13076/Overview",
+   "legiscan_url": "https://legiscan.com/NV/bill/SB31/2027"
   },
   {
    "id": "NV-SB362",
@@ -354527,7 +355327,7 @@
   {
    "id": "OH-HB1000",
    "legiscan_id": 2157782,
-   "change_hash": "663e04e6495621ad544d8621dfbea7df",
+   "change_hash": "64f43d86974e45d23fbf8095bc8ad2b6",
    "topics": [
     "ai"
    ],
@@ -354541,12 +355341,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-09-02",
-   "last_action": "Introduced",
-   "last_action_date": "2026-09-02",
+   "last_action": "Referred to committee: General Government",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2026-09-02",
      "action": "Introduced",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Referred to committee: General Government",
      "chamber": "H"
     }
    ],
@@ -354557,7 +355362,7 @@
     }
    ],
    "calendar": [],
-   "committee": null,
+   "committee": "General Government",
    "sponsors": [
     {
      "people_id": 19550,
@@ -354586,7 +355391,7 @@
   {
    "id": "OH-HB1032",
    "legiscan_id": 2161109,
-   "change_hash": "02d628418408af743513e3164c73504d",
+   "change_hash": "57104c842b5f0d1f851b3f8d23eba3a3",
    "topics": [
     "ai"
    ],
@@ -354600,12 +355405,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-10-22",
-   "last_action": "Introduced",
-   "last_action_date": "2026-10-22",
+   "last_action": "Referred to committee: Technology and Innovation",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2026-10-22",
      "action": "Introduced",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Referred to committee: Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -354616,7 +355426,7 @@
     }
    ],
    "calendar": [],
-   "committee": null,
+   "committee": "Technology and Innovation",
    "sponsors": [
     {
      "people_id": 26121,
@@ -357473,7 +358283,7 @@
   {
    "id": "OH-HB392",
    "legiscan_id": 2038933,
-   "change_hash": "edc7d5025f58baddc921e6f62aa479d3",
+   "change_hash": "00a4d760af213169a6feeb59daccb7b3",
    "topics": [
     "ai"
    ],
@@ -357487,8 +358297,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2025-07-07",
-   "last_action": "Reported - Amended: Technology and Innovation",
-   "last_action_date": "2026-06-10",
+   "last_action": "Reported - Re-referred to Technology and Innovation: Rules and Reference",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2025-07-07",
@@ -357504,6 +358314,16 @@
      "date": "2026-06-10",
      "action": "Reported - Amended: Technology and Innovation",
      "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Re-referred",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Reported - Re-referred to Technology and Innovation: Rules and Reference",
+     "chamber": "H"
     }
    ],
    "progress": [
@@ -357514,6 +358334,14 @@
     {
      "date": "2026-06-10",
      "event": 10
+    },
+    {
+     "date": "2026-11-10",
+     "event": 9
+    },
+    {
+     "date": "2026-11-10",
+     "event": 9
     }
    ],
    "calendar": [
@@ -357553,7 +358381,7 @@
      "description": "House Technology and Innovation Demetriou, 5th Hearing"
     }
    ],
-   "committee": null,
+   "committee": "Rules and Reference",
    "sponsors": [
     {
      "people_id": 25208,
@@ -357590,7 +358418,7 @@
     }
    ],
    "text": {
-    "doc_id": 3447611,
+    "doc_id": 3465713,
     "date": "0000-00-00",
     "type": "Comm Sub",
     "mime": "application/pdf"
@@ -363349,7 +364177,7 @@
   {
    "id": "OH-HB971",
    "legiscan_id": 2155357,
-   "change_hash": "b8d142d223ddd40593e809d1abbf924e",
+   "change_hash": "0024af207613145272488c2097b26072",
    "topics": [
     "sports"
    ],
@@ -363363,12 +364191,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-07-01",
-   "last_action": "Introduced",
-   "last_action_date": "2026-07-01",
+   "last_action": "Referred to committee: Finance",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2026-07-01",
      "action": "Introduced",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Referred to committee: Finance",
      "chamber": "H"
     }
    ],
@@ -363379,7 +364212,7 @@
     }
    ],
    "calendar": [],
-   "committee": null,
+   "committee": "Finance",
    "sponsors": [
     {
      "people_id": 26119,
@@ -365562,7 +366395,7 @@
   {
    "id": "OH-SB326",
    "legiscan_id": 2052361,
-   "change_hash": "deff1357d600440c8781b5adf088d61b",
+   "change_hash": "6fd0771b91fe244bb4ad4e832c95527e",
    "topics": [
     "ai"
    ],
@@ -365576,8 +366409,8 @@
    "status": 2,
    "status_text": "Passed one chamber",
    "status_date": "2026-06-10",
-   "last_action": "Introduced",
-   "last_action_date": "2026-06-16",
+   "last_action": "Referred to committee: Education",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2025-11-12",
@@ -365602,6 +366435,11 @@
     {
      "date": "2026-06-16",
      "action": "Introduced",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Referred to committee: Education",
      "chamber": "H"
     }
    ],
@@ -365668,9 +366506,16 @@
      "time": "15:00",
      "location": "South Hearing Room",
      "description": "Senate Education 6th Hearing, Proponent/Opponent/Interested Party"
+    },
+    {
+     "type": "Hearing",
+     "date": "2026-11-17",
+     "time": "14:45",
+     "location": "Room 121",
+     "description": "House Education Ingram, 1st Hearing, Sponsor/Prop Testimony"
     }
    ],
-   "committee": null,
+   "committee": "Education ",
    "sponsors": [
     {
      "people_id": 22630,
@@ -366293,7 +367138,7 @@
   {
    "id": "OH-SB479",
    "legiscan_id": 2160318,
-   "change_hash": "7b4a3314f9f836e82caca753e2ffb92d",
+   "change_hash": "66bd14c033be71944330e03f3e78c44b",
    "topics": [
     "sports"
    ],
@@ -366307,12 +367152,17 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-10-13",
-   "last_action": "Introduced",
-   "last_action_date": "2026-10-13",
+   "last_action": "Referred to committee: General Government",
+   "last_action_date": "2026-11-10",
    "history": [
     {
      "date": "2026-10-13",
      "action": "Introduced",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-10",
+     "action": "Referred to committee: General Government",
      "chamber": "S"
     }
    ],
@@ -366323,7 +367173,7 @@
     }
    ],
    "calendar": [],
-   "committee": null,
+   "committee": "General Government",
    "sponsors": [
     {
      "people_id": 24480,
@@ -437028,6 +437878,124 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB1121/2025"
   },
   {
+   "id": "TX-HB1201",
+   "legiscan_id": 2163682,
+   "change_hash": "1278dfdeab588139e912c359b49ee60c",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB1201",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to required reporting of rogue artificial intelligence incidents; authorizing civil penalties.",
+   "description": "Relating to required reporting of rogue artificial intelligence incidents; authorizing civil penalties.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-17",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-17",
+   "history": [
+    {
+     "date": "2026-11-17",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-17",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3466581,
+    "date": "2026-11-17",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB1201",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB1201/2027"
+  },
+  {
+   "id": "TX-HB1245",
+   "legiscan_id": 2163848,
+   "change_hash": "abcd025f034e258639c38d2afaa658cc",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "HB1245",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "description": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-18",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-18",
+   "history": [
+    {
+     "date": "2026-11-18",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-18",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 15352,
+     "name": "Nicole Collier",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-095",
+     "primary": true,
+     "ballotpedia": "Nicole_Collier",
+     "opensecrets_id": null,
+     "votesmart_id": 137771
+    }
+   ],
+   "text": {
+    "doc_id": 3467153,
+    "date": "2026-11-19",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB1245",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB1245/2027"
+  },
+  {
    "id": "TX-HB126",
    "legiscan_id": 1996283,
    "change_hash": "8add1dcd2fc67834e43d385122fd3fe8",
@@ -438985,6 +439953,242 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB2400/2025"
   },
   {
+   "id": "TX-HB248",
+   "legiscan_id": 2162475,
+   "change_hash": "5d9f043c9cc54abbbd0f84d1978c771e",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB248",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the inclusion of provenance data on certain content created or posted on a social media platform.",
+   "description": "Relating to the inclusion of provenance data on certain content created or posted on a social media platform.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24089,
+     "name": "Suleman Lalani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-076",
+     "primary": true,
+     "ballotpedia": "Suleman_Lalani",
+     "opensecrets_id": null,
+     "votesmart_id": 188448
+    }
+   ],
+   "text": {
+    "doc_id": 3465040,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB248",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB248/2027"
+  },
+  {
+   "id": "TX-HB268",
+   "legiscan_id": 2162626,
+   "change_hash": "f2286f41a61c0be48562a42f670d0f20",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "HB268",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to digital citizenship instruction in public schools.",
+   "description": "Relating to digital citizenship instruction in public schools.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14990,
+     "name": "Mary Gonzalez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-075",
+     "primary": true,
+     "ballotpedia": "Mary_Gonzalez",
+     "opensecrets_id": null,
+     "votesmart_id": 137767
+    }
+   ],
+   "text": {
+    "doc_id": 3465169,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB268",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB268/2027"
+  },
+  {
+   "id": "TX-HB273",
+   "legiscan_id": 2162894,
+   "change_hash": "3a839551f03c6add53f54504488f6fb0",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB273",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the use of artificial intelligence by health care providers.",
+   "description": "Relating to the use of artificial intelligence by health care providers.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465414,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB273",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB273/2027"
+  },
+  {
+   "id": "TX-HB280",
+   "legiscan_id": 2161817,
+   "change_hash": "8f1394b2d687a074fc0b69a7f453c876",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 85,
+   "state": "TX",
+   "number": "HB280",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a prohibition on the use of certain personalized dynamic pricing models by a business in this state.",
+   "description": "Relating to a prohibition on the use of certain personalized dynamic pricing models by a business in this state.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24089,
+     "name": "Suleman Lalani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-076",
+     "primary": true,
+     "ballotpedia": "Suleman_Lalani",
+     "opensecrets_id": null,
+     "votesmart_id": 188448
+    }
+   ],
+   "text": {
+    "doc_id": 3464457,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB280",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB280/2027"
+  },
+  {
    "id": "TX-HB2818",
    "legiscan_id": 1970030,
    "change_hash": "0ae92be239478ec5df7063de64b6d8a7",
@@ -439912,6 +441116,65 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB3694/2025"
   },
   {
+   "id": "TX-HB374",
+   "legiscan_id": 2162629,
+   "change_hash": "d242e31e54b6fab84c9944567c090bab",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 84,
+   "state": "TX",
+   "number": "HB374",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to certain requirements applicable to governmental entities with respect to an agreement prohibiting the release of information regarding a data center project; providing a civil penalty.",
+   "description": "Relating to certain requirements applicable to governmental entities with respect to an agreement prohibiting the release of information regarding a data center project; providing a civil penalty.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14990,
+     "name": "Mary Gonzalez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-075",
+     "primary": true,
+     "ballotpedia": "Mary_Gonzalez",
+     "opensecrets_id": null,
+     "votesmart_id": 137767
+    }
+   ],
+   "text": {
+    "doc_id": 3465172,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB374",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB374/2027"
+  },
+  {
    "id": "TX-HB3755",
    "legiscan_id": 1991260,
    "change_hash": "db81a0689286e829aadc3ae8eec0453b",
@@ -440277,6 +441540,124 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB4018/2025"
   },
   {
+   "id": "TX-HB405",
+   "legiscan_id": 2162757,
+   "change_hash": "21691653355a0a8fcd68b271384ca53d",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 95,
+   "state": "TX",
+   "number": "HB405",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to requiring a business in this state to disclose the use of certain personalized dynamic pricing models.",
+   "description": "Relating to requiring a business in this state to disclose the use of certain personalized dynamic pricing models.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14990,
+     "name": "Mary Gonzalez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-075",
+     "primary": true,
+     "ballotpedia": "Mary_Gonzalez",
+     "opensecrets_id": null,
+     "votesmart_id": 137767
+    }
+   ],
+   "text": {
+    "doc_id": 3465289,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB405",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB405/2027"
+  },
+  {
+   "id": "TX-HB416",
+   "legiscan_id": 2162606,
+   "change_hash": "41832c782e07952ed745c8976ccd72fd",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 97,
+   "state": "TX",
+   "number": "HB416",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a restriction on state agency deployment and use of an artificial intelligence system regarding an employment decision or confidential information.",
+   "description": "Relating to a restriction on state agency deployment and use of an artificial intelligence system regarding an employment decision or confidential information.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14990,
+     "name": "Mary Gonzalez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-075",
+     "primary": true,
+     "ballotpedia": "Mary_Gonzalez",
+     "opensecrets_id": null,
+     "votesmart_id": 137767
+    }
+   ],
+   "text": {
+    "doc_id": 3465152,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB416",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB416/2027"
+  },
+  {
    "id": "TX-HB418",
    "legiscan_id": 1890894,
    "change_hash": "e2befdf7bd0fe9b22651d7bb6af1a370",
@@ -440355,6 +441736,65 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB418/2025"
   },
   {
+   "id": "TX-HB427",
+   "legiscan_id": 2162141,
+   "change_hash": "7478951534c141545402d9e26cc05607",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "HB427",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a criminal offense for the creation or distribution of certain artificially generated media with the intent to influence the outcome of an election.",
+   "description": "Relating to a criminal offense for the creation or distribution of certain artificially generated media with the intent to influence the outcome of an election.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 14990,
+     "name": "Mary Gonzalez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-075",
+     "primary": true,
+     "ballotpedia": "Mary_Gonzalez",
+     "opensecrets_id": null,
+     "votesmart_id": 137767
+    }
+   ],
+   "text": {
+    "doc_id": 3464748,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB427",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB427/2027"
+  },
+  {
    "id": "TX-HB4390",
    "legiscan_id": 1999872,
    "change_hash": "3dd56a01319088000fb4bf0a79b1ccc5",
@@ -440426,6 +441866,65 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB4390",
    "legiscan_url": "https://legiscan.com/TX/bill/HB4390/2025"
+  },
+  {
+   "id": "TX-HB441",
+   "legiscan_id": 2162368,
+   "change_hash": "4f419a710c36347cd7dcb01f7fefbbbe",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 94,
+   "state": "TX",
+   "number": "HB441",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to public school instruction and courses in artificial intelligence system usage.",
+   "description": "Relating to public school instruction and courses in artificial intelligence system usage.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3466239,
+    "date": "2026-11-16",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB441",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB441/2027"
   },
   {
    "id": "TX-HB4437",
@@ -441307,6 +442806,65 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB4635/2025"
   },
   {
+   "id": "TX-HB474",
+   "legiscan_id": 2162614,
+   "change_hash": "b1ce20df7f430d7f173bb3f562448c27",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB474",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to human oversight and review of decisions and actions involving artificial intelligence systems used by state agencies.",
+   "description": "Relating to human oversight and review of decisions and actions involving artificial intelligence systems used by state agencies.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465157,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB474",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB474/2027"
+  },
+  {
    "id": "TX-HB4908",
    "legiscan_id": 2006128,
    "change_hash": "c525508441f926cd7a4100940391c3c7",
@@ -441808,6 +443366,65 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB500",
    "legiscan_url": "https://legiscan.com/TX/bill/HB500/2025"
+  },
+  {
+   "id": "TX-HB510",
+   "legiscan_id": 2162899,
+   "change_hash": "631d90bc15237d21473afd58c688ebbd",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB510",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to human oversight and override for certain high-risk artificial intelligence systems; providing a civil penalty.",
+   "description": "Relating to human oversight and override for certain high-risk artificial intelligence systems; providing a civil penalty.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465419,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB510",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB510/2027"
   },
   {
    "id": "TX-HB5118",
@@ -442405,6 +444022,65 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB556/2025"
   },
   {
+   "id": "TX-HB561",
+   "legiscan_id": 2162088,
+   "change_hash": "17c0a189ced3aed8224b5e4bcf73c870",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 96,
+   "state": "TX",
+   "number": "HB561",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to cybersecurity safeguards, required contractual protections, and civil remedies for certain commercial agreements involving artificial intelligence vendors.",
+   "description": "Relating to cybersecurity safeguards, required contractual protections, and civil remedies for certain commercial agreements involving artificial intelligence vendors.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3466380,
+    "date": "2026-11-17",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB561",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB561/2027"
+  },
+  {
    "id": "TX-HB581",
    "legiscan_id": 1891063,
    "change_hash": "969bf1aa6bdd5e7895612d52869fdfe1",
@@ -442597,6 +444273,419 @@
    "legiscan_url": "https://legiscan.com/TX/bill/HB581/2025"
   },
   {
+   "id": "TX-HB585",
+   "legiscan_id": 2162254,
+   "change_hash": "8d6b55debbf6ad73a10598b0356a3401",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "HB585",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the requirements for artificial intelligence operations of state agencies, establishing artificial intelligence divisions.",
+   "description": "Relating to the requirements for artificial intelligence operations of state agencies, establishing artificial intelligence divisions.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3466533,
+    "date": "2026-11-17",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB585",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB585/2027"
+  },
+  {
+   "id": "TX-HB588",
+   "legiscan_id": 2161823,
+   "change_hash": "6743e3f1cd407a3fbd8666b0b86f3ba8",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "HB588",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a health care facility grant program supporting the use of artificial intelligence technology in scanning medical images for cancer detection.",
+   "description": "Relating to a health care facility grant program supporting the use of artificial intelligence technology in scanning medical images for cancer detection.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24089,
+     "name": "Suleman Lalani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-076",
+     "primary": true,
+     "ballotpedia": "Suleman_Lalani",
+     "opensecrets_id": null,
+     "votesmart_id": 188448
+    }
+   ],
+   "text": {
+    "doc_id": 3464462,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB588",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB588/2027"
+  },
+  {
+   "id": "TX-HB592",
+   "legiscan_id": 2162428,
+   "change_hash": "8e90a5d6b2df80e88d53e07b6ae8fa9d",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 71,
+   "state": "TX",
+   "number": "HB592",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the protection and security of student information handled by contractors and subcontractors of public school districts and open-enrollment charter schools, including cybersecurity requirements, breach notification, contractual protections, and vendor liability; providing for civil penalties.",
+   "description": "Relating to the protection and security of student information handled by contractors and subcontractors of public school districts and open-enrollment charter schools, including cybersecurity requirements, breach notification, contractual protections, and vendor liability; providing for civil penalties.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3466212,
+    "date": "2026-11-16",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB592",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB592/2027"
+  },
+  {
+   "id": "TX-HB598",
+   "legiscan_id": 2161770,
+   "change_hash": "27a86ce9f9d9ab63b6e5b7d16558a0cd",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 100,
+   "state": "TX",
+   "number": "HB598",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the regulation of prediction-market event contracts and related operator requirements; providing civil penalties.",
+   "description": "Relating to the regulation of prediction-market event contracts and related operator requirements; providing civil penalties.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465803,
+    "date": "2026-11-12",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB598",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB598/2027"
+  },
+  {
+   "id": "TX-HB605",
+   "legiscan_id": 2162049,
+   "change_hash": "f8a4a2037044d2daf974640cb33314ca",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "HB605",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the establishment of the Texas Department of Artificial Intelligence and oversight of artificial intelligence systems used by state agencies.",
+   "description": "Relating to the establishment of the Texas Department of Artificial Intelligence and oversight of artificial intelligence systems used by state agencies.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465877,
+    "date": "2026-11-12",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB605",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB605/2027"
+  },
+  {
+   "id": "TX-HB625",
+   "legiscan_id": 2162506,
+   "change_hash": "082f8e43e9e48587c2b55dbeb9cbf279",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 98,
+   "state": "TX",
+   "number": "HB625",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the labeling of artificial intelligence systems by businesses for commercial purposes.",
+   "description": "Relating to the labeling of artificial intelligence systems by businesses for commercial purposes.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465068,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB625",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB625/2027"
+  },
+  {
+   "id": "TX-HB639",
+   "legiscan_id": 2161941,
+   "change_hash": "2de1292f254b1051a0e131ba9f18bcfa",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "HB639",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "description": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3464569,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB639",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB639/2027"
+  },
+  {
    "id": "TX-HB641",
    "legiscan_id": 1891411,
    "change_hash": "aa42bf26bec729d32fbb0a34b284e36f",
@@ -442668,6 +444757,537 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB641",
    "legiscan_url": "https://legiscan.com/TX/bill/HB641/2025"
+  },
+  {
+   "id": "TX-HB671",
+   "legiscan_id": 2162984,
+   "change_hash": "de48d2153e1913d76482979e245082ad",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "HB671",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "description": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 23120,
+     "name": "Erin Gamez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-038",
+     "primary": true,
+     "ballotpedia": "Erin_Gamez",
+     "opensecrets_id": null,
+     "votesmart_id": 188454
+    }
+   ],
+   "text": {
+    "doc_id": 3465493,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB671",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB671/2027"
+  },
+  {
+   "id": "TX-HB677",
+   "legiscan_id": 2162588,
+   "change_hash": "bfae415fec5d7e431c15f0464be5474a",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "HB677",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a study on employer and state agency use of automated employment decision tools in assessing an applicant's suitability for a position.",
+   "description": "Relating to a study on employer and state agency use of automated employment decision tools in assessing an applicant's suitability for a position.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24075,
+     "name": "Salman Bhojani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-092",
+     "primary": true,
+     "ballotpedia": "Salman_Bhojani",
+     "opensecrets_id": null,
+     "votesmart_id": 201240
+    }
+   ],
+   "text": {
+    "doc_id": 3465140,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB677",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB677/2027"
+  },
+  {
+   "id": "TX-HB732",
+   "legiscan_id": 2162829,
+   "change_hash": "cb2ce0d14cdca5f2c4827408cbb36e6f",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 79,
+   "state": "TX",
+   "number": "HB732",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the ineligibility of certain data centers for state and local economic development incentives.",
+   "description": "Relating to the ineligibility of certain data centers for state and local economic development incentives.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 26339,
+     "name": "Vincent Perez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-077",
+     "primary": true,
+     "ballotpedia": "Vincent_Perez_(Texas)",
+     "opensecrets_id": null,
+     "votesmart_id": 163449
+    }
+   ],
+   "text": {
+    "doc_id": 3465355,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB732",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB732/2027"
+  },
+  {
+   "id": "TX-HB734",
+   "legiscan_id": 2162717,
+   "change_hash": "2df80f0cd06ec767f8926a3961883d09",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 86,
+   "state": "TX",
+   "number": "HB734",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the public disclosure of local economic development agreements involving data centers.",
+   "description": "Relating to the public disclosure of local economic development agreements involving data centers.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 26339,
+     "name": "Vincent Perez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-077",
+     "primary": true,
+     "ballotpedia": "Vincent_Perez_(Texas)",
+     "opensecrets_id": null,
+     "votesmart_id": 163449
+    }
+   ],
+   "text": {
+    "doc_id": 3465251,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB734",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB734/2027"
+  },
+  {
+   "id": "TX-HB813",
+   "legiscan_id": 2161837,
+   "change_hash": "0dff112d99485d5172412d3feaedf47d",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 76,
+   "state": "TX",
+   "number": "HB813",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to bullying and cyberbullying in public schools.",
+   "description": "Relating to bullying and cyberbullying in public schools.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 11598,
+     "name": "Ron Reynolds",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-027",
+     "primary": true,
+     "ballotpedia": "Ron_Reynolds",
+     "opensecrets_id": null,
+     "votesmart_id": 102294
+    }
+   ],
+   "text": {
+    "doc_id": 3464475,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB813",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB813/2027"
+  },
+  {
+   "id": "TX-HB851",
+   "legiscan_id": 2162579,
+   "change_hash": "35b9e77d8ebae46c00fa60291e5a43e3",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 91,
+   "state": "TX",
+   "number": "HB851",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the repeal of the sales and use tax exemptions for data centers and the ineligibility of data centers for enterprise project tax refunds.",
+   "description": "Relating to the repeal of the sales and use tax exemptions for data centers and the ineligibility of data centers for enterprise project tax refunds.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 26339,
+     "name": "Vincent Perez",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-077",
+     "primary": true,
+     "ballotpedia": "Vincent_Perez_(Texas)",
+     "opensecrets_id": null,
+     "votesmart_id": 163449
+    }
+   ],
+   "text": {
+    "doc_id": 3465760,
+    "date": "2026-11-12",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB851",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB851/2027"
+  },
+  {
+   "id": "TX-HB909",
+   "legiscan_id": 2162113,
+   "change_hash": "889ffb81d54e83ad19702ee5cafae254",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 94,
+   "state": "TX",
+   "number": "HB909",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to cyber safety instruction for public school students.",
+   "description": "Relating to cyber safety instruction for public school students.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24089,
+     "name": "Suleman Lalani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-076",
+     "primary": true,
+     "ballotpedia": "Suleman_Lalani",
+     "opensecrets_id": null,
+     "votesmart_id": 188448
+    }
+   ],
+   "text": {
+    "doc_id": 3464721,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB909",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB909/2027"
+  },
+  {
+   "id": "TX-HB914",
+   "legiscan_id": 2161904,
+   "change_hash": "d6bbdcb012e8980a664dd066f69ac81c",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 96,
+   "state": "TX",
+   "number": "HB914",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to the required disclosure to a consumer that the consumer is interacting with an artificial intelligence system.",
+   "description": "Relating to the required disclosure to a consumer that the consumer is interacting with an artificial intelligence system.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 24089,
+     "name": "Suleman Lalani",
+     "party": "D",
+     "role": "Rep",
+     "district": "HD-076",
+     "primary": true,
+     "ballotpedia": "Suleman_Lalani",
+     "opensecrets_id": null,
+     "votesmart_id": 188448
+    }
+   ],
+   "text": {
+    "doc_id": 3464537,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB914",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB914/2027"
+  },
+  {
+   "id": "TX-HB929",
+   "legiscan_id": 2161782,
+   "change_hash": "d9a32aa34041c6c745c70149f0020abd",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 96,
+   "state": "TX",
+   "number": "HB929",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Relating to a disclosure of the use of generative artificial intelligence in certain political advertising; providing a civil penalty.",
+   "description": "Relating to a disclosure of the use of generative artificial intelligence in certain political advertising; providing a civil penalty.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 26716,
+     "name": "Armin Mizani",
+     "party": "R",
+     "role": "Rep",
+     "district": "HD-098",
+     "primary": true,
+     "ballotpedia": "Armin_Mizani",
+     "opensecrets_id": null,
+     "votesmart_id": null
+    }
+   ],
+   "text": {
+    "doc_id": 3465806,
+    "date": "2026-11-12",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HB929",
+   "legiscan_url": "https://legiscan.com/TX/bill/HB929/2027"
   },
   {
    "id": "TX-HCR53",
@@ -443077,6 +445697,65 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HJR185",
    "legiscan_url": "https://legiscan.com/TX/bill/HJR185/2025"
+  },
+  {
+   "id": "TX-HJR52",
+   "legiscan_id": 2161774,
+   "change_hash": "7ab9ffc5283b501b9236e2570efc7b38",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "HJR52",
+   "chamber": "H",
+   "current_body": "H",
+   "title": "Proposing a constitutional amendment, to be submitted to the voters of Texas for approval, authorizing the legislature to strictly regulate and authorize casino gaming and sports wagering by general law and establishing certain requirements for such law, including imposition of a tax on casino gaming and sports wagering revenue, requiring licensing of casino gaming and sports wagering operators, and requiring license application fees.",
+   "description": "Proposing a constitutional amendment, to be submitted to the voters of Texas for approval, authorizing the legislature to strictly regulate and authorize casino gaming and sports wagering by general law and establishing certain requirements for such law, including imposition of a tax on casino gaming and sports wagering revenue, requiring licensing of casino gaming and sports wagering operators, and requiring license application fees.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "H"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 5899,
+     "name": "Charlie Geren",
+     "party": "R",
+     "role": "Rep",
+     "district": "HD-099",
+     "primary": true,
+     "ballotpedia": "Charlie_Geren",
+     "opensecrets_id": null,
+     "votesmart_id": 49376
+    }
+   ],
+   "text": {
+    "doc_id": 3465811,
+    "date": "2026-11-12",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=HJR52",
+   "legiscan_url": "https://legiscan.com/TX/bill/HJR52/2027"
   },
   {
    "id": "TX-HR1261",
@@ -443971,6 +446650,70 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HR868",
    "legiscan_url": "https://legiscan.com/TX/bill/HR868/2025"
+  },
+  {
+   "id": "TX-SB100",
+   "legiscan_id": 2162114,
+   "change_hash": "4c56122e063aa834796b6047299c7d25",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 76,
+   "state": "TX",
+   "number": "SB100",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to bullying and cyberbullying in public schools.",
+   "description": "Relating to bullying and cyberbullying in public schools.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 5949,
+     "name": "Jose Menendez",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-026",
+     "primary": true,
+     "ballotpedia": "Jose_Menendez",
+     "opensecrets_id": null,
+     "votesmart_id": 49908
+    }
+   ],
+   "text": {
+    "doc_id": 3464722,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB100",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB100/2027"
   },
   {
    "id": "TX-SB1188",
@@ -445835,6 +448578,70 @@
    "legiscan_url": "https://legiscan.com/TX/bill/SB2373/2025"
   },
   {
+   "id": "TX-SB244",
+   "legiscan_id": 2162180,
+   "change_hash": "11783034c10e088de2569e6e0bf148c6",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 67,
+   "state": "TX",
+   "number": "SB244",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to changing the name of the offense of child pornography to child sexual abuse material and to updating references to conform to that terminology.",
+   "description": "Relating to changing the name of the offense of child pornography to child sexual abuse material and to updating references to conform to that terminology.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 19730,
+     "name": "Angela Paxton",
+     "party": "R",
+     "role": "Sen",
+     "district": "SD-008",
+     "primary": true,
+     "ballotpedia": "Angela_Paxton",
+     "opensecrets_id": null,
+     "votesmart_id": 177576
+    }
+   ],
+   "text": {
+    "doc_id": 3464783,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB244",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB244/2027"
+  },
+  {
    "id": "TX-SB2473",
    "legiscan_id": 2005998,
    "change_hash": "df776ca874a13b91f48093d54d278778",
@@ -446303,6 +449110,70 @@
    "legiscan_url": "https://legiscan.com/TX/bill/SB2831/2025"
   },
   {
+   "id": "TX-SB296",
+   "legiscan_id": 2162420,
+   "change_hash": "5c2718f0f7833dd0c543f8141e19d048",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 91,
+   "state": "TX",
+   "number": "SB296",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to the siting, construction, permitting, and operation of certain data centers; requiring local option elections; imposing a temporary moratorium; establishing an annual payments to county residents; repealing certain tax exemptions; providing civil penalties.",
+   "description": "Relating to the siting, construction, permitting, and operation of certain data centers; requiring local option elections; imposing a temporary moratorium; establishing an annual payments to county residents; repealing certain tax exemptions; providing civil penalties.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 5904,
+     "name": "Roland Gutierrez",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-019",
+     "primary": true,
+     "ballotpedia": "Roland_Gutierrez",
+     "opensecrets_id": null,
+     "votesmart_id": 106951
+    }
+   ],
+   "text": {
+    "doc_id": 3465667,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB296",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB296/2027"
+  },
+  {
    "id": "TX-SB2966",
    "legiscan_id": 2008307,
    "change_hash": "adb7c5c783ce37029505c78665bc60b6",
@@ -446457,6 +449328,198 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB2991",
    "legiscan_url": "https://legiscan.com/TX/bill/SB2991/2025"
+  },
+  {
+   "id": "TX-SB32",
+   "legiscan_id": 2162417,
+   "change_hash": "3acaf4201be4caa07a6009fbd2fbeeb7",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 81,
+   "state": "TX",
+   "number": "SB32",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to the issuance by the Public Utilities Commission of Texas of a permit for the construction of a large computational load site; providing an administrative penalty.",
+   "description": "Relating to the issuance by the Public Utilities Commission of Texas of a permit for the construction of a large computational load site; providing an administrative penalty.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 6032,
+     "name": "Judith Zaffirini",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-021",
+     "primary": true,
+     "ballotpedia": "Judith_Zaffirini",
+     "opensecrets_id": null,
+     "votesmart_id": 5465
+    }
+   ],
+   "text": {
+    "doc_id": 3464992,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB32",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB32/2027"
+  },
+  {
+   "id": "TX-SB33",
+   "legiscan_id": 2162987,
+   "change_hash": "2206d995222e7ee52af3b4f5d5115012",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 86,
+   "state": "TX",
+   "number": "SB33",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to the recovery of costs related to providing electricity service to customers at a computational load site.",
+   "description": "Relating to the recovery of costs related to providing electricity service to customers at a computational load site.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 6032,
+     "name": "Judith Zaffirini",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-021",
+     "primary": true,
+     "ballotpedia": "Judith_Zaffirini",
+     "opensecrets_id": null,
+     "votesmart_id": 5465
+    }
+   ],
+   "text": {
+    "doc_id": 3465495,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB33",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB33/2027"
+  },
+  {
+   "id": "TX-SB34",
+   "legiscan_id": 2162300,
+   "change_hash": "73c1ec42ac3a6d5f781f307d984d77e1",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 73,
+   "state": "TX",
+   "number": "SB34",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to county authority to regulate the development of certain large electricity users.",
+   "description": "Relating to county authority to regulate the development of certain large electricity users.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 6032,
+     "name": "Judith Zaffirini",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-021",
+     "primary": true,
+     "ballotpedia": "Judith_Zaffirini",
+     "opensecrets_id": null,
+     "votesmart_id": 5465
+    }
+   ],
+   "text": {
+    "doc_id": 3464887,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB34",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB34/2027"
   },
   {
    "id": "TX-SB382",
@@ -446867,6 +449930,70 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB442",
    "legiscan_url": "https://legiscan.com/TX/bill/SB442/2025"
+  },
+  {
+   "id": "TX-SB46",
+   "legiscan_id": 2162044,
+   "change_hash": "66409ee1aab031fb6c63425f2d1ffd37",
+   "topics": [
+    "ai"
+   ],
+   "relevance": 87,
+   "state": "TX",
+   "number": "SB46",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "description": "Relating to required disclosures on certain political advertising that contains altered media; creating a criminal offense.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 6032,
+     "name": "Judith Zaffirini",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-021",
+     "primary": true,
+     "ballotpedia": "Judith_Zaffirini",
+     "opensecrets_id": null,
+     "votesmart_id": 5465
+    }
+   ],
+   "text": {
+    "doc_id": 3464665,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SB46",
+   "legiscan_url": "https://legiscan.com/TX/bill/SB46/2027"
   },
   {
    "id": "TX-SB668",
@@ -447736,6 +450863,134 @@
    "sine_die": true,
    "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SB844",
    "legiscan_url": "https://legiscan.com/TX/bill/SB844/2025"
+  },
+  {
+   "id": "TX-SJR11",
+   "legiscan_id": 2162834,
+   "change_hash": "3a7fb41edf47761f5218b568602ea024",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 99,
+   "state": "TX",
+   "number": "SJR11",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Proposing a constitutional amendment, to be submitted to the voters of Texas for approval, authorizing the legislature to strictly regulate and authorize casino gaming and sports wagering by general law and establishing certain requirements for such law, including establishment of a state agency with powers to regulate all lotteries and gift enterprises, imposition of a tax on casino gaming and sports wagering revenue, requiring licensing of casino gaming and sports wagering operators, and requiring license application fees.",
+   "description": "Proposing a constitutional amendment, to be submitted to the voters of Texas for approval, authorizing the legislature to strictly regulate and authorize casino gaming and sports wagering by general law and establishing certain requirements for such law, including establishment of a state agency with powers to regulate all lotteries and gift enterprises, imposition of a tax on casino gaming and sports wagering revenue, requiring licensing of casino gaming and sports wagering operators, and requiring license application fees.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 5850,
+     "name": "Carol Alvarado",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-006",
+     "primary": true,
+     "ballotpedia": "Carol_Alvarado",
+     "opensecrets_id": null,
+     "votesmart_id": 49524
+    }
+   ],
+   "text": {
+    "doc_id": 3465359,
+    "date": "2026-11-09",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SJR11",
+   "legiscan_url": "https://legiscan.com/TX/bill/SJR11/2027"
+  },
+  {
+   "id": "TX-SJR12",
+   "legiscan_id": 2162191,
+   "change_hash": "51115ab3443d7ff5ce9aeb56aeab0785",
+   "topics": [
+    "sports"
+   ],
+   "relevance": 65,
+   "state": "TX",
+   "number": "SJR12",
+   "chamber": "S",
+   "current_body": "S",
+   "title": "Proposing a constitutional amendment authorizing the Kickapoo Traditional Tribe of Texas to conduct gaming by executing a gaming compact with this state; providing for occupational licensing under the compact; limiting certain taxes and fees.",
+   "description": "Proposing a constitutional amendment authorizing the Kickapoo Traditional Tribe of Texas to conduct gaming by executing a gaming compact with this state; providing for occupational licensing under the compact; limiting certain taxes and fees.",
+   "status": 1,
+   "status_text": "Introduced",
+   "status_date": "2026-11-09",
+   "last_action": "Filed",
+   "last_action_date": "2026-11-09",
+   "history": [
+    {
+     "date": "2026-11-09",
+     "action": "Received by the Secretary of the Senate",
+     "chamber": "S"
+    },
+    {
+     "date": "2026-11-09",
+     "action": "Filed",
+     "chamber": "S"
+    }
+   ],
+   "progress": [
+    {
+     "date": "2026-11-09",
+     "event": 1
+    }
+   ],
+   "calendar": [],
+   "committee": null,
+   "sponsors": [
+    {
+     "people_id": 5904,
+     "name": "Roland Gutierrez",
+     "party": "D",
+     "role": "Sen",
+     "district": "SD-019",
+     "primary": true,
+     "ballotpedia": "Roland_Gutierrez",
+     "opensecrets_id": null,
+     "votesmart_id": 106951
+    }
+   ],
+   "text": {
+    "doc_id": 3464793,
+    "date": "2026-11-10",
+    "type": "Introduced",
+    "mime": "text/html"
+   },
+   "session": "90th Legislature Regular Session",
+   "session_id": 2278,
+   "sine_die": false,
+   "url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=90R&Bill=SJR12",
+   "legiscan_url": "https://legiscan.com/TX/bill/SJR12/2027"
   },
   {
    "id": "TX-SJR16",
@@ -454989,7 +458244,7 @@
   {
    "id": "VA-HB1257",
    "legiscan_id": 2160815,
-   "change_hash": "21ecbf192d67c6d8e5d448a5fec918be",
+   "change_hash": "770477840908e957765e906121be3530",
    "topics": [
     "ai"
    ],
@@ -455003,8 +458258,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-14",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-14",
@@ -455034,6 +458289,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -455254,7 +458514,7 @@
   {
    "id": "VA-HB1261",
    "legiscan_id": 2160641,
-   "change_hash": "a9ccbac11ec0599c34c4fed2a7a29f0b",
+   "change_hash": "2d7aa8351862f2873384a831132cd30c",
    "topics": [
     "ai"
    ],
@@ -455268,8 +458528,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-14",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-14",
@@ -455294,6 +458554,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -455667,7 +458932,7 @@
   {
    "id": "VA-HB1294",
    "legiscan_id": 2160830,
-   "change_hash": "eebf200d16c074e368fd8b4cdb9d1ebf",
+   "change_hash": "5e188500eccb4ce3308d0fd26fcdb9b9",
    "topics": [
     "ai"
    ],
@@ -455681,8 +458946,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-15",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-15",
@@ -455712,6 +458977,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -455875,7 +459145,7 @@
   {
    "id": "VA-HB1295",
    "legiscan_id": 2160599,
-   "change_hash": "977089dac60c51b1058c799729598b32",
+   "change_hash": "3be9860ed23180ffbddafdd481b00094",
    "topics": [
     "ai"
    ],
@@ -455889,8 +459159,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-15",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-15",
@@ -455920,6 +459190,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -457075,7 +460350,7 @@
   {
    "id": "VA-HB1451",
    "legiscan_id": 2160592,
-   "change_hash": "f03d952624547f0d4d5b5ff0ec8566dd",
+   "change_hash": "8b6158deb58d32c40498ef7a0e5073c8",
    "topics": [
     "ai"
    ],
@@ -457089,8 +460364,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-23",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Labor and Commerce",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-23",
@@ -457125,6 +460400,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Labor and Commerce",
      "chamber": "H"
     }
    ],
@@ -457870,7 +461150,7 @@
   {
    "id": "VA-HB1521",
    "legiscan_id": 2160715,
-   "change_hash": "bd8c4923cdf9a7b8ef76890b0191a6d8",
+   "change_hash": "9db0d51d35369f4be35f6adf8eb7227f",
    "topics": [
     "ai"
    ],
@@ -457884,8 +461164,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-23",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-23",
@@ -457915,6 +461195,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -461643,7 +464928,7 @@
   {
    "id": "VA-HB635",
    "legiscan_id": 2160873,
-   "change_hash": "bb1a0cada7097d878cea56da25bf81a8",
+   "change_hash": "a03325debb65ec9c05a32ef01740ed12",
    "topics": [
     "ai"
    ],
@@ -461657,8 +464942,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-13",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-13",
@@ -461693,6 +464978,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -461971,7 +465261,7 @@
   {
    "id": "VA-HB638",
    "legiscan_id": 2160839,
-   "change_hash": "a07046c29e57169b46a305ead057814d",
+   "change_hash": "02b72c319f6e83eff7cb3c87149ccb25",
    "topics": [
     "ai"
    ],
@@ -461985,8 +465275,8 @@
    "status": 1,
    "status_text": "Introduced",
    "status_date": "2026-01-13",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
     {
      "date": "2026-01-13",
@@ -462021,6 +465311,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -465150,7 +468445,7 @@
   {
    "id": "VA-SB269",
    "legiscan_id": 2160809,
-   "change_hash": "4c00f00dac8c68838da1db9c20c01ef4",
+   "change_hash": "8f826e6897438e5ef164727c0125e1b9",
    "topics": [
     "ai"
    ],
@@ -465164,14 +468459,9 @@
    "status": 2,
    "status_text": "Passed one chamber",
    "status_date": "2026-02-02",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
-    {
-     "date": "2026-02-02",
-     "action": "Engrossed by Senate - committee substitute Block Vote (Voice Vote)",
-     "chamber": "S"
-    },
     {
      "date": "2026-02-03",
      "action": "Read third time and passed Senate (39-Y 0-N 0-A)",
@@ -465205,6 +468495,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -467850,7 +471145,7 @@
   {
    "id": "VA-SB586",
    "legiscan_id": 2160615,
-   "change_hash": "b8353c8322b4a4d710a0b3d1def0a911",
+   "change_hash": "3294d015ec71c1079d745dd983412f32",
    "topics": [
     "ai"
    ],
@@ -467864,14 +471159,9 @@
    "status": 2,
    "status_text": "Passed one chamber",
    "status_date": "2026-02-05",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
-    {
-     "date": "2026-02-06",
-     "action": "Read third time and passed Senate (22-Y 18-N 0-A)",
-     "chamber": "S"
-    },
     {
      "date": "2026-02-06",
      "action": "Reconsideration of passage agreed to by Senate",
@@ -467905,6 +471195,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],
@@ -469099,7 +472394,7 @@
   {
    "id": "VA-SB796",
    "legiscan_id": 2160889,
-   "change_hash": "0bb73f7bc6800ed7cb13c7df3ddeaccc",
+   "change_hash": "4f7191380577c16d6de33833cc01d507",
    "topics": [
     "ai"
    ],
@@ -469113,14 +472408,9 @@
    "status": 2,
    "status_text": "Passed one chamber",
    "status_date": "2026-02-16",
-   "last_action": "Continued from last session",
-   "last_action_date": "2026-07-21",
+   "last_action": "Left in Committee Communications, Technology and Innovation",
+   "last_action_date": "2026-11-17",
    "history": [
-    {
-     "date": "2026-02-17",
-     "action": "Constitutional reading dispensed (on 3rd reading) (40-Y 0-N 0-A)",
-     "chamber": "S"
-    },
     {
      "date": "2026-02-17",
      "action": "Read third time and passed Senate (39-Y 1-N 0-A)",
@@ -469154,6 +472444,11 @@
     {
      "date": "2026-07-21",
      "action": "Continued from last session",
+     "chamber": "H"
+    },
+    {
+     "date": "2026-11-17",
+     "action": "Left in Committee Communications, Technology and Innovation",
      "chamber": "H"
     }
    ],

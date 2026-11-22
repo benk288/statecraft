@@ -11,7 +11,7 @@
     --ground: #f6f1e7; --paper: #fffaf0; --ink: #111111; --ink-2: #3a332d; --muted: #5a5048; --faint: #8a8072;
     --rule: #111111; --rule-soft: #d8cfbd; --rule-faint: #e6dccb; --line-input: #c9bfab; --wash: #efe6d6; --wash-2: #f3ebdc; --select: #fbefe3;
     --red: #a3271a; --red-soft: #f0c9b5; --green: #2a6b45; --amber: #b35c00;
-    --map-0: #e9e2d4; --map-1: #f0c9b5; --map-2: #e29274; --map-3: #c4472d; --map-4: #7f1d12;
+    --map-off: #f3eee3; --map-0: #e9e2d4; --map-1: #f0c9b5; --map-2: #e29274; --map-3: #c4472d; --map-4: #7f1d12;
     --serif: Fraunces, Georgia, serif; --sans: "IBM Plex Sans", system-ui, sans-serif;
   }
   * { box-sizing: border-box; }
@@ -77,6 +77,15 @@
   #map .state:hover { stroke: var(--ink); stroke-width: 1.5; }
   #map .state.selected { stroke: var(--ink); stroke-width: 2.2; }
   #map .state.infolder { stroke: var(--ink); stroke-width: 1.4; stroke-dasharray: 3 2; }
+  #map .state.off { fill: var(--map-off); stroke: #d8cfbd; stroke-width: .8; }
+  .legend .sw.off { background: var(--map-off); border: 1px solid var(--rule); }
+  .sess-strip { margin-top: 14px; font-size: 13px; line-height: 1.75; }
+  .sess-strip b { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; margin-right: 8px; }
+  .sess-strip a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  .sess-strip a.on, .sess-strip a:hover { color: var(--red); text-decoration-color: var(--red); }
+  .sess-line { display: inline-block; margin: 2px 0 10px; padding: 3px 9px; font-size: 12px; font-weight: 600; letter-spacing: .02em; border: 1px solid var(--rule); }
+  .sess-line.live { border-color: var(--red); color: var(--red); }
+  .sess-line.dead { color: var(--muted); }
   #tip { position: absolute; pointer-events: none; display: none; z-index: 5; background: var(--ink); color: var(--ground); padding: 14px 16px; width: 230px; font-size: 13px; line-height: 1.5; }
   #tip .name { font-family: var(--serif); font-size: 21px; font-weight: 600; }
   #tip .soft { color: var(--red-soft); }
@@ -228,7 +237,7 @@
 <script src="vendor/topojson-client.min.js"></script>
 <script src="vendor/states-10m.js"></script>
 <script>
-  for (const f of ["data/bills.js", "data/analysis.js", "data/sponsors.js", "data/headlines.js", "app.js"]) document.write(`<script src="${f}?v=${Date.now()}"><\/script>`);
+  for (const f of ["data/bills.js", "data/analysis.js", "data/sponsors.js", "data/headlines.js", "data/sessions.js", "app.js"]) document.write(`<script src="${f}?v=${Date.now()}"><\/script>`);
 </script>
 </body>
 </html>

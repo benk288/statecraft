@@ -5,3 +5,4 @@ node_modules/
 data/texts/
 data/bills.openstates.json
 data/bills.before-prior*.json
+data/bills.before-live.json
